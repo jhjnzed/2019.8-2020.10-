@@ -2,9 +2,9 @@
 
 var name = ' 雷乾凯'
 var age = 18
-var dress ='四川'
+var address ='四川'
 
 
-var my = `我是 ${name},今年 ${age}, 我来自${dress} `
+var my = `我是 ${name},今年 ${age}, 我来自${address} `
 
 console.log(my)
