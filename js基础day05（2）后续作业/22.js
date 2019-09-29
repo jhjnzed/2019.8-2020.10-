@@ -2,14 +2,14 @@
 
 
 var num=12325;
-var num01W,num02W,num03W,num04W,num05W;
-    num01W=num%10;                      //个
-    num02W=parseInt(num%100/10);        //十
-    num03W=parseInt(num%1000/100);      //百
-    num04W=parseInt(num%10000/1000);    //千
-    num05W=parseInt(num%100000/10000)   //万
+var g,s,b,q,w;
+    g=num%10;                      //个
+    s=parseInt(num%100/10);        //十
+    b=parseInt(num%1000/100);      //百
+    q=parseInt(num%10000/1000);    //千
+    w=parseInt(num%100000/10000)   //万
 
-    if(num01W==num05W && num02W==num04W)
+    if(g==w && s==q)
     {
         console.log("回文数");
     }
