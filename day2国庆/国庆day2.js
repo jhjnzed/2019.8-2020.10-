@@ -3,13 +3,13 @@
 // // 1.定义若干个js变量，需表现出js中的各种数据类型，并在页面中输出每个变量的值和其对应类型。
 
 // var num=123;
-// var string="zs";
+// var string="xx";
 // var undefined;
 // var kong=null;
 // var boolean=true;
 // var arr=[1,2,3,4,5];
 // var obj={
-//     name:'zs',
+//     name:'yy',
 //     age:18
 // };
 
@@ -51,19 +51,23 @@
 // var v1 = "abc";
 // var v2 = v1;
 // var v2 = '123' + v2;
-// console.log(v1);    //abc
-// console.log(v2);    //123abc
+// console.log(v1);    
+// console.log(v2);   
+
+
 
 
 // var a = { name: '张三', age: 22 }
 // var b = a;
-// console.log(b.age); ///22
+// console.log(b.age); 
 // b.age = 23;
-// console.log(a.age);     //23
+// console.log(a.age);   
 
 
 
-// // 4.已知任意两个正整数（a，b），将其作为直角三角形的直角边长，求斜边长
+
+
+ // 4.已知任意两个正整数（a，b），将其作为直角三角形的直角边长，求斜边长
 // var a = 12;
 // var b = 5;
 // for (var i = 1; i < 100; i++) {
@@ -71,6 +75,9 @@
 //         console.log('这个直角三角的形斜边长为' + i);
 //     }
 // }
+
+
+
 
 // // 5.一个小球从空中掉下来，求如下问题：
 // // 如果已知小球掉落时高度（1000m），求其触地瞬间的速度；
@@ -92,6 +99,9 @@
 
 
 
+
+
+
 // // 6.	写一个程序打印1到100这些数字。但是遇到数字为3的倍数的时候，打印“Fizz”替代数字，5的倍数用“Buzz”代替，既是3的倍数又是5的倍数打印“abcde”。
 // for (var i = 1; i <= 100; i++) {
 //     if (i%3==0&&i%5==0) {
@@ -106,26 +116,33 @@
 // }
 
 
+
+
+
 // // 7.求两个正数的最大公约数
-// var a=10;
-// var b=20;
-// var result = 1;
+// var a=50;
+// var b=120;
+// var x = 1;
 // for(var i = 1; i <= a && i <= b; i++ ){
 //   if(a%i == 0 && b%i == 0 ){
-//     result = i;
+//     x = i;
 //   }
 // }
-// console.log(result);
+// console.log(x);
+
+
+
+
 
 // // 8.求两个正数的最小公倍数
 
-// console.log(a*b/result);
+// console.log(a*b/x);
 
-// // 9.水果店LED屏幕
-// // 模拟LED屏幕显示内容
-// //                       图二
-// // 要求 1）商品编号 商品名称  单价 和品质 都定义成变量
-// //      2）在控制台出各种水果的信息，如图二所示
+// 9.
+
+
+
+
 
 // var arr=[
 //     {num:1,name:'榴莲',price:32.0, unit :"公斤",quality:'A'},
@@ -137,10 +154,12 @@
 
 
 
-// // 10、超市购物小票V2  
-// // 展示超市所有的商品信息到控制台，如图三所示:
 
-// //           图三
+
+
+// 10
+
+
 
 // var num1=15.50*22.00;
 // var num2=16.00*55.00;
@@ -150,6 +169,13 @@
 // console.log('商品单价'+num2);
 // console.log('商品单价'+num3);
 // console.log('商品总价'+ (num1+num2+num3));
+
+
+
+
+
+
+
 // 二、简答题
 // //  1. 数据类型有几种,分别是哪些
 // // 有七种数据类型
@@ -168,7 +194,10 @@
 
 // // 3. 怎么判断一个变量是否是数字
 
-// console.log(typeof num); 判断打印的结果是不是number
+// console.log(typeof num);
+
+
+
 // // 4. 怎么将其他数据类型转换成数字类型
 
 // var str='123'
