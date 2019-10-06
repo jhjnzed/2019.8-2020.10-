@@ -4,3 +4,13 @@
 
 
 
+var x =55
+var a =10
+
+if(a>x){
+    console.log('猜大了')
+}else if(a<x){
+    console.log('猜小了')
+}else if(a==x){
+    console.log('猜对了')
+}
