@@ -12,7 +12,7 @@ var f = [];
 var g = {};
 console.log(typeof number, typeof boolean, typeof string, typeof undefined, typeof nul, typeof f, typeof g, typeof Symbol);
 
-
+ 
 // 第一种
 var num1 = 123;
 var num2 = 456;
