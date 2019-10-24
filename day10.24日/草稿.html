@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+       1. 录入6个学生成绩信息， 用数组对象存储学生信息，每个学生拥有的属性是学号，姓名，年龄，成绩，例子如下:
+      var studentArr = [
+      {sId:1,name:'张三',age:18,score:80}
+      ]
+       根据现有的存储数据,和用户进行交互,完成对数据的,增,删,改,查,的功能.
+      交互设计:提示用户功能选择
+          数据处理:
+        增删改查局部功能的实现: 
+        增: 提示用户输入用户名, 程序校验是否有重复的姓名, 如果有就告知已经存在，需要再次重新输入名字，如果没有就添加进数组,并告知用户添加成功,弹出输出数组进行校验.
+        删: 提示用户输入要删除的用户名, 程序校验是否有该用户名,如果有就删除,并返回用户删除成功提醒,弹出数组校验，如果没有就告知用户该用户不存在，需要重新输入要删除的用户名 
+        改: 提示用户输入要修改的用户名 程序校验改用户名是否存在 如果有就修改相应索引对应的项,并告知用户修改成功,打印校验 如果没有就告知改用户不存在，需要重新输入要删除的用户名
+        查:提示用户输入要查找的用户名 ，所以有就弹出有,没有就弹出没有.
+     全栈12班学员名单操作指南：1：增加用户； 2：删除用户；3：修改用户； 4：查找用户
+        请输入操作模块编号：
+        请输入要增加学员名称
+      */
+        // 分析:
+        // 创建一个数组来储存学生信息
+        var studentArr = [];
+        // 创建一个构造函数来创建学生信息
+        function AddStudent(id, name, age, score) {
+            this.id = id;
+            this.name = name;
+            this.age = age;
+            this.score = score;
+        }
+        // 循环菜单栏
+        do {
+            let input = prompt('欢饮来到学生管理系统，请选择您的操作:\n' +
+                '1.增加用户 ' + '2.删除用户 ' + '3.修改用户 ' + '4.查找用户 ' + '5.退出系统');
+            input = Number(input);
+            switch (input) {
+                case 1:
+                    let AddId = prompt('请输入学号:');
+                    let AddName = prompt('请输入姓名:');
+                    let AddAge = prompt('请输入年龄:');
+                    let AddScore = prompt('请输入分数');
+                    studentArr.push(new AddStudent(AddId, AddName, AddAge, AddScore));
+                    alert('添加成功!');
+                    break;
+                case 2:
+                    let DelName = prompt('请输入您要删除用户的姓名:');
+                    // 创建一个计数器
+                    var count = 0;
+                    // 遍历对象
+                    for (let i = 0; i < studentArr.length; i++) {
+                        for (let key in studentArr[i]) {
+                            alert(key + ':' + studentArr[i][key]);
+                        }
+                    }
+                    // 遍历数组
+                    for (let i = 0; i < studentArr.length; i++) {
+                        // 判断是否有这个用户
+                        if (studentArr[i].name == DelName) {
+                            // 使用splice删除用户
+                            studentArr.splice(i, 1);
+                            count++;
+                            alert('删除成功!');
+                            break;
+                        }
+                    }
+                    if (count == 0) {
+                        alert('系统里面没有这个用户!');
+                    }
+                    break;
+                case 3:
+                    let UpdateName = prompt('请输入您要修改用户的姓名');
+                    // 创建一个计数器
+                    var count = 0;
+                    // 判断用户是否存在
+                    for (let i = 0; i < studentArr.length; i++) {
+                        if (studentArr[i].name == UpdateName) {
+                            count++;
+                            break;
+                        }
+                    }
+                    if (count == 0) {
+                        alert('该用户不存在!');
+                        break;
+                    }
+                    // 遍历数组
+                    for (let i = 0; i < studentArr.length; i++) {
+                        if (studentArr[i].name == UpdateName) {
+                            // 创建一个空的字符串储存遍历结果
+                            let str = '';
+                            // 遍历对象
+                            for (let key in studentArr[i]) {
+                                // 使用字符串拼接结果
+                                str = str + key + ':' + studentArr[i][key] + '\n';
+                            }
+                            alert(str);
+                            // 用户输入要修改的元素
+                            let NewId = prompt('请输入修改后的学号:');
+                            let NewName = prompt('请输入修改后的姓名:');
+                            let NewAge = prompt('请输入修改后的年龄:');
+                            let NewScore = prompt('请输入修改后的分数:');
+                            var result = confirm('您确定要修改吗?');
+                            // 判断用户是否确定需要修改元素
+                            if (result == true) {
+                                // 如果确定，删除数组原来的对象
+                                studentArr.splice(i, 1);
+                                // 创建一个新元素，使用push添加到数组里面
+                                studentArr.push(new AddStudent(NewId, NewName, NewAge, NewScore));
+                                alert('修改成功!');
+                                break;
+                            } else {
+                                alert('您已经放弃修改!');
+                                break;
+                            }
+                            break;
+                        }
+                    }
+                    break;
+                case 4:
+                    let select = prompt('请输入您要查询的名字:');
+                    var count = 0; // 创建一个计数器
+                    // 查询是否有这个人
+                    for (let i = 0; i < studentArr.length; i++) {
+                        if (studentArr[i].name == select) {
+                            count++;
+                            alert('系统里面有该学生!');
+                        }
+                    }
+                    if (count == 0) {
+                        alert('没有这个学生!');
+                    }
+            }
+            if (input == 5) {
+                alert('欢迎您下次使用本系统');
+                break;
+            }
+        } while (true);
+
+    </script>
+</body>
+
+</html>
