@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 初始化信息
+
+        //         整体的思路分析
+        // 功能五: 退出管理系统
+        // 功能四: 删除学生信息
+        // 功能三: 查找学生信息
+        // 功能二: 修改学生信息
+        // 功能一: 添加学生信息
+        var arr = [
+            {
+                name: 'hanhan',
+                age: 18
+            },
+            {
+                name: 'hanpi',
+                age: 19
+            }
+        ];
+
+
+        alert('欢迎进入');
+        while (true) {
+
+            let menuNum = prompt(`
+
+            请输入操作项的序号：
+            1添加学生信息
+            2查找学生信息
+            3修改学生信息
+            4删除学生信息
+            5退出管理系统
+
+
+           ` )
+            if (menuNum == 5) {
+
+                let tuichu = confirm('您真的要退出吗？')  // confirm 确定就是是true  取消就是 null
+                if (tuichu == true) {
+                    break;
+                }
+            }
+
+            if (menuNum == 4) {
+                let delStr = '';
+                for (let i = 0; i < arr.length; i++) {
+                    delStr += `${i}.${arr[i].name}\n`
+                }
+                alert('请你选择删除:\n' + delStr);
+            }
+
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>
