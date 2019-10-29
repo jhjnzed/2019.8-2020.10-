@@ -4,14 +4,27 @@
 
 
 
-var str = 'qweqweoeqweroqweqweodfsfdo'
+// var str = 'qweqweoeqweroqweqweodfsfdo'
 
 
 
 
-let x = str.indexOf('o');
-console.log(x)
+// let x = str.indexOf('o');
+// console.log(x)
 
 
-let y = str.replace('o', '-');
-console.log(y)
+// let y = str.replace('o', '-');
+// console.log(y)
+
+
+
+var str = 'qweqweoeqweroqweqweodfsfdo';
+
+for (var i = 0; i < str.length; i++) {
+    if (str[i] == 'o') {
+        console.log(i);
+        str = str.replace('o', '-');
+    }
+}
+
+console.log(str);

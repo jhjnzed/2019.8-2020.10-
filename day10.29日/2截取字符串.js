@@ -4,4 +4,6 @@ let str = '我爱中华人民共和国';
 
 
 let x = str.substr(2, 2);
-console.log(x)
+console.log(x);
+
+
