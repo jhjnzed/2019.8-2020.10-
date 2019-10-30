@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // function getday(year, mth, day) {
+
+
+        //     prompt('请输入年份');
+        //     prompt('请输入月份')
+        //     prompt('请输入日期')
+
+        // }
+        // getday(2019, 3, 1)
+
+
+        var year = + prompt('请输入年份');
+        var mth = + prompt('请输入月份')
+        var day = + prompt('请输入日期')
+
+        var num = x(year, mth, day)
+        alert(`这是${year}年的第${num}天`)
+
+        function x(year, mth, day) {
+
+
+
+
+            var pingnian = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+            var runnian = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+            var sum = 0;
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+                for (var i = 0; i < mth - 1; i++) {
+                    sum += runnian[i];
+                }
+                return sum + day;
+            }
+            else {
+                for (var i = 0; i < mth - 1; i++) {
+                    sum += pingnian[i];
+                }
+                return sum + day;
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
