@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+
+
+
+    // 7.一个加油站为了鼓励车主多加油，所以加的多有优惠。
+    // 92号汽油，每升6元；如果大于20升，那么超出部分每升5.9；
+    // 95号汽油，每升7元；如果大于30升，那么超出部分每升6.95
+    // 编写JS程序，用户输入自己的汽油编号，然后输入自己加多少升，弹出价格。
+    let youzhan = +prompt('请选择一个加油站：92号；96号');
+    // 首先判断如果输入的是92号的汽油
+    if (youzhan == 92) {
+      let y92 = +prompt('请用户输入要加多少升？');
+      // 小于或等于20的输出每升6元的价格
+      if (y92 <= 20) {
+        let num = y92 * 6
+        alert(`${num}元`)
+      }
+      // 如果大于20 则每多出的部分价格为5.9每升
+      else if (y92 > 20) {
+        let price = 20 * 6 + (y92 - 20) * 5.9;
+        alert(`${price}元`)
+      }
+    } else {
+      alert('麻烦您看清楚选着92或者是95')
+    }
+
+
+
+
+    // 判断如果输入的是96号的汽油
+    if (youzhan == 96) {
+      let oil_96 = +prompt('请用户输入要加多少升?');
+      // 小于或等于20的输出每升6元的价格
+      if (oil_96 <= 20) {
+        let num = oil_96 * 7
+        alert(`${num}元`)
+      }
+      // 如果大于20 则每多出的部分价格为6.95每升
+      else if (oil_96 > 20) {
+        let price = 20 * 7 + (oil_96 - 20) * 6.95;
+        alert(`${price}元`)
+      }
+    }
+
+
+    alert('是不是很贵');
+    alert('没钱你加个毛')
+
+  </script>
+
+
+</body>
+
+</html>
