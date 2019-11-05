@@ -8,11 +8,18 @@
 
 
 
+for (var i = 2; i < 100; i++) {
 
+  var a = true
 
-for (let i = 0; i <= 100; i++) {
-  if (100 % i != 0) {
-    console.log(i)
+  for (var j = 2; j < i; j++) {
+
+    if (i % j == 0) {
+      a = false
+    }
   }
 
+  if (a == true) {
+    console.log(i)
+  }
 }
