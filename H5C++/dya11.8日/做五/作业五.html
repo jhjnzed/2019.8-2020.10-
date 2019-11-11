@@ -6,193 +6,386 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="./lib/reset.css">
-  <style>
-    body {
-      background-color: #f6f6f6;
-    }
-
-    .school-view {
-      margin: 100px auto;
-      width: 574px;
-      height: 460px;
-      background-color: #ffffff;
-    }
-
-    .school-nav {
-      width: 100%;
-      height: 60px;
-
-      background-color: #b35058;
-    }
-
-    .school-nav h3 {
-      font-size: 20px;
-      color: #ffffff;
-      float: left;
-      margin-left: 18px;
-      height: 100%;
-      line-height: 60px;
-    }
-
-    .school-nav-link {
-      float: right;
-      height: 60px;
-      margin-right: 10px;
-
-    }
-
-    .school-nav-link a {
-      float: left;
-      width: 78px;
-      height: 30px;
-      border: 1px solid #ffffff;
-      color: #ffffff;
-      text-align: center;
-      line-height: 30px;
-      background-color: rgba(255, 255, 255, 0.2);
-      margin-top: 14px;
-      margin-right: 10px;
-      text-decoration: none;
-    }
-
-    .school-content {
-      width: 535px;
-      padding-left: 20px;
-      padding-right: 20px;
-      padding-bottom: 20px;
-      background-color: salmon;
-      position: relative;
-    }
-
-    .school-content::before {
-      content: '';
-      width: 535px;
-      height: 60px;
-      background-color: rgba(0, 0, 0, 0.2);
-      display: inline-block;
-      position: absolute;
-      top: 0px;
-      left: 20px;
-
-    }
-
-    .school-content img {
-      width: 100%;
-    }
-
-
-
-    .school-content-top {
-      width: 368px;
-      height: 160px;
-      background-color: saddlebrown;
-    }
-
-    .school-content-top img {
-
-      margin-left: -106px;
-
-      width: 94px;
-      height: 94px;
-      float: left;
-    }
-
-    .x1 {
-      font-weight: 700;
-      color: #b35058;
-      float: left;
-    }
-
-    .x2 {
-      font-weight: 700;
-      color: #b35058;
-
-      display: inline;
-
-
-
-    }
-  </style>
-
 </head>
+<style>
+  body {
+    background-color: #f6f6f6;
+  }
+
+  div {
+    margin: 0;
+    padding: 0;
+  }
+
+  .x {
+    width: 744px;
+    height: 598px;
+    margin: 0 auto;
+    background-color: #ffffff;
+  }
+
+  .x9 {
+    width: 694px;
+    height: 80px;
+  }
+
+  .x7 {
+
+    width: 210px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 5px;
+    border: 1px solid #dfdfdf;
+    text-align: center;
+    line-height: 40px;
+  }
+
+  .xx {
+    width: 230px;
+    height: 150px;
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+
+  .xx ul {
+    padding-left: 20px;
+    list-style-type: none;
+  }
+
+  .xx ul li {
+    font-size: 15px;
+    padding-bottom: 14px;
+  }
+
+  .x66 {
+    width: 230px;
+    height: 150px;
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+
+  .x66 ul {
+    padding-left: 20px;
+    list-style-type: none;
+  }
+
+  .x66 ul li {
+    font-size: 15px;
+    padding-bottom: 14px;
+  }
+
+  .x7 span {
+    padding-right: 14px;
+  }
+
+  .x6 {
+    float: right;
+    width: 227px;
+    height: 423px;
+    background-color: #ffffff;
+  }
+
+  .x5 {
+    width: 515px;
+    height: 116px;
+    background-color: #ffffff;
+  }
+
+  .x1 {
+    width: 744px;
+    height: 75px;
+    background-color: #b35058;
+  }
+
+  .x1-left {
+    float: left;
+    padding-left: 25px;
+    padding-top: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fffdf9;
+  }
+
+  .x1-right {
+    float: right;
+    width: 360px;
+    height: 75px;
+  }
+
+  .x1-right .school {
+    display: inline-block;
+    margin-top: 20px;
+    width: 100px;
+    height: 31px;
+    text-align: center;
+    padding-top: 10px;
+    margin-left: 11px;
+    background-color: #c27379;
+    font-size: 15px;
+    color: #fdf6ef;
+  }
+
+  .x2-left {
+    float: left;
+    width: 406px;
+    height: 144px;
+    margin-left: 28px;
+    padding-top: 45px;
+    padding-left: 80px;
+    border-bottom: 1px solid #ececec;
+    border-right: 1px solid #ededed;
+    background-color: #ffffff;
+  }
+
+  .x3 {
+    width: 515px;
+    height: 116px;
+
+    margin-top: 190px;
+    background-color: #ffffff;
+  }
+
+  .x2 {
+    float: left;
+    width: 515px;
+    height: 422px;
+    background-color: #ffffff;
+  }
+
+
+
+  .x3-2 {
+    float: left;
+    width: 207px;
+    height: 115px;
+    margin-left: 28px;
+    border-bottom: 1px solid #ededed;
+    background-color: #ffffff;
+  }
+
+  .x5-3 {
+    float: left;
+    width: 207px;
+    height: 115px;
+    margin-left: 28px;
+    border-bottom: 1px solid #ededed;
+    background-color: #ffffff;
+  }
+
+  .x3-2-image {
+    float: left;
+    padding-top: 42px;
+    padding-left: 15px;
+  }
+
+  .x5-3-image {
+    float: left;
+    padding-top: 30px;
+    padding-left: 15px;
+  }
+
+  .x5-3-2 {
+    float: right;
+    width: 260px;
+    height: 114px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    background-color: #ffffff;
+  }
+
+  .x2-left-font {
+    float: right;
+    width: 297px;
+    height: 60px;
+    margin-top: 20px;
+  }
+
+
+
+  .x5-3-2-image {
+    width: 155px;
+    height: 19px;
+    margin-top: 68px;
+    margin-left: 53px;
+    text-align: right;
+    color: #f0e9e2;
+    background-color: #b35058;
+  }
+
+  .x4-ctern {
+    float: right;
+    width: 260px;
+    height: 114px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    background-color: #ffffff;
+  }
+
+  .font-x {
+    font-size: 20px;
+    font-weight: bold;
+    color: #b4526b;
+  }
+
+  #x8 {
+    color: #db2836;
+  }
+
+  .font-x4-ctern {
+    float: right;
+    padding-right: 92px;
+    padding-top: 10px;
+  }
+
+  .x3-2-font {
+    float: right;
+    padding-top: 63px;
+    padding-right: 54px;
+  }
+
+  .x5-3-font {
+    float: right;
+    padding-top: 50px;
+    padding-right: 50px;
+  }
+
+  .x5-3-2-font {
+    float: right;
+    padding-top: 39px;
+    padding-right: 95px;
+  }
+
+
+  .x4-ctern-image {
+    width: 157px;
+    height: 15px;
+    padding-top: 39px;
+    padding-left: 30px;
+  }
+</style>
 
 <body>
 
-  <div class="school-view">
-    <div class="school-nav">
-      <h3>前端与移动开发</h3>
-      <div class="school-nav-link">
-        <a href="">进入学院</a>
-        <a href="">学习社区</a>
-        <a href="">申请试听</a>
+  <div class="x">
+
+
+    <div class="x1">
+
+      <div class="x1-left">
+        前端与移动开发
+      </div>
+
+
+      <div class="x1-right">
+
+        <div class="school">
+          进入学院
+        </div>
+        <div class="school">
+          学习社区
+        </div>
+        <div class="school">
+          申请试听
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="x2">
+
+      <div class="x2-left">
+        <img src="./images/web_icon.jpg">
+        <div class="x2-left-font">
+          <span class="font-x">大前端改变世界</span><br>
+          <span class="font-x">我们改变前端</span>
+        </div>
+      </div>
+
+
+
+
+      <div class="x3">
+
+        <div class="x3-2">
+
+          <div class="x3-2-image">
+            <img src="./images/icon2.png">
+          </div>
+          <div class="x3-2-font">
+            <span class="font-two">课程大纲</span>
+          </div>
+        </div>
+
+
+        <div class="x4-ctern">
+
+          <div class="x4-ctern-image">
+            <img src="./images/icon3.png" alt="">
+          </div>
+          <div class="x4-ctern-font">
+            <span class="font-x4-ctern">就业前景</span>
+          </div>
+
+        </div>
+      </div>
+
+
+
+      <div class="x5">
+        <div class="x5-3">
+
+          <div class="x5-3-image">
+            <img src="./images/icon1.png" alt="">
+          </div>
+          <div class="x5-3-font">
+            <span class="font-three">师资力量</span>
+          </div>
+        </div>
+
+        <div class="x5-3-2">
+          <div class="x5-3-2-font">
+            <span class="font-four">免费视频下载</span>
+          </div>
+          <div class="x5-3-2-image">
+            100%
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="x6">
+      <div class="x7">
+        <span>北京校区</span>
+        <img src="./images/kczxdown.png" width="10px" height="10px">
+      </div>
+
+      <div class="xx">
+        <ul>
+          <li>基础班 2019-10-22 已开班</li>
+          <li>基础班 2019-11-09 报名中</li>
+          <li>基础班 2019-11-26 报名中</li>
+          <li id="x8">基础班 2019-12-16 报名中</li>
+        </ul>
+      </div>
+
+      <div class="x66">
+        <ul>
+          <li>就业班 2019-11-13 报名中</li>
+          <li>就业班 2019-11-26 报名中</li>
+          <li>就业班 2019-12-01 报名中</li>
+          <li>就业班 2019-12-19 报名中</li>
+        </ul>
       </div>
     </div>
 
 
-
-
-    <div class="school-content">
-
+    <div class="x9">
+      <img src="./images/technologyadweb.jpg" width="750px" height="80px">
     </div>
-
-
-    <div class="school-content-top">
-      <img src="./images/web_icon.jpg" alt="">
-      <p class="x1">大前端改变世界</p>
-      <p class="x2">我们改变前端</p>
-
-    </div>
-
-    <div class="school-content-top-left">
-      <div class="school-content-top-left-top"></div>
-      <div class="school-content-top-left-bottom">
-        <div class="school-content-top-left-bottom-left"></div>
-
-        <div class="school-content-top-left-bottom-right"></div>
-      </div>
-
-
-    </div>
-
-
-
-
-
-    <div class="school-content-top-right">
-      <div class="school-content-top-right-top"></div>
-      <div class="school-content-top-right-center"></div>
-      <div class="school-content-top-right-bottom"></div>
-
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-    <div class="school-content-bottom">
-      <img src="./images/technologyadweb.jpg" alt="">
-    </div>
-
-
-
-
-
-
-
-
-
-  </div>
-
-
-
-
 </body>
 
 </html>
