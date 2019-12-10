@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 1400px;
+            height: 300px;
+            margin: 100px auto;
+            border: 1px solid #ccc;
+            border-top: 2px solid skyblue;
+        }
+
+        .xz {
+            float: left;
+            position: relative;
+            overflow: hidden;
+            margin-top: 52px;
+            margin-left: 0px;
+        }
+
+        .box img {
+            width: 250px;
+            transition: all 2s;
+        }
+
+        .box img:hover {
+            transform: scale(1.1);
+        }
+
+        .sz {
+            position: absolute;
+            bottom: -68px;
+            left: 0%;
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            line-height: 100%;
+            background-color: #d1d1d194;
+            transition: all 2s;
+        }
+
+        .box div:hover .sz {
+            transform: translate(0px, -28px);
+        }
+
+        .sz p {
+            color: #ccc;
+            font-weight: 400;
+        }
+
+
+        .box-title {
+            width: 1280px;
+            height: 38px;
+            margin-top: 0;
+            margin-left: 42px;
+        }
+
+        .box-title h4 {
+            float: left;
+            background-color: skyblue;
+            color: #fff;
+        }
+
+        .box-title span {
+            float: right;
+            color: skyblue;
+        }
+
+        .wb {
+            width: 1400px;
+            height: 400px;
+            margin: 100px auto;
+        }
+
+        .wb-z {
+            color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="wb">
+
+        <p style="
+        margin-bottom: -86px;
+    ">
+            <span>目的地攻略</span><span class="wb-z">旅游旗舰店</span>
+        </p>
+
+        <div class="box">
+
+            <div class="box-title">
+                <h4>精选</h2>
+                    <span>更多旗舰馆&gt;</span>
+            </div>
+
+            <div class=" xz"> <img src="./img/1.jpg" alt="" class="">
+                <h4 class="sz " style="
+                    bottom: -52px;">韶关旅游体验馆
+                    <p>活力之旅 善美韶关</p>
+                </h4>
+
+
+            </div>
+
+
+            <div class=" xz"> <img src="./img/2.jpg" alt="" class="">
+                <h4 class="sz">嘉兴旅游体验馆
+                    <p>红船启梦，心游嘉兴：江南水乡、历...</p>
+                </h4>
+
+
+            </div>
+            <div class=" xz"> <img src="./img/3.jpg" alt="" class="">
+                <h4 class="sz">广州南沙游轮旅游体验馆
+                    <p>广州心州城南沙，开，“驶”，游轮体验</p>
+                </h4>
+
+
+            </div>
+            <div class=" xz"> <img src="./img/4.jpg" alt="" class="">
+                <h4 class="sz">西班牙旅游体验馆
+                    <p>西班牙不缺阳光，不缺美食，不缺文...</p>
+                </h4>
+
+
+            </div>
+            <div class=" xz"> <img src="./img/5.jpg" alt="" class="">
+                <h4 class="sz">以色列国家体验馆
+                    <p>一面蔚蓝 ，一面神秘，应许之地与海</p>
+                </h4>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
