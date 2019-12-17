@@ -1,0 +1,82 @@
+$colors : #ccc;
+$center:100px auto;
+$wh:100px;
+
+
+
+body {
+
+    width: 100px;
+}
+
+
+header {
+    background-color: $colors;
+    margin: $center;
+}
+
+
+
+div {
+    width: $wh;
+    height: $wh;
+
+    a {
+        width: 20px;
+        height: 10px;
+    }
+
+    a:hover {
+        color: #000;
+    }
+
+    &:first-child {
+        color: red($color: #f1f1f1);
+    }
+}
+
+
+div {
+    &+nav {
+        margin-top: 100px;
+    }
+
+    >a {
+        color: hue($color: #000000);
+    }
+
+    ~i+span {
+        color: #2d81b3;
+    }
+}
+
+
+
+
+@mixin hmp($wpe, $hpe) {
+    width: $wpe;
+    height: $hpe;
+}
+
+div {
+    @include hmp(100px, 200px)
+}
+
+
+
+
+
+
+.box {
+    >a {
+        color: red;
+
+        &+b {
+            color: gray;
+        }
+
+        &~i {
+            color: blue;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+body {
+  width: 100px;
+}
+
+header {
+  background-color: #ccc;
+  margin: 100px auto;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+}
+
+div a {
+  width: 20px;
+  height: 10px;
+}
+
+div a:hover {
+  color: #000;
+}
+
+div:first-child {
+  color: 241;
+}
+
+div + nav {
+  margin-top: 100px;
+}
+
+div > a {
+  color: 0deg;
+}
+
+div ~ i + span {
+  color: #2d81b3;
+}
+
+div {
+  width: 100px;
+  height: 200px;
+}
+
+.box > a {
+  color: red;
+}
+
+.box > a + b {
+  color: gray;
+}
+
+.box > a ~ i {
+  color: blue;
+}
+/*# sourceMappingURL=code.css.map */
