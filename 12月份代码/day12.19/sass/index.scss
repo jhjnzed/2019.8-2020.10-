@@ -1,0 +1,117 @@
+.jd-title {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #c91523;
+    display: flex;
+
+    .logo-title {
+        background-image: url(../images/jd-sprites.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        width: 60px;
+        height: 30px;
+        background-position: 0px -104px;
+        background-size: 200px;
+    }
+
+    .ipt-srk {
+        position: relative;
+        flex: 1;
+        top: 5px;
+        margin-left: 72px;
+        margin-right: 50px;
+        background-color: #fff;
+        width: 100%;
+        height: 30px;
+        border-radius: 30px;
+
+        .ipt-srkss {
+            background-image: url(../images/jd-sprites.png);
+            background-repeat: no-repeat;
+            background-position: -60px -104px;
+            background-size: 200px;
+            width: 20px;
+            height: 40px;
+            position: absolute;
+            top: 0px;
+            left: 10px;
+        }
+
+        input {
+            position: absolute;
+            top: 0;
+            left: 10px;
+            margin-left: 26px;
+            width: 80%;
+            height: 100%;
+            box-sizing: border-box;
+            border: 0px;
+        }
+    }
+
+    .dl {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+        /* height: 40px; */
+        background-color: #c91523;
+        color: #fff;
+        line-height: 40px;
+        text-align: center;
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+.ft {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    display: flex;
+
+    a {
+        flex: 1;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .ft-1 {
+        background-image: url(../images/index-icon.png);
+    }
+
+    .ft-2 {
+        background-image: url(../images/sort-icon.png);
+    }
+
+    .ft-3 {
+        background-image: url(../images/618-icon.png);
+    }
+
+    .ft-4 {
+        background-image: url(../images/cart-icon.png);
+    }
+
+    .ft-5 {
+        background-image: url(../images/center-icon.png);
+    }
+}
+
+
+.zx {
+    background-image: linear-gradient(to bottom, #E91E63, #E91E63, #9C27B0, #673AB7, #3F51B5, #2196F3, #00BCD4, #009688, #4CAF50, #CDDC39, #FFEB3B, #FFC107, #FF9800, #FF5722, #795548, #9E9E9E, #607D8B);
+    height: 1000px;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
