@@ -114,10 +114,398 @@
 }
 
 .zx {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#E91E63), color-stop(#E91E63), color-stop(#9C27B0), color-stop(#673AB7), color-stop(#3F51B5), color-stop(#2196F3), color-stop(#00BCD4), color-stop(#009688), color-stop(#4CAF50), color-stop(#CDDC39), color-stop(#FFEB3B), color-stop(#FFC107), color-stop(#FF9800), color-stop(#FF5722), color-stop(#795548), color-stop(#9E9E9E), to(#607D8B));
-  background-image: linear-gradient(to bottom, #E91E63, #E91E63, #9C27B0, #673AB7, #3F51B5, #2196F3, #00BCD4, #009688, #4CAF50, #CDDC39, #FFEB3B, #FFC107, #FF9800, #FF5722, #795548, #9E9E9E, #607D8B);
-  height: 1000px;
-  padding-top: 40px;
+  height: 10000px;
+  padding-top: 39px;
   padding-bottom: 60px;
+  background-color: #f5f5f5;
+}
+
+.lb {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.lb ul {
+  width: 1000%;
+  overflow: hidden;
+}
+
+.lb ul .lb-1 {
+  float: left;
+  width: 10%;
+}
+
+.lb ul .lb-1 a {
+  width: 100%;
+  display: block;
+}
+
+.lb ul .lb-1 a img {
+  width: 100%;
+}
+
+.zdan {
+  width: 100%;
+  background-color: #fff;
+  padding-top: 10px;
+}
+
+.zdan ul {
+  width: 100%;
+  overflow: hidden;
+}
+
+.zdan-1 {
+  float: left;
+  width: 25%;
+  margin-bottom: 10px;
+}
+
+.zdan-1 a {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.zdan-1 a span {
+  color: #333;
+}
+
+.zdan-1 a img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin-left: 26px;
+}
+
+.zsms {
+  position: relative;
+  top: 6px;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+}
+
+.zsms h3 {
+  float: left;
+  color: #c91523;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  line-height: 30px;
+  padding-left: 34px;
+}
+
+.zsms h3::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 10px;
+  width: 18px;
+  height: 24px;
+  background-image: url(../images/jd-sprites.png);
+  background-size: 200px 200px;
+  background-position: -84px -109px;
+}
+
+.zsms span {
+  float: left;
+}
+
+.zsms span:nth-of-type(2n+1) {
+  background-color: #000000;
+  color: #fff;
+  position: relative;
+  top: 6px;
+  left: 10px;
+  width: 20px;
+  height: 16px;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.zsms span:nth-of-type(2n) {
+  position: relative;
+  top: 6px;
+  left: 10px;
+  margin: 0 2px;
+}
+
+.zsms a {
+  float: right;
+  line-height: 30px;
+  text-align: center;
+  color: #666;
+  margin-right: 8px;
+}
+
+.wp {
+  width: 100%;
+  height: 190px;
+  background: #fff;
+}
+
+.wp ul {
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.wp-1 {
+  width: 33.33333%;
+  float: left;
+}
+
+.wp-1 a {
+  display: block;
+  width: 100%;
+}
+
+.wp-1 a img {
+  width: 100%;
+}
+
+.wp-1 a span {
+  position: relative;
+  display: block;
+  top: -28px;
+  left: 90px;
+  width: 40px;
+  height: 26px;
+  background-color: #fdb60a;
+  color: #fff;
+  text-align: center;
+  line-height: 26px;
+  border-radius: 50%;
+}
+
+.wp-1 b {
+  display: block;
+  text-align: center;
+  color: #c91523;
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 4px;
+  margin-top: -16px;
+}
+
+.wp-1 s {
+  text-align: center;
+  display: block;
+  color: #a2a2a2;
+  text-decoration: line-through;
+}
+
+.sj {
+  width: 100%;
+  height: 194px;
+  background-image: url(../uploads/banner_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.sj ul {
+  width: 100%;
+  overflow: hidden;
+  padding: 50px 0;
+}
+
+.sj-1 {
+  float: left;
+  width: 50%;
+}
+
+.sj-1 a {
+  width: 100%;
+}
+
+.sj-1 a img {
+  width: 100%;
+}
+
+.sjzx {
+  width: 100%;
+}
+
+.sjzx ul {
+  width: 100%;
+  overflow: hidden;
+}
+
+.sjzx-1 {
+  width: 33.33333%;
+  float: left;
+}
+
+.sjzx-1 a {
+  width: 100%;
+  display: block;
+}
+
+.sjzx-1 a img {
+  width: 100%;
+}
+
+.jdcs {
+  width: 100%;
+}
+
+.jdcs ul {
+  width: 100%;
+  overflow: hidden;
+}
+
+.jdcs-1 {
+  width: 50%;
+  float: left;
+}
+
+.jdcs-1 a {
+  width: 100%;
+  display: block;
+}
+
+.jdcs-1 a img {
+  width: 100%;
+}
+
+.gg {
+  width: 100%;
+  height: 110px;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+.gg a {
+  display: block;
+  width: 96%;
+  margin: 8px 8px;
+}
+
+.gg a img {
+  width: 100%;
+}
+
+.tscs {
+  width: 100%;
+  height: 30px;
+  background-color: #fff;
+}
+
+.tscs h2 {
+  color: #f25353;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0 10px;
+  line-height: 30px;
+}
+
+.xsd {
+  width: 100%;
+}
+
+.xsd ul {
+  width: 100%;
+  overflow: hidden;
+}
+
+.xsd-1 {
+  width: 50%;
+  float: left;
+}
+
+.xsd-1 a {
+  display: block;
+  width: 100%;
+}
+
+.xsd-1 a img {
+  width: 100%;
+}
+
+.dnbg {
+  width: 100%;
+}
+
+.dnbg ul {
+  width: 100%;
+  overflow: hidden;
+}
+
+.dnbg-1 {
+  width: 50%;
+  float: left;
+}
+
+.dnbg-1 a {
+  width: 100%;
+  display: block;
+}
+
+.dnbg-1 a img {
+  width: 100%;
+}
+
+.dnbg-1:nth-child(3) {
+  width: 25%;
+}
+
+.dnbg-1:nth-child(4) {
+  width: 25%;
+}
+
+.ghqj {
+  width: 100%;
+}
+
+.ghqj ul {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ghqj-1 {
+  width: 25%;
+  float: left;
+}
+
+.ghqj-1 a {
+  width: 100%;
+  display: block;
+}
+
+.ghqj-1 a img {
+  width: 100%;
+}
+
+.tmh {
+  width: 100%;
+}
+
+.tmh ul {
+  width: 100%;
+  overflow: hidden;
+}
+
+.tmh-1 {
+  width: 40%;
+  float: left;
+}
+
+.tmh-1 a {
+  width: 100%;
+  display: block;
+}
+
+.tmh-1 a img {
+  width: 100%;
+}
+
+.tmh-1:nth-child(2),
+.tmh-1:nth-child(3) {
+  width: 30%;
+  height: 210px;
+  background-color: #fff;
 }
 /*# sourceMappingURL=index.css.map */

@@ -12,6 +12,6 @@ body {
 }
 
 .sprites {
-    background-image: url("../image/jd-sprites.png");
+    background-image: url(../images/jd-sprites.png);
     background-size: 200px 200px;
 }
