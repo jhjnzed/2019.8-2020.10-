@@ -17,44 +17,45 @@ header {
 
 
 
-// div {
-//     width: $wh;
-//     height: $wh;
-//     border: $ysasb;
-//     background-color: $bac;
+div {
+    width: $wh;
+    height: $wh;
+    border: $ysasb;
+    background-color: $bac;
 
-//     a {
-//         width: 20px;
-//         height: 10px;
-//     }
+    a {
+        width: 20px;
+        height: 10px;
+    }
 
-//     a:hover {
-//         color: #000;
-//     }
+    a:hover {
+        color: #000;
+    }
 
-//     &:first-child {
-//         color: red($color: #f1f1f1);
-//     }
-// }
+    &:first-child {
+        color: red($color: #f1f1f1);
+    }
+}
 
 
-// div {
-//     &+nav {
-//         margin-top: 100px;
-//     }
+div {
+    &+nav {
+        margin-top: 100px;
+    }
 
-//     >a {
-//         color: hue($color: #000000);
-//     }
+    >a {
+        color: hue($color: #000000);
+    }
 
-//     ~i+span {
-//         color: #2d81b3;
-//     }
-// }
+    ~i+span {
+        color: #2d81b3;
+    }
+}
 
 
 // 下面这个权限貌似高一些
 // 下面不行
+// 真的给我搞蒙了，现在好了
 @mixin hmp($wpe, $hpe) {
     width: $wpe;
     height: $hpe;
