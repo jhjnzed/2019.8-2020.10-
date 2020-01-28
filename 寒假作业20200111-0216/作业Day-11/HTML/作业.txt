@@ -1,0 +1,18 @@
+解答题
+1.伸缩布局 （总结所有的知识点 主轴、侧轴）
+// 1.伸缩容器
+具有display: flex属性的元素就是伸缩容器
+// 2.伸缩项目
+伸缩容器的所有子代元素都是伸缩项目
+// 3.主轴：主轴是伸缩容器中一条默认的虚拟线，自左而右(默认)
+justify-content: flex-start | flex-end | center | space-between | space-around;
+flex-dirction: row | row-reverse | column | column-reverse;
+// 4.侧轴：侧轴垂直于主轴
+flex-wrap: nowrap | wrap;
+align-items: stretch | flex-start | flex-end | center;
+align-content: stretch | flex-start | flex-end | center | space-between | space-around;
+// 5.伸缩项目属性
+flex:;(占比)
+order:;(排序)
+align-self:;(设置自我对齐方式)
+flex-flow: row nowrap;(默认值，添加给父元素)
