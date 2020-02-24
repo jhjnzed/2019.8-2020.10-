@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1. 定义一个人的对象, 属性有姓名，年龄，性别，身高，方法有：能吃饭，能跑步
+    // 1）遍历对象，将对象的属性和值输出来，并且调用其中的一个方法，将结果在控制台输出
+    // 2）将对象得年龄这个属性删除
+    // 3）将对象的身高的值题换成"180cm"
+    // 4）给对象添加属性学号，通过两种方式
+    // var json = {
+    //   name: 'json',
+    //   age: 18,
+    //   sex: '男',
+    //   height: 185,
+    //   wan: function () {
+    //     console.log("玩耍")
+    //   },
+    //   run: function () {
+    //     console.log("打球");
+    //   }
+
+    // }
+    // // 遍历对象
+    // for (var key in json) {
+    //   console.log(key + '---' + json[key])
+    // }
+
+    // delete json.age
+
+    // json.height = '180cm'
+
+    // console.log(json)
+
+    // // 4）给对象添加属性学号，通过两种方式
+
+    // json.stuid = 123;
+
+    // var stuid = "stuid"
+    // json[stuid] = 123;  
+
+    // //  json["stuid"] = 123;
+
+
+
+
+    // var arr = {
+    //   name: "zs",
+    //   age: "45",
+    //   sex: "男",
+    //   height: "180",
+    //   hobby: function () {
+    //     console.log("吃饭，跑步")
+    //   }
+    // }
+    // console.log(arr)
+
+    // for (var key in arr) {
+    //   console.log(key);
+    //   console.log(arr[key]);
+    // }
+    // arr.hobby();
+    // delete arr.age;
+    // arr.height = '180cm';
+    // // 方式一
+    // arr.id = 6;
+    // // 方式二
+    // arr['id'] = 6
+    // console.log(arr);
+
+
+    // 2. 定义数组var arr = [2,4,77,100,1]
+    // 1）在控制台输出数组的最大值
+    // 2）在控制台输出数组的最小值
+
+
+    // 曹洋
+    // let arr = [2, 4, 77, 100, 1];
+
+    // // 先进行排序 从小到大
+    // arr.sort(function (a, b) {
+    //   return a - b
+    // });
+
+    // console.log(arr[0]); // 最小值
+    // console.log(arr[arr.length - 1]); // 最大值
+
+
+    // // 赵瑞轩
+    // var arr = [2, 4, 77, 100, 1]
+    // var max = arr[0] // 假设法
+    // for (let i = 0; i < arr.length; i++) {
+    //   if (max < arr[i]) {
+    //     max = arr[i]
+    //   }
+    // }
+    // console.log(max);
+
+    // var arr = [2, 4, 77, 100, 1]
+    // var min = arr[0]
+    // for (let i = 0; i < arr.length; i++) {
+    //   if (arr[i] < min) {
+    //     min = arr[i]
+    //   }
+    // }
+    // console.log(min);
+
+
+    //   // 曾鹏
+    //   var arr = [2, 4, 77, 100, 1]
+    //   var max = Math.max.apply(Math, arr)
+    //   console.log(max)
+
+    //  // 张建平  call,apply（js高级）
+    //   var arr = [2, 4, 77, 100, 1]     
+    //   alert(Math.max.apply(null, arr));//最大值     alert(Math.min.apply(null, arr));//最小值 
+
+
+    // 3.定义数组var arr = [1,2,3,4,5,6,1,2,3,1,2],将数组重复的元素去重,(请使用2种方式实现)
+
+    // new Set()   indexOf    includes
+
+    // 范志伟
+    // var arr = [1, 2, 3, 4, 5, 6, 1, 2, 3, 1, 2]
+    // //1
+    // // 创建一个新数组
+    // var xarr = []
+    // // 循环数组
+    // for (var i = 0; i < arr.length; i++) {
+    //   // 判断新数组中是否有这个arr[i]这个元素
+    //   if (xarr.indexOf(arr[i]) === -1) {
+    //     xarr.push(arr[i])
+    //   }
+    // }
+    // console.log(xarr);
+
+    // //2
+    // var xarr = Array.from(new Set(arr))
+    // console.log(xarr);
+    // //3   ... 扩展运算符, 是将数组进行展开
+    // var xarr = [...new Set(arr)]
+    // console.log(xarr);
+
+
+    // 白冰浩
+
+    // var arr = [1, 2, 3, 4, 5, 6, 1, 2, 3, 1, 2];
+    // var set = new Set(arr);
+    // console.log(set);   // 不太对的
+
+
+    // var arr = [1, 2, 3, 4, 5, 6, 1, 2, 3, 1, 2];
+    // var arr2 = [];
+    // for (var i = 0; i < arr.length; i++) {
+    //   if (arr2.indexOf(arr[i]) == -1) {
+    //     arr2.push(arr[i]);
+    //   }
+    // }
+    // console.log(arr2);
+
+
+
+    // 周子轩
+    // var arr = [1, 2, 3, 4, 5, 6, 1, 2, 3, 1, 2]
+    // let arr1 = new Set(arr)
+    // console.log(Array.from(arr1))
+    // //第二种方法
+    // var arr = [1, 2, 3, 4, 5, 6, 1, 2, 3, 1, 2]
+    // let arr1 = [];
+    // for (let i = 0; i < arr.length; i++) {
+    //   if (arr1.indexOf(arr[i]) == -1) {
+    //     arr1.push(arr[i])
+    //   }
+    // }
+    // console.log(arr1)
+
+
+
+
+    // 4.将数组 var arr = [99, 85, 82, 63, 60]按照从小到大排序，(用冒泡排序)    // 排序算法  很重要
+
+    // var arr = [99, 85, 82, 63, 60];
+    // for (var i = 0; i < arr.length - 1; i++) {   // 4趟    
+    //   for (var j = 0; j < arr.length - i - 1; j++) {   //  4次    
+    //     if (arr[j] > arr[j + 1]) {
+    //       var newarr = arr[j];
+    //       arr[j] = arr[j + 1];
+    //       arr[j + 1] = newarr;
+    //     }
+    //   }
+    // }
+    // console.log(arr)
+
+
+
+    // 5.查找数组中与item相等的元素所有的位置，要求:
+    // 使用javascript实现如下要求:
+    // 1)定义一个数组arr,数组元素包含1、2、2、4、5、6、7、8、2、3
+    // 用户输入一个整数item
+    // 2)查找数组中与Item相等的元素出现的所有位置并且在控制台输出，如果没有，则输出-1
+
+    // 袁旭东
+    // let arr = [1, 2, 2, 4, 5, 6, 7, 8, 2, 3];
+    // let item = 12;
+    // // 先判断数组中是否有这个数字
+    // if (arr.indexOf(item) != -1) {
+    //   // 在这里整明数组有item这个元素
+    //   for (let i = 0; i < arr.length; i++) {
+    //     if (arr[i] == item) {
+    //       console.log(i); // 输出对应的索引
+    //     }
+    //   }
+    // } else {
+    //   console.log(-1); // 否则就是没有这个数
+    // }
+
+
+
+    // 范志伟
+    // var item = +prompt('请输入一个正整数')
+    // var arr = [1, 2, 2, 4, 5, 6, 7, 8, 2, 3]
+    // for (var i = 0; i < arr.length - 1; i++) {
+    //   // 先判断数组中是否有这个item
+    //   if (arr.indexOf(item) === -1) {
+    //     console.log(-1);
+    //     break;
+    //   } else {
+    //     if (item === arr[i]) {
+    //       console.log(i);
+    //     }
+    //   }
+    // }
+
+
+    // 官呈达
+    // var arr = [1, 2, 2, 4, 5, 6, 7, 8, 2, 3];
+    // var item = +prompt('请输入一个整数');
+    // if (arr.indexOf(item) == -1) {
+    //   alert(-1);
+    // } else {
+    //   for (var i = 0; i < arr.length; i++) {
+    //     if (arr[i] == item) {
+    //       alert(`您输入的${item}在数组中索引位置为${i}出现`);
+    //     }
+    //   }
+    // }
+
+
+    // 易成龙
+    // var arr = [1, 2, 2, 4, 5, 6, 7, 8, 2, 3];
+    // var user = 0;
+    // for (let i = 0; i < arr.length; i++) {
+    //   if (arr[i] == user) {
+    //     console.log(arr.indexOf(user, i));
+    //   }
+    // }
+
+
+    // 我    (判断某一个数字是不是质数)
+    // var arr = [1, 2, 2, 4, 5, 6, 7, 8, 2, 3];
+    // var item = +prompt('请输入一个整数');
+    // // 定义一个标识
+    // var flag = false;
+    // // 定义一个数组
+    // var arr = []
+    // for (var i = 0; i < arr.length; i++) {
+    //   if (arr[i] == item) {
+    //     flag = true;
+    //     arr.push(i)
+    //   }
+    // }
+    // // 循环完毕
+    // if (flag) {
+    //   console.log(arr)
+    // } else {
+    //   console.log(-1)
+    // }
+
+
+    // (判断某一个数字是不是质数)
+
+    // 袁旭东
+    // let num = 8;
+    // // 设置了一个标识
+    // let isZhi = true;
+    // for (let i = 2; i < num; i++) {
+    //   if (num % i == 0) {
+    //     isZhi = false;
+    //   }
+    // }
+
+    // if (isZhi == false) {
+    //   console.log(num + "不是质数");
+    // } else {
+    //   console.log(num + "是质数");
+
+    // }
+
+
+    // 李佳琪
+    // var num = 8;
+    // var flag = true;
+    // for (var i = 2; i < num; i++) {
+    //   if (num % i == 0) {
+    //     flag = false;
+    //   }
+    // }
+    // if (flag == false) {
+    //   console.log(num + '不是质数')
+    // } else {
+    //   console.log(num + '是质数')
+    // }
+
+
+    // 范志伟
+    // var num =Number(prompt("请输入一个正整数,判断此数是不是素数"));//要判断的数
+    // var flag = true;//假设变量  值为true 是素数 
+    // for( var i = 2 ; i < num ; i++ ){
+    //     if( num % i == 0 ){//满足这个条件  说明有因子了  不是素数
+    //         flag = false;//不是素数
+    //         break;
+    //     }
+    // }
+    // //如果假设成立  
+    // if( flag && num != 1 ){ //1不是素数
+    //     document.write( num + "是素数" );
+    // }else{
+    //     document.write( num + "不是素数" );
+    // }
+
+
+
+
+
+    // 6.在编程竞赛中，有6个评委为参赛的选手打分，打分的分数范围为0-100的整数分
+    // 选手的最后得分规则为：
+    // 去掉一个最高分，再去掉一个最低分，
+    // 其余4个分数的平均值就是选手最终分数。(不考虑小数部分),
+
+
+    // 左君伟
+    // var num1 = +prompt("请第一位评委输入分数(0-100)")
+    // var num2 = +prompt("请第二位评委输入分数(0-100)")
+    // var num3 = +prompt("请第三位评委输入分数(0-100)")
+    // var num4 = +prompt("请第四位评委输入分数(0-100)")
+    // var num5 = +prompt("请第五位评委输入分数(0-100)")
+    // var num6 = +prompt("请第六位评委输入分数(0-100)")
+    // var arr = []
+    // arr.splice(0, 0, num1, num2, num3, num4, num5, num6)  // arr.push(num1,)
+
+    // for(var i = 1;i<=6;i++){
+    //   var num1 = +prompt('请输入第' + i + '次打分:范围在(0-100)')
+    //   arr.push(num1)
+    // }
+    //  // 排序  从小到大排序
+    //   arr.sort(function (a, b) {
+    //     return a - b
+    //   })
+
+    //   delete arr[0]  // 删除最小的
+    //   delete arr[arr.length - 1]  // 删除最大的
+
+    //   var arr1 = []
+    //   for (var i = 1; i < arr.length - 1; i++) {
+    //     arr1.push(arr[i])
+    //   }
+    //   var sum = 0;
+    //   for (var i = 0; i < arr1.length; i++) {
+    //     sum += arr1[i]
+    //   }
+    //   console.log(`平均分为${parseInt(sum / arr1.length)}`)
+
+
+    // 范志伟
+    // var arr = [66, 44, 98, 77, 55, 80]
+    // // 按照从小到大排序
+    // var xarr = arr.sort(function (a, b) {
+    //   return a - b;
+    // });
+    // // 删除最后一个数字，最后一个是最大的
+    // xarr.pop()
+    // // 删除第一个元素，这个元素是最小的
+    // xarr.shift()
+    // //求剩余元素的和
+    // var sum = 0;
+    // for (var i = 0; i < xarr.length - 1; i++) {
+    //   sum += xarr[i]
+    // }
+    // // 求平均值   
+    // var jg = sum / xarr.length
+
+    // console.log(jg);
+
+
+
+    // // 官呈达
+    // // 求某位选手的最终分数
+    // function fn(a, b, c, d, e, f) {
+    //   var max = Math.max(a, b, c, d, e, f); // 求最大值
+    //   var min = Math.min(a, b, c, d, e, f); // 求最小值
+    //   return `该选手的最终分数是${(a+b+c+d+e+f-max-min)/4}`
+    // }
+    // var result = fn(80, 90, 88, 96, 82, 80)
+    // console.log(result);
+
+
+
+    // 黎雪佳
+    // var arr = [];
+    // for (var i = 0; i < 6; i++) {
+    //   // 产生随机数
+    //   var sorce = Math.ceil(Math.random() * 101);
+    //   arr.push(sorce);
+    // }
+    // arr.sort((a, b) => {
+    //   return a - b
+    // })
+    // console.log(arr)
+    // arr.shift();
+    // arr.pop();
+    // console.log(arr);
+    // var sum = 0
+    // for (var j = 0; j < arr.length; j++) {
+    //   sum += arr[j];
+    // }
+    // console.log(sum / 4);
+
+
+
+    //庞建聪
+
+    // 创建数组装成绩
+    var arr = new Array();
+    //添加成绩
+    for (var i = 1; i <= 6; i++) {
+      var num1 = +prompt('请第' + i + '个评委打分:范围在(0-100)')
+      arr.push(num1)
+    }
+    //排序
+    arr.sort(function (a, b) {
+      return a - b;
+    });
+    //加变量
+    var sum = 0;
+    // 遍历成绩  ,最小值在数组索引为0的位置，最大值在数组索引为arr.length-1的位置
+    for (var i = 1; i < arr.length - 1; i++) {
+      // 累加成绩
+      sum += arr[i];
+    }
+    //求平均数并取整
+    console.log(parseInt(sum / 4));
+  </script>
+</body>
+
+</html>
