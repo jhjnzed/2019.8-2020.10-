@@ -41,5 +41,5 @@ function fn() {
     //接收用户输入数据
     let count = getInfo(UserEnter, getNum);
     return count;
-    //返回结果
+    //返回结果.
 }
