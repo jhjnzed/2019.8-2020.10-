@@ -1,17 +1,18 @@
-function fn(Str) {
-        let countUpperCase = 0;
-        let countLowerCase = 0;
-        let newStr = '';
-        for (let i in Str) {
-            if (Str[i].charCodeAt() >= 65 || Str[i].charCodeAt() <= 90) {
-                newStr += Str[i].toLowerCase();
-                countLowerCase++;
-            }
-            if (Str[i].charCodeAt() >= 97 || Str[i].charCodeAt() <= 122) {
-                newStr += Str[i].toUpperCase();
-                countUpperCase++;
-            }
-        }
-        console.log(countLowerCase, countUpperCase);
-        return newStr;
-    }
+function one(string) {
+var u = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+for (var i = 0; i < string.length; i++) {
+for (var o = 0; o < u.length; o++) {
+if (string[i] == u[o]) {
+break
+}
+}
+}
+var y = string.slice(0, i)
+var p = Number(string.slice(i, string.length))
+p = p++
+string = String(y + p)
+console.log(string)
+
+}
+var string = "a7"
+one(string)
