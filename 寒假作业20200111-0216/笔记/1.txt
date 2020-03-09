@@ -1,0 +1,76 @@
+js基础规定的是js的基本语法  webapi 是为了实现网页交互的只有在js基础知识之上  我们才能去学习webapi  从而实现网页交互
+
+webapi就是一系列的方法(操作网页 操作浏览器) 
+
+API :   其他开发者预先定义好的一些方法功能
+webapi：   其他开发者 （浏览器厂商 其他开发者）预先定义好的一组 操作网页的 （dom）和操作浏览器的（bom）  方法 
+学习webapi的方法： 1.  知道 这个方法的作用
+2 知道这个方法需要哪些参数 
+3 知道这个方法返回啥
+
+4  知道这个方法的兼容性怎么样
+
+
+
+
+
+  
+文档对象模型    dom 可以改变网页 内容 样式 结构 
+
+dom 树  ： 就是根据网页来进行抽象出来的一种树状结构
+
+文档：decument 一个页面就是一个文档
+元素： <标签>内容</标签>  任何一个标签都是一个元素
+节点：标签节点（一个标签就是一个节点   p）
+
+
+获取元素通过id   id不能 重复
+
+<div id="dv">hell00  1 0 nm</div>
+
+let x = document.getelementbyid("dv")
+
+cs.log(x)
+
+console.dir(x)   // 打印对象详细信息的
+
+通过标签名获取元素   标签的名字
+
+
+
+
+var ol = document.getElementsByTagName('ol');console.log(ol[0].getElementsByTagName('li')) 
+
+
+方法： node .getElementsByTagName(标签名)  注意 node 可以是任何元素 也可以是document  
+功能： 通过标签名来获取元素
+参数： 标签名
+返回值：  元素对象集合（伪数组）
+兼容性： 在任何浏览器都可以
+
+
+var li=document.getElementsByTagName('ol')[0].getElementsByTagName('li')
+console.log(li)
+
+
+let xx= document.queryselector(#dv')
+console.log(xx)
+
+1获取事件源
+2 绑定事件 
+3 书写事件处理程序
+
+
+let  元素 = 获取元素的方法  
+元素.on+事件类型 = function（）{
+    //让程序做啥 写在这里
+}
+
+onclick  鼠标点击左键触发
+onmouseover    鼠标经过触发
+onmouseout  鼠标离开触发 
+onfocus   获取鼠标焦点触发
+onblur    失去鼠标焦点触发
+onmousemove     鼠标移动触发
+onmouseup    鼠标弹起触发
+onmousedown      鼠标按下触发
