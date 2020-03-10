@@ -1,31 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
     <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(179, 255, 0);
+        }
+    </style>
 </head>
-<style>
-    div {
-        width: 200px;
-        height: 200px;
-        background-color: aquamarine;
-    }
-</style>
 
 <body>
 
     <div></div>
-
-
     <script>
-        let divx = document.querySelector("div");
-        divx.onclick = function () {
-            alert('xxxx')
+        var x = document.querySelector('div')
+        x.onmouseout = function () {
+            alert('鼠标离开了盒子')
         }
     </script>
-
 </body>
 
 </html>
