@@ -1,27 +1,494 @@
-<!DOCTYPE html>
-<html>
+<!-- <!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点击我吧</button>
+
+    <script>
+        let x = document.getElementsByTagName('button')[0]
+        x.onclick = function () {
+            x.innerHTML = '你好听话哦'
+            console.log(x)
+        }
+    </script>
+
+</body>
+
+</html> -->
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点击我吧 有东西</button>
+    <img>
+    <a></a>
+    <div class="xbox"></div>
+
+    <script>
+        // let x = document.querySelector('button');
+        // let x1 = document.querySelector('img');
+        // x.onclick = function () {
+        //     x1.src = "QQ图片20191118105723.png";
+        // }
+
+
+
+        // let x = document.querySelector('button');
+        // let x1 = document.querySelector('a');
+        // x.onclick = function () {
+        //     x1.href = "http://www.itcast.cn";
+        //     x1.innerHTML = "传智播客"
+        // }
+
+        let x = document.querySelector('button');
+        let xdiv = document.querySelector(".xbox");
+        x.onclick = function () {
+            xdiv.style.width = "200px";
+            xdiv.style.height = "200px";
+            xdiv.style.background = "red";
+            xdiv.innerHTML = '那没事了';
+            xdiv.style.fontSize = '50px'
+        }
+    </script>
+
+</body>
+
+</html> -->
+
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div {
-            width: 200px;
-            height: 200px;
-            background-color: rgb(179, 255, 0);
+        .aaa {
+            background-color: coral;
+        }
+
+        .bbb {
+            font-size: 50px;
+        }
+
+        .ccc {
+            font-weight: 700;
         }
     </style>
 </head>
 
 <body>
 
-    <div></div>
+    <button>点击吧</button>
+    <ul>
+        <li class="bbb ccc">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+
     <script>
-        var x = document.querySelector('div')
-        x.onmouseout = function () {
-            alert('鼠标离开了盒子')
+        let x = document.querySelector('button');
+        let xli = document.querySelector("li");
+        x.onclick = function () {
+            // xli.classList.add("aaa")
+            xli.classList.remove("bbb")
+            xli.classList.toggle("aaa")
+        }
+    </script>
+
+</body>
+
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="kd">开灯</button>
+    <button class="gd">关灯</button>
+
+
+
+
+    <script>
+        let kd1 = document.querySelector('.kd');
+        let gd1 = document.querySelector('.gd');
+        let bodyx = document.body;
+
+        kd1.onclick = function () {
+            bodyx.style.backgroundColor = '#fff'
+        }
+
+
+        gd1.onclick = function () {
+            bodyx.style.backgroundColor = '#000'
         }
     </script>
 </body>
 
 </html>
+ -->
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1></h1>
+    <img>
+
+
+
+
+    <script>
+        let x1 = document.querySelector("h1");
+        let x2 = document.querySelector("img");
+        let hour = 19;
+        if (hour < 12) {
+            x1.innerHTML = '起床了瓜皮';
+            x2.src = "QQ图片20191118105723.png"
+        } else if (hour >= 12 && hour < 18) {
+            x1.innerHTML = '开黑了'
+            x2.src = "QQ图片20191118105723.png"
+        } else {
+            x1.innerHTML = '通宵别说了'
+            x2.src = "QQ图片20191118105723.png"
+        }
+    </script>
+
+</body>
+
+</html> -->
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        
+    <meta charset="UTF-8">
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        .one {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+        <button>开</button>
+        <script>
+        let but = document.querySelector('button');
+        let boy = document.body;
+        let count = false;
+        but.onclick = function () {
+            boy.classList.toggle('one')
+            count = !count;
+            if (count) {
+                but.innerHTML = '关'
+            } else {
+                but.innerHTML = '开'
+            }
+        }
+    </script>
+</body>
+
+</html> -->
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="kd">开灯</button>
+    <script>
+        let kd1 = document.querySelector('.kd');
+        let bodyx = document.body;
+
+        kd1.onclick = function () {
+            bodyx.style.backgroundColor = '#fff'
+        }
+
+
+        gd1.onclick = function () {
+            bodyx.style.backgroundColor = '#000'
+        }
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <button class="gd">显示</button>
+    <button class="kd">隐藏</button>
+
+
+
+
+    <script>
+        let kd1 = document.querySelector('.kd');
+        let gd1 = document.querySelector('.gd');
+        let xdiv = document.querySelector('div')
+
+        kd1.onclick = function () {
+            xdiv.style.display = "none"
+        }
+
+
+        gd1.onclick = function () {
+            xdiv.style.display = "block"
+        }
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        /* 方案一配套使用 */
+        /* div {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        } */
+        /* 方案二配套使用 */
+        .three {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <button class="one">显示</button>&nbsp;&nbsp;&nbsp;&nbsp;<button class="two">隐藏</button>
+    <script>
+        //方法一
+        // var txt = document.querySelector('div')
+        // var tat = document.querySelector('.one')
+        // var tbt = document.querySelector('.two')
+        // tat.onclick = function () {
+        //     txt.style.display = 'block'
+        // }
+        // tbt.onclick = function () {
+        //     txt.style.display = 'none'
+        // }
+
+        //方法二
+        var txt = document.querySelector('div')
+        var tat = document.querySelector('.one')
+        var tbt = document.querySelector('.two')
+        tat.onclick = function () {
+            txt.classList.add('three')
+        }
+        tbt.onclick = function () {
+            txt.classList.remove('three')
+        }
+    </script>
+</body>
+
+</html>
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .xdiv {
+            width: 100px;
+            height: 100px;
+            background: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="xdiv"></div>
+    <button class="gd">显示</button>
+    <button class="kd">隐藏</button>
+    <script>
+        let kd1 = document.querySelector('.kd');
+        let gd1 = document.querySelector('.gd');
+        let x1div = document.querySelector('div')
+        kd1.onclick = function () {
+            x1div.classList.toggle('xdiv')
+        }
+        gd1.onclick = function () {
+            x1div.classList.toggle('xdiv')
+        }
+    </script>
+</body>
+
+</html> -->
