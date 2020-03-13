@@ -1,0 +1,383 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        您好<p class="con">我是内容</p>
+
+
+        <script>
+            let oBox = document.querySelector('.box')
+
+
+            oBox.onclick = function () {
+                // oBox.innerHTML = '<a href="http://www.czxy.com">传智学院</>'
+                // document.write('<a href="http://www.czxy.com">传智00学院</>')
+                // console.log(oBox.childNodes)
+                let h1 = document.createElement('h1')
+                h1.innerText =
+                    '有点东西5个单词 ,oBox.innerHTML, document.write,oBox.childNodes,document.createElement   appendChild() '
+                this.appendChild(h1)
+            }
+        </script>
+
+    </div>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="./640 (4).webp" alt="">
+    </div>
+
+    <script>
+        let oBox = document.querySelector('.box')
+        oBox.onclick = function () {
+            let p = document.createElement('p');
+            let h1 = document.createElement('h1');
+            p.innerText = "我老婆爱了";
+            h1.innerText = '这是谁';
+            this.appendChild(p);
+            this.insertBefore(h1, document.querySelector("img"))
+        }
+    </script>
+
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点了就要失去了</button>
+
+    <div class="box"><img src="640 (4).webp" alt=""></div>
+
+    <script>
+        let oBox = document.querySelector('.box');
+        let oBtn = document.querySelector("button");
+        let oImg = document.querySelector('img')
+        oBtn.onclick = function () {
+            oBox.removeChild(oImg)
+        }
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>你好啊</p>
+    </div>
+    <script>
+        let p = document.querySelector('p');
+        let oDiv = p.parentElement;
+        let oDiv1 = p.parentNode;
+
+        console.log(oDiv, oDiv1)
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script>
+        let oUl = document.querySelector('ul');
+        // let childNodes1 = oUl.childNodes;
+        // let chider2 = oUl.children;//(推荐)
+        // console.log(childNodes1, chider2)
+
+        // let first = oUl.firstChild;
+        // let fst2 = oUl.firstElementChild;//（推荐）
+        // console.log(fst2, first)
+        console.log(oUl.children.length - 1)
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+  
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style-type: none;
+        }
+        
+        a {
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .nav {
+            margin: 100px;
+            
+            background-color: orange;
+        }
+        
+        .nav>li {
+            position: relative;
+            float: left;
+            width: 80px;
+            height: 41px;
+            text-align: center;
+        }
+        
+        .nav li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 41px;
+            color: #333;
+        }
+        
+        .nav>li>a:hover {
+            background-color: #eee;
+        }
+        
+        .nav ul {
+            display: none;
+            position: absolute;
+            top: 41px;
+            left: 0;
+            width: 100%;
+            border-left: 1px solid #FECC5B;
+            border-right: 1px solid #FECC5B;
+            z-index: 1000;
+        }
+        
+        .nav ul li {
+            border-bottom: 1px solid #FECC5B;
+        }
+        
+        .nav ul li a:hover {
+            background-color: #FFF5DA;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>
+                    <a href="">私信</a>
+                </li>
+                <li>
+                    <a href="">评论</a>
+                </li>
+                <li>
+                    <a href="">@我</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>
+                    <a href="">私信</a>
+                </li>
+                <li>
+                    <a href="">评论</a>
+                </li>
+                <li>
+                    <a href="">@我</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>
+                    <a href="">私信</a>
+                </li>
+                <li>
+                    <a href="">评论</a>
+                </li>
+                <li>
+                    <a href="">@我</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>
+                    <a href="">私信</a>
+                </li>
+                <li>
+                    <a href="">评论</a>
+                </li>
+                <li>
+                    <a href="">@我</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+ <script>
+
+
+
+ </script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点点看</button>
+    <ul>
+        <li>1</li>
+        <li class="itm3">2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script>
+        let itm3 = document.querySelector('.itm3');
+        let oUl = document.queryCommandEnabled('ul') //         let i4 = itm3.nextElementSibling;
+        // let i41=itm3.nextSibling;
+        // let i123=itm3.nextElementSibling
+        let oBtn = document.querySelector('button');
+        oBtn.onclick = function () {
+            let copyit3 = itm3.cloneNode(true);
+            document.body.insertBefore(copyit3, oUl)
+        }
+    </script>
+</body>
+
+</html>
