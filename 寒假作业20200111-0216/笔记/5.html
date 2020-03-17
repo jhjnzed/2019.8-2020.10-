@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -22,6 +22,149 @@
             alert('我要玩亚索啊')
         })
     </script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <button>按钮</button>
+    <script>
+        var oBth = document.querySelector('button')
+        // oBth.onclick = function () {
+        //     alert('不要乱点哪')
+        //     oBth.onclick = null;
+        // }
+
+        // oBth.addEventListener('click , handleClick');
+
+        // function handleClick() {
+        //     alert('点我干嘛');
+        //     oBth.removeEventListener('click', handleClick)
+        // }
+
+        // function removeEventListener(element, eventName, fn) {
+        //     if (element.removeEventListener) {
+        //         element.removeEventListener(eventName, fn)
+        //     } else if (element.detachEvent) {
+        //         element.detachEvent('on' + eventName, fn)
+        //     } else {
+        //         element['on' + eventName] = null
+        //     }
+        // }
+    </script>
+
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inner {
+            width: 200px;
+            background-color: brown;
+            height: 200px;
+        }
+
+        .outer {
+            width: 400px;
+            background-color: rgb(49, 38, 38);
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+
+    <script>
+        let inner = document.querySelector('.inner');
+        let outer = document.querySelector('.outer')
+        inner.addEventListener('click', function () {
+            console.log('我是n die')
+        });
+        outer.addEventListener('click', function () {
+            console.log('我是n ye')
+        })
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="outer"></div>
+    <div class="inner"></div>
+    <script>
+        let outer = document.querySelector('.outer')
+        let inner = document.querySelector('.inner')
+        inner.addEventListener('click', function (e) {
+            console.log('inner innerinnerinner')
+            e.cancelBubble = true;
+        })
+        outer.addEventListener('click', function () {
+            console.log('outer outer  outerouter')
+        })
+    </script>
+
 </body>
 
 </html>
