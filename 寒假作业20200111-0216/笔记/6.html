@@ -1,0 +1,267 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+    <script>
+        // let aLi = document.querySelectorAll('li');
+        // for (let i = 0; i < aLi.length; i++) {
+        //     aLi[i].onclick = function () {
+        //         alert(this.innerText)
+        //     }
+        // }
+
+        // let oUl = document.querySelector('ul');
+        // oUl.onclick = function (e) {
+        //     // console.log(e.target)
+        //     let t = e.target;
+        //     // console.log(t)
+        //     if (e.target.nodeName == 'LI') {
+        //         console.log(t.innerText)
+        //     }
+        // }
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            height: 2000px;
+        }
+
+        .box {
+            width: 500px;
+            height: 500px;
+            background-attachment: red;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <button>按钮</button> -->
+<!-- <div class="box"></div>
+    <script>
+        // document.addEventListener('click', function (e) {
+        //     console.log(e.clientX, e.clientY)
+        // })
+
+        document.addEventListener('click', function (e) {
+            console.log(e.pageX, e.pageY)
+        })
+    </script>
+
+</body>
+
+</html> -->
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 150px;
+            height: 190px;
+            position: absolute;
+            box-shadow: 0 0 1px #cccccc;
+            top: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="微信图片_20200318163801.jpg" alt="">
+    <script>
+        let oImg = document.querySelector('img');
+        document.addEventListener('mousemove', function (e) {
+            let left = e.pageX;
+            let top = e.pageY;
+            oImg.style.left = (left - 50) + 'px';
+            oImg.style.top = (top - 50) + 'px'
+        })
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text">
+    <script>
+        let oSearch = document.querySelector('input');
+        document.addEventListener('keyup', function (e) {
+            if (e.keyCode == 83) {
+                oSearch.focus();
+            }
+        })
+    </script>
+
+
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .search {
+            position: relative;
+            width: 178px;
+            margin: 100px;
+        }
+
+        .con {
+            display: none;
+            position: absolute;
+            top: -40px;
+            width: 171px;
+            border: 1px solid rgba(0, 0, 0, .2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+            padding: 5px 0;
+            font-size: 18px;
+            line-height: 20px;
+            color: #333;
+        }
+
+        .con::before {
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 28px;
+            left: 18px;
+            border: 8px solid #000;
+            border-style: solid dashed dashed;
+            border-color: #fff transparent transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="search">
+        <div class="con"></div>
+        <input type="text" placeholder="请输入您的快递单号" class="jd">
+    </div>
+    <!--
+    // 1.介绍布局
+    // 2.介绍样式 -->
+    <script>
+        // 3.写js代码
+        // 需求:  1.快递单号输入框输入内容的时候， 上面的con显示出来
+        //        2.检测用户输入 一边输入 一边把输入的内容显示在con中
+        //        3.当内容为空的时候 con是要隐藏的
+        //        4.失去焦点 con隐藏 获得焦点 con显示
+
+
+
+
+        let oCon = document.querySelector('.con');
+        let oIput = document.querySelector('input');
+        oIput.addEventListener('keyup', function (e) {
+
+            if (this.value == '') {
+                oCon.style.display = 'none';
+            } else {
+                oCon.style.display = 'block';
+                oCon.innerText = this.value;
+            }
+            oIput.addEventListener('blur', function () {
+                oCon.style.display = 'none'
+            })
+            oIput.addEventListener('focus', function () {
+                oCon.style.display = 'block'
+            })
+        })
+    </script>
+</body>
