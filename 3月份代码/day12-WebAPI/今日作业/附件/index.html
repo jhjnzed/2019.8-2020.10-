@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 400px;
+            height: 200px;
+            margin: 100px auto;
+        }
+
+        input {
+            border: 2px solid red;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .green {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div> <input type="password" placeholder="请输入分数" value=""> <img alt=""><span></span></div>
+
+
+    <script>
+        let oInput = document.querySelector('input');
+        let oSpan = document.querySelector('span');
+        let oImg = document.querySelector("img")
+        oSpan.innerHTML = "请输入您的成绩";
+
+        oInput.onblur = function () {
+            let password = this.value;
+            if (password >= 0 && password <= 100) {
+                oSpan.innerHTML = "输入成绩正确";
+                oSpan.className = "green";
+                oImg.src = "./img/right.png"
+
+            } else if (password < 0) {
+
+                oSpan.innerHTML = "成绩不能小于0";
+                oImg.src = "./img/error.png"
+                oSpan.className = "red";
+            } else if (password > 100) {
+                oSpan.innerHTML = "成绩不能超出100";
+                oImg.src = "./img/error.png"
+                oSpan.className = "red";
+            } else {
+                oSpan.innerHTML = "请您输入数字";
+                oImg.src = "./img/error.png"
+                oSpan.className = "red";
+            }
+        }
+    </script>
+</body>
+
+</html>
