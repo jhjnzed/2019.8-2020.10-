@@ -1,0 +1,578 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 140px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button>别说话按我</button>
+
+    <div></div>
+
+    <script>
+        let oDiv = document.querySelector('div');
+        let oBtn = document.querySelector('button');
+        // oBtn.onclick = function () {
+        //     let timer = setInterval(function () {
+        //         if (oDiv.offsetLeft >= 400) {
+        //             clearInterval(timer);
+        //         }
+
+        //         oDiv.style.left = oDiv.offsetLeft + 1 + 'px';
+        //     }, 20)
+        // }
+        oBtn.onclick = function () {
+            animate(oDiv, 400)
+        }
+
+
+        function animate(element, target) {
+            clearInterval(element.timer)
+            element.timer = setInterval(function () {
+                if (element.offsetLeft >= target) {
+                    clearInterval(element.timer);
+                }
+                element.style.left = element.offsetLeft + 1 + 'px'
+            }, 20)
+        }
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            color: blanchedalmond;
+            left: 800px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <span style="display: block; width: 200px; height: 200px; left: 300px;"></span>
+
+    <script>
+        var oDiv = document.querySelector('div');
+        var ospan = document.querySelector('span');
+        // console.log(oDiv.offsetWidth);
+        // console.log(ospan.style.width);
+        // console.log(ospan.style.left);
+        // console.log(oDiv.style.left);
+        // console.log(window.getComputedStyle(oDiv, null).left);
+        // console.log(window.getComputedStyle(oDiv, null)['left']);
+        // console.log(oDiv.currentStyle.left)
+
+        function getStyle(element, attr) {
+            if (window.getComputedStyle) {
+                return window.getComputedStyle(element, null)[attr]
+            } else {
+                return element.currentStyle[attr]
+            }
+        }
+
+        var left = getStyle(oDiv, 'left')
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            position: absolute;
+            top: 140px;
+        }
+    </style>
+</head>
+
+<body>
+    <button> 按钮</button>
+    <div></div>
+    <script>
+        let oBtn = document.querySelector('button');
+        let oDiv = document.querySelector('div');
+        oBtn.onclick = function () {
+            animate(oDiv, 800);
+        }
+
+        function animate(element, target) {
+            clearInterval(element.timer);
+            element.timer = setInterval(function () {
+                let step = (target - element.offsetLeft) / 10;
+                if (element.offsetLeft == target) {
+                    clearInterval(element.timer)
+                }
+                element.style.left = element.offsetLeft + step + 'px'
+            }, 20)
+        }
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .container {
+            width: 1200px;
+            margin: 100px auto;
+        }
+
+        .container li {
+            float: left;
+            width: 133px;
+            height: 260px;
+            background-position: center;
+            position: relative;
+
+
+        }
+
+        .container li:first-child {
+            width: 400px;
+        }
+
+        .container li h4 {
+            width: 30px;
+            font-size: 28px;
+            color: #fff;
+            font-weight: bold;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%);
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #666;
+        }
+
+        body {
+            background: #fff;
+            color: #666;
+            font-size: 14px;
+        }
+
+        input {
+            outline: none;
+        }
+
+        .clearfix::before,
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <ul class="container clearfix">
+        <li>
+            <h4>园林酒店</h4>
+        </li>
+        <li>
+            <h4>情侣酒店</h4>
+        </li>
+
+        <li>
+            <h4>设计师酒店</h4>
+        </li>
+        <li>
+            <h4>青年旅舍</h4>
+        </li>
+        <li>
+            <h4>特色客栈</h4>
+        </li>
+
+        <li>
+            <h4>海岛酒店</h4>
+        </li>
+        <li>
+            <h4>海外温泉</h4>
+        </li>
+    </ul>
+
+
+    <script>
+        function getStyle(element, attr) {
+            if (window.getComputedStyle) {
+                return window.getComputedStyle(element, null)[attr];
+            } else {
+                return element.currentStyle[attr];
+            }
+        }
+
+        function animate(element, attrObj) {
+            clearInterval(element.timer);
+            element.timer = setInterval(function () {
+                for (let attr in attrObj) {
+                    let current = parseInt(getStyle(element, attr));
+                    let target = attrObj[attr];
+                    let step = parseInt(target - current) / 10;
+                    step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                    current += step;
+                    element.style[attr] = current + 'px';
+                    if (current == target) {
+                        clearInterval(element.timer)
+                    }
+                }
+            }, 20)
+        }
+
+        var lis = document.querySelectorAll(".container>li")
+        for (let i = 0; i < lis.length; i++) {
+            lis[i].style.backgroundImage = ` url(./images/ifold${i+1}.jpg)`
+        }
+        for (let i = 0; i < lis.length; i++) {
+            lis[i].onmouseover = function () {
+                for (let j = 0; j < lis.length; j++) {
+                    animate(lis[j], {
+                        "width": 133
+                    })
+                }
+                animate(this, {
+                    "width": 400
+                })
+            }
+        }
+    </script>
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        ul {
+            list-style: none
+        }
+
+        body {
+            background-color: #333;
+        }
+
+        .nav {
+            width: 800px;
+            height: 42px;
+            margin: 100px auto;
+            background: url(images/rss.png) right center no-repeat;
+            background-color: #fff;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .nav li {
+            width: 83px;
+            height: 42px;
+            text-align: center;
+            line-height: 42px;
+            float: left;
+            cursor: pointer;
+        }
+
+        .nav span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 83px;
+            height: 42px;
+            background: url(images/cloud.gif) no-repeat;
+        }
+
+        ul {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <span id="cloud"></span>
+        <ul id="navBar">
+            <li>北京校区</li>
+            <li>上海校区</li>
+            <li>广州校区</li>
+            <li>深圳校区</li>
+            <li>武汉校区</li>
+            <li>关于我们</li>
+            <li>联系我们</li>
+            <li>招贤纳士</li>
+        </ul>
+    </div>
+      <script>
+        // - 功能1：鼠标悬停到哪个li上面，对应的绿色的云也会移动到那个li上面
+        // - 功能2：如果鼠标没有点击任何一个li，并且鼠标没有悬停到任何一个li上面的时候，那么绿色的云就会回到最起始的位置
+        // - 功能3：如果鼠标点击了某一个li，并且当鼠标没有悬停到任何一个li上面的时候，那么绿色的云就会停留到点击的那个li的位置
+        //   注意：当点击了某个li之后，鼠标再次悬停到任何一个li上面，绿色的云还是依旧再跟着动
+
+        function getStyle(element, attr) {
+            if (window.getComputedStyle) {
+                return window.getComputedStyle(element, null)[attr];
+            } else {
+                return element.currentStyle[attr];
+            }
+        }
+
+        function animate(element, attrObj) {
+            clearInterval(element.timer);
+            element.timer = setInterval(function () {
+                for (let attr in attrObj) {
+                    let current = parseInt(getStyle(element, attr));
+                    let target = attrObj[attr];
+                    let step = parseInt(target - current) / 10;
+                    step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                    current += step;
+                    element.style[attr] = current + 'px';
+
+                    if (current == target) {
+                        clearInterval(element.timer)
+                    }
+                }
+
+            }, 20)
+
+
+        }
+        var cloud = document.querySelector('#cloud')
+        var lis = document.querySelectorAll("#navBar>li")
+        var position = 0;
+
+        for (let i = 0; i < lis.length; i++) {
+            lis[i].onmouseover = function () {
+                var leftvalue = this.offsetLeft;
+                animate(cloud, {
+                    "left": leftvalue
+                })
+            }
+            lis[i].onmouseout = function () {
+                animate(cloud, {
+                    "left": position
+                })
+            }
+            lis[i].onclick = function () {
+                position = this.offsetLeft
+                animate(cloud, {
+                    "left": position
+                })
+            }
+
+
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getStyle(element, attr) {
+            if (window.getComputedStyle) {
+                return window.getComputedStyle(element, null)[attr];
+
+            } else {
+                return element.currentStyle[attr];
+            }
+        }
+
+        function animate(element, attrObj) {
+            clearInterval(element.timer);
+            element.timer = setInterval(function () {
+                for (let attr in attrObj) {
+                    let current = parseInt(getStyle(element, attr));
+                    let target = attrObj[attr];
+                    let step = parseInt(target - current) / 10;
+                    step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                    current += step;
+                    element.style[attr] = current + 'px';
+                    if (current == target) {
+                        clearInterval(element.timer)
+                    }
+                }
+            }, 20)
+        }
+        var lis = document.querySelector(".container>li");
+        for (let i = 0; i < lis.length; i++) {
+            lis[i].style.backgroundImage = `url{./images/ifold${i+1}.jpg}`
+        }
+        for (let i = 0; i < lis.length; i++) {
+            lis[i].onmouseover = function () {
+                for (let j = 0; j < lis.length; j++) {
+                    animate(lis[j], {
+                        "width": 133
+                    })
+                }
+                animate(this, {
+                    "width": 400
+                })
+
+            }
+        }
+    </script>
+</body>
+
+</html>
