@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body,
+        ul,
+        ol {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        .slider {
+            width: 400px;
+            height: 100%;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        ul {
+            width: 1600px;
+            height: 100%;
+
+        }
+
+        li {
+            float: left;
+        }
+
+        a {
+            display: block;
+        }
+
+        li a>img {
+            width: 400px;
+            height: 100%;
+        }
+
+        .prev,
+        .next {
+            display: none;
+            font-size: 20px;
+            position: absolute;
+            top: 160px;
+            color: #fff;
+            cursor: pointer;
+            background-color: aqua;
+        }
+
+        ol {
+            position: absolute;
+            left: 124px;
+            top: 378px;
+            width: 100%;
+            text-align: center;
+        }
+
+        ol li {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #ccc;
+            background-color: #fff;
+            box-sizing: border-box;
+            border-radius: 50%;
+            margin: 0 6px;
+        }
+
+        .active {
+            border: 2px solid #fff;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slider">
+        <ul>
+            <li><a href="javascript:;"><img src="./640 (4).webp" alt=""></a></li>
+            <li><a href="javascript:;"><img src="./QQ图片20191118105723.png" alt=""></a></li>
+            <li><a href="javascript:;"><img src="./微信图片_20200318163139.png" alt=""></a></li>
+            <li><a href="javascript:;"><img src="./微信图片_20200318163801.jpg" alt=""></a></li>
+        </ul>
+        <i class="prev"> 点我←</i>
+        <i style="
+        right: 0;
+    " class="next">按我→</i>
+        <ol>
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+    <script src="./js/animate.js"></script>
+    <script>
+        let oPrev = document.querySelector(".prev");
+        let oNext = document.querySelector(".next");
+        let slider = document.querySelector(".slider");
+        let sliderWidth = slider.offsetWidth;
+        let ul = document.querySelector('ul');
+        let num = 0;
+        let fisrtLi = document.querySelector('ul li:first-child')
+        let ol = document.querySelector('ol')
+        ul.appendChild(fisrtLi.cloneNode(true));
+        ul.style.width = ul.children.length * sliderWidth + 'px';
+        slider.addEventListener("mouseenter", function () {
+            oPrev.style.display = 'block'
+            oNext.style.display = 'block'
+        })
+
+        slider.addEventListener("mouseleave", function () {
+            oPrev.style.display = 'none'
+            oNext.style.display = 'none'
+        })
+
+        oNext.addEventListener('click', function () {
+            if (num == ul.children.length - 1) {
+                ul.style.left = 0;
+                num = 0;
+
+            }
+            num++;
+            animate('ul', {
+                left: -num * sliderWidth
+            })
+        })
+        oPrev.addEventListener('click', function () {
+
+
+            if (num == 0) {
+                num = ul.children.length - 1;
+                ul.style.left = -num * sliderWidth + 'px';
+                num--;
+                animate(ul, {
+                    left: -num * sliderWidth
+                })
+            }
+        })
+
+
+        for (let i = 0; i < ol.children.length - 1; i++) {
+            let li = document.createElement('li');
+            li.dataset.index = i;
+            if (i == 0) {
+                li.classList.add('active');
+            }
+            ol.appendChild(li);
+            li.addEventListener('click', function () {
+                for (let j = 0; j < ol.children.length; j++) {
+                    ol.children[j].classList.remove('active');
+
+                }
+                this.classList.add('active');
+                let index = this.dataset.index;
+                animate(ul, {
+                    left: -index * sliderWidth
+                })
+            })
+        }
+    </script>
+</body>
+
+</html>
