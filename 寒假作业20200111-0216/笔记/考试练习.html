@@ -1,0 +1,217 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        let oDiv = document.querySelector('div');
+        oDiv.addEventListener('click', function () {
+            alert('小狼狗')
+        })
+        oDiv.addEventListener('mouseleave', function () {
+            alert('小狼狗')
+        })
+        oDiv.addEventListener('mouseenter', function () {
+            alert('小狼狗')
+        })
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .x3 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+  <div class="x3"></div>
+    <button class="x1 ">关</button>
+
+    <script>
+        // // let oDiv = document.querySelector('div');
+        let x1 = document.querySelector('.x1');
+        let flag = true;
+        let oBody = document.body;
+        let x2 = document.querySelector('.x2');
+        // x2.onclick = function () {
+        //     // oDiv.style.display = 'block';
+        //     oDiv.classList.add('x3')
+
+        // }
+        x1.onclick = function () {
+            // oDiv.style.display = 'none';
+            // oDiv.classList.remove('x3')
+            if (flag == true) {
+                oBody.style.backgroundColor = 'black';
+                this.innerText = '开'
+                flag = false;
+            } else {
+                oBody.style.backgroundColor = 'white';
+                this.innerText = '关'
+                flag = true;
+            }
+        }
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            width: 600px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+
+    <script>
+        let aLi = document.querySelectorAll('li');
+        for (let i = 0; i < aLi.length; i++) {
+            aLi[i].style.backgroundColor = i % 2 == 0 ? 'yellow' : 'red';
+            aLi[i].dataset.index = i;
+            aLi[i].addEventListener('mouseenter', function () {
+                this.style.backgroundColor = 'green'
+            })
+            aLi[i].addEventListener('mouseleave', function () {
+                this.style.backgroundColor = this.dataset.index % 2 == 0 ? 'yellow' : 'red';
+            })
+        }
+    </script>
+
+
+
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: #ccc;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    您的成绩：<input type="text" placeholder="输入分数">请输入您的成绩
+    <script>
+        let Ipt = document.querySelector('input');
+        Ipt.onblur = function () {
+
+            if (Number(this.value.trim())) {
+                document.querySelector('span').innerHTML = '<img src="">'
+            }
+        }
+    </script>
+
+
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
