@@ -198,7 +198,7 @@
 
             if (Number(this.value.trim())) {
                 document.querySelector('span').innerHTML = '<img src="">'
-            }
+             }
         }
     </script>
 
@@ -215,3 +215,3903 @@
 
 
 
+
+
+
+
+<!-- 
+全选反选不选第一遍 -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style type="text/css">
+        .one {
+            background-color: #9bf7d5;
+        }
+
+        .two {
+            background-color: #f3e99a;
+        }
+
+        .over {
+            background-color: #ef7125;
+        }
+
+        table {
+            border: #249bdb 1px solid;
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        table td {
+            border: #249bdb 1px solid;
+            padding: 10px;
+        }
+
+        table th {
+            border: #249bdb 1px solid;
+            padding: 10px;
+            background-color: rgb(200, 200, 200);
+        }
+    </style>
+</head>
+
+<body>
+
+    <table id="mailtable">
+        <tr>
+            <th>
+                <input type="checkbox" name="all" />全选
+            </th>
+            <th>
+                发件人
+            </th>
+            <th>
+                邮件名称
+            </th>
+            <th>
+                邮件附属信息
+            </th>
+        </tr>
+
+        <tr class="one">
+            <td>
+                <input type="checkbox" name="mail" />
+            </td>
+            <td>
+                张三11
+            </td>
+            <td>
+                我是邮件11
+            </td>
+            <td>
+                我是附属信息11
+            </td>
+        </tr>
+        <tr class="two">
+            <td>
+                <input type="checkbox" name="mail" />
+            </td>
+            <td>
+                张三22
+            </td>
+            <td>
+                我是邮件22
+            </td>
+            <td>
+                我是附属信息22
+            </td>
+        </tr>
+        <tr class="one">
+            <td>
+                <input type="checkbox" name="mail" />
+            </td>
+            <td>
+                张三33
+            </td>
+            <td>
+                我是邮件33
+            </td>
+            <td>
+                我是附属信息33
+            </td>
+        </tr>
+        <tr class="two">
+            <td>
+                <input type="checkbox" name="mail" />
+            </td>
+            <td>
+                张三44
+            </td>
+            <td>
+                我是邮件44
+            </td>
+            <td>
+                我是附属信息44
+            </td>
+        </tr>
+
+        <tr>
+            <th>
+
+            </th>
+            <th colspan="3">
+                <input type="button" value="全选" />
+                <input type="button" value="取消全选" />
+                <input type="button" value="反选" />
+
+            </th>
+        </tr>
+    </table>
+
+    <script>
+        let allcheck = document.getElementsByName('all')[0];
+        let lists = document.getElementsByName('mail');
+        let allBtn = document.querySelectorAll('input[type="button"]')[0];
+        let cancelBtn = document.querySelectorAll('input[type="button"]')[1];
+        let reverseBtn = document.querySelectorAll('input[type="button"]')[2];
+        allcheck.onclick = function () {
+            for (let i = 0; i < lists.length; i++) {
+                lists[i].checked = this.checked;
+            }
+        }
+        for (let i = 0; i < lists.length; i++) {
+            lists[i].onclick = function () {
+                let flag = true;
+                for (let j = 0; j < lists.length; j++) {
+                    if (!lists[j].checked) {
+                        flag = false;
+                        break;
+                    }
+                }
+                allcheck.checked = flag;
+            }
+        }
+
+        allBtn.onclick = function () {
+            for (let i = 0; i < lists.length; i++) {
+                lists[i].checked = true;
+            }
+            allcheck.checked = true;
+        }
+        cancelBtn.onclick = function () {
+            for (let i = 0; i < lists.length; i++) {
+                lists[i].checked = false;
+            }
+            allcheck.checked = false;
+        }
+        reverseBtn.onclick = function () {
+            for (let i = 0; i < lists.length; i++) {
+                lists[i].checked = !lists[i].checked;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+ -->
+
+
+
+
+<!-- 第二遍 -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        .one {
+            background-color: #9bf7d5;
+        }
+
+        .two {
+            background-color: #f3e99a;
+        }
+
+        .over {
+            background-color: #ef7125;
+        }
+
+        table {
+            border: #249bdb 1px solid;
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        table td {
+            border: #249bdb 1px solid;
+            padding: 10px;
+        }
+
+        table th {
+            border: #249bdb 1px solid;
+            padding: 10px;
+            background-color: rgb(200, 200, 200);
+        }
+    </style>
+</head>
+
+<body>
+
+    <table id="mailtable">
+        <tr>
+            <th>
+                <input type="checkbox" name="all" />全选
+            </th>
+            <th>
+                发件人
+            </th>
+            <th>
+                邮件名称
+            </th>
+            <th>
+                邮件附属信息
+            </th>
+        </tr>
+
+        <tr class="one">
+            <td>
+                <input type="checkbox" name="mail" />
+            </td>
+            <td>
+                张三11
+            </td>
+            <td>
+                我是邮件11
+            </td>
+            <td>
+                我是附属信息11
+            </td>
+        </tr>
+        <tr class="two">
+            <td>
+                <input type="checkbox" name="mail" />
+            </td>
+            <td>
+                张三22
+            </td>
+            <td>
+                我是邮件22
+            </td>
+            <td>
+                我是附属信息22
+            </td>
+        </tr>
+        <tr class="one">
+            <td>
+                <input type="checkbox" name="mail" />
+            </td>
+            <td>
+                张三33
+            </td>
+            <td>
+                我是邮件33
+            </td>
+            <td>
+                我是附属信息33
+            </td>
+        </tr>
+        <tr class="two">
+            <td>
+                <input type="checkbox" name="mail" />
+            </td>
+            <td>
+                张三44
+            </td>
+            <td>
+                我是邮件44
+            </td>
+            <td>
+                我是附属信息44
+            </td>
+        </tr>
+
+        <tr>
+            <th>
+
+            </th>
+            <th colspan="3">
+                <input type="button" value="全选" />
+                <input type="button" value="取消全选" />
+                <input type="button" value="反选" />
+
+            </th>
+        </tr>
+    </table>
+    <script>
+        let allcheck = document.getElementsByName('all')[0];
+        let lists = document.getElementsByName('mail');
+        let allBtn = document.querySelectorAll('input[type="button"]')[0];
+        let cancelBtn = document.querySelectorAll('input[type="button"]')[1];
+        let reverseBtn = document.querySelectorAll('input[type="button"]')[2];
+        allcheck.onclick = function () {
+            for (let i = 0; i < lists.length; i++) {
+                lists[i].checked = this.checked;
+                1
+            }
+        }
+        for (let i = 0; i < lists.length; i++) {
+            lists[i].onclick = function () {
+                let flag = true;
+                for (let j = 0; j < lists.length; j++) {
+                    if (!lists[j].checked) {
+                        flag = false;
+                        break;
+                    }
+                }
+                allcheck.checked = flag
+            }
+        }
+
+        allcheck.onclick = function () {
+            for (let i = 0; i < lists.length; i++) {
+                lists[i].checked = true;
+            }
+            allcheck.checked = true;
+        }
+        cancelBtn.onclick = function () {
+            for (let i = 0; i < lists.length; i++) {
+                lists[i].checked = false;
+            }
+            allcheck.checked = false;
+        }
+        reverseBtn.onclick = function () {
+            for (let i = 0; i < lists.length; i++) {
+                lists[i].checked = !lists[i].checked;
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 第三遍 -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        .one {
+            background-color: #9bf7d5;
+        }
+
+        .two {
+            background-color: #f3e99a;
+        }
+
+        .over {
+            background-color: #ef7125;
+        }
+
+        table {
+            border: #249bdb 1px solid;
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        table td {
+            border: #249bdb 1px solid;
+            padding: 10px;
+        }
+
+        table th {
+            border: #249bdb 1px solid;
+            padding: 10px;
+            background-color: rgb(200, 200, 200);
+        }
+    </style>
+</head>
+
+<body>
+
+    <table id="mailtable">
+        <tr>
+            <th>
+                <input type="checkbox" name="all" />全选
+            </th>
+            <th>
+                发件人
+            </th>
+            <th>
+                邮件名称
+            </th>
+            <th>
+                邮件附属信息
+            </th>
+        </tr>
+
+        <tr class="one">
+            <td>
+                <input type="checkbox" name="mail" />
+            </td>
+            <td>
+                张三11
+            </td>
+            <td>
+                我是邮件11
+            </td>
+            <td>
+                我是附属信息11
+            </td>
+        </tr>
+        <tr class="two">
+            <td>
+                <input type="checkbox" name="mail" />
+            </td>
+            <td>
+                张三22
+            </td>
+            <td>
+                我是邮件22
+            </td>
+            <td>
+                我是附属信息22
+            </td>
+        </tr>
+        <tr class="one">
+            <td>
+                <input type="checkbox" name="mail" />
+            </td>
+            <td>
+                张三33
+            </td>
+            <td>
+                我是邮件33
+            </td>
+            <td>
+                我是附属信息33
+            </td>
+        </tr>
+        <tr class="two">
+            <td>
+                <input type="checkbox" name="mail" />
+            </td>
+            <td>
+                张三44
+            </td>
+            <td>
+                我是邮件44
+            </td>
+            <td>
+                我是附属信息44
+            </td>
+        </tr>
+
+        <tr>
+            <th>
+
+            </th>
+            <th colspan="3">
+                <input type="button" value="全选" />
+                <input type="button" value="取消全选" />
+                <input type="button" value="反选" />
+
+            </th>
+        </tr>
+    </table>
+    <script>
+        let allcheck = document.getElementsByName('all')[0];
+        let lists = document.getElementsByName('mail');
+        let allBtn = document.querySelectorAll('input[type="button"]')[0];
+        let cancelBtn = document.querySelectorAll('input[type="button"]')[1];
+        let reverseBtn = document.querySelectorAll('input[type="button"]')[2];
+
+        allcheck.onclick = function () {
+            for (let i = 0; i < lists.length; i++) {
+                lists[i].checked = this.checked;
+            }
+        }
+        for (let i = 0; i < lists.length; i++) {
+            lists[i].onclick = function () {
+                let flag = true;
+                for (let j = 0; j < lists.length; j++) {
+                    if (!lists[j].checked) {
+                        flag = false;
+                        break;
+                    }
+                }
+                allcheck.checked = flag;
+            }
+        }
+        allBtn.onclick = function () {
+            for (let i = 0; i < lists.length; i++) {
+                lists[i].checked = true;
+            }
+            allcheck.checked = true;
+        }
+        cancelBtn.onclick = function () {
+            for (let i = 0; i < lists.length; i++) {
+                lists[i].checked = false;
+            }
+            allcheck.checked = false
+        }
+        reverseBtn.onclick = function () {
+            for (i = 0; i < lists.length; i++) {
+                lists[i].checked = !lists[i].checked;
+            }
+
+        }
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- QQ留言板 第一遍 -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        This is the head nav
+      </div>
+      <div class="topInfo">
+        <span class="edit">编辑</span>
+        <div class="zoneName">
+          <h2>漠丶叹尘 的空间</h2>
+          <p>知我者，谓我心忧。不知我者，谓我何求。</p>
+        </div>
+        <div class="support">
+          <img src="image/support_1.png" alt="赞">
+          <span class="num">7</span>
+        </div>
+        <div class="tips">7人赞过</div>
+        <!-- bottom nav -->
+<!-- <div class="top_bottom">
+          <div class="photo">
+            <img src="http://qlogo3.store.qq.com/qzone/1262283870/1262283870/100?1481718124">
+          </div>
+          <div class="uploadphoto">修改头像</div>
+          <div class="container">
+            <ul class="section">
+              <li>主页</li>
+              <li>日志</li>
+              <li>相册</li>
+              <li>留言板</li>
+              <li>说说</li>
+              <li>个人档</li>
+              <li>音乐</li>
+              <li>更多</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- 下面实现留言板功能 -->
+<!-- <div class="mainframe">
+        <div class="title">留言板</div>
+        <div class="message">主人寄语</div>
+        <div class="info">
+          这是主人留下的寄语~
+        </div>
+        <div class="content" contenteditable="true"></div>
+        <input type="button" name="submit" value="发表" class="subbtn">
+        <div class="numofmessage">留言(0)</div>
+        <!-- 下面是留言区 -->
+<!--  <div class="msgFrame">
+          <!-- <div class="content_1">
+                     <img class="name" src="http://qlogo3.store.qq.com/qzone/1262283870/1262283870/100?1481718124" alt="photo">
+                     <div class="mainInfo">
+                         <div class="userId"><a href="#">zipple</a></div>
+                         <div class="conInfo">
+                               这是一条留言。
+                            </div>
+                         <div class="time">2016-12-19  23:46:11</div>
+                    </div> -->
+<!--  </div>
+      </div>
+
+<script>
+
+var content = document.querySelector('.content')
+    var release = document.querySelector('.subbtn')
+    var messageCount = document.querySelector('.numofmessage')
+    var messageArea = document.querySelector('.msgFrame')
+var count=0;
+release.onclick=function(){
+var val=content.innerText;
+if(va.trim().length==0){
+    alert('您还没有输入任何内容')
+return false;
+}else{
+    var divObj1=document.createElement('div');
+    divObj1.className='content_1'if(messageArea.children.length==0){
+        messageArea.appendChild(divObj1)
+    }else{
+        messagearea.insertbefore(divObj1,messagearea.children[0])
+    }
+    var imgObj = document.createElement('img')
+        imgObj.src = "http://qlogo3.store.qq.com/qzone/1262283870/1262283870/100?1481718124"
+        imgObj.className = "name"
+        imgObj.alt = "photo"
+        divObj1.appendChild(imgObj)
+        var divObj2 = document.createElement('div')
+        divObj2.className = "mainInfo"
+        divObj1.appendChild(divObj2)
+        var divObj3 = document.createElement('div')
+        divObj3.className = "userId"
+        var aObj = document.createElement('a')
+        aObj.herf = "#"
+        aObj.innerText = "Zipple"
+        divObj3.appendChild(aObj)
+        divObj2.appendChild(divObj3)
+        var divObj4 = document.createElement('div')
+        divObj4.className = "conInfo"
+        divObj4.innerText = val;
+        divObj2.appendChild(divObj4)
+        var divObj5 = document.createElement('div')
+        divObj5.innerText = dateStr
+        divObj2.appendChild(divObj5)
+        content.innerText = ""
+        count++;
+        messageCount.innerText = `留言(${count})`
+      }
+    }
+    let date = new Date();
+    function fill(num) {
+      return num > 10 ? num : "0" + num;
+    }
+    let dateStr = date.getFullYear() + "-" + fill(date.getMonth() + 1) + "-" + fill(date.getDate()) + " " + fill(date
+      .getHours()) + ":" + fill(date.getMinutes()) + ":" + fill(date.getSeconds());
+  </script>
+
+
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- QQ留言板 第2遍 -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        This is the head nav
+      </div>
+      <div class="topInfo">
+        <span class="edit">编辑</span>
+        <div class="zoneName">
+          <h2>漠丶叹尘 的空间</h2>
+          <p>知我者，谓我心忧。不知我者，谓我何求。</p>
+        </div>
+        <div class="support">
+          <img src="image/support_1.png" alt="赞">
+          <span class="num">7</span>
+        </div>
+        <div class="tips">7人赞过</div>
+        <!-- bottom nav -->
+<!--  <div class="top_bottom">
+          <div class="photo">
+            <img src="http://qlogo3.store.qq.com/qzone/1262283870/1262283870/100?1481718124">
+          </div>
+          <div class="uploadphoto">修改头像</div>
+          <div class="container">
+            <ul class="section">
+              <li>主页</li>
+              <li>日志</li>
+              <li>相册</li>
+              <li>留言板</li>
+              <li>说说</li>
+              <li>个人档</li>
+              <li>音乐</li>
+              <li>更多</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- 下面实现留言板功能 -->
+<!--<div class="mainframe">
+        <div class="title">留言板</div>
+        <div class="message">主人寄语</div>
+        <div class="info">
+          这是主人留下的寄语~
+        </div>
+        <div class="content" contenteditable="true"></div>
+        <input type="button" name="submit" value="发表" class="subbtn">
+        <div class="numofmessage">留言(0)</div>
+        <!-- 下面是留言区 -->
+<!--  <div class="msgFrame">
+          <!-- <div class="content_1">
+                     <img class="name" src="http://qlogo3.store.qq.com/qzone/1262283870/1262283870/100?1481718124" alt="photo">
+                     <div class="mainInfo">
+                         <div class="userId"><a href="#">zipple</a></div>
+                         <div class="conInfo">
+                               这是一条留言。
+                            </div>
+                         <div class="time">2016-12-19  23:46:11</div>
+                    </div> -->
+<!--</div>
+      </div>
+
+<script>
+
+var content = document.querySelector('.content')
+    var release = document.querySelector('.subbtn')
+    var messageCount = document.querySelector('.numofmessage')
+    var messageArea = document.querySelector('.msgFrame')
+var count=0;
+release.onclick=function(){
+var val=content.innerText;
+if(va.trim().length==0){
+    alert('您还没有输入任何内容')
+return false;
+}else{
+    var divObj1=document.createElement('div');
+    divObj1.className='content_1'if(messageArea.children.length==0){
+        messageArea.appendChild(divObj1)
+    }else{
+        messagearea.insertbefore(divObj1,messagearea.children[0])
+    }
+    var imgObj = document.createElement('img')
+        imgObj.src = "http://qlogo3.store.qq.com/qzone/1262283870/1262283870/100?1481718124"
+        imgObj.className = "name"
+        imgObj.alt = "photo"
+        divObj1.appendChild(imgObj)
+        var divObj2 = document.createElement('div')
+        divObj2.className = "mainInfo"
+        divObj1.appendChild(divObj2)
+        var divObj3 = document.createElement('div')
+        divObj3.className = "userId"
+        var aObj = document.createElement('a')
+        aObj.herf = "#"
+        aObj.innerText = "Zipple"
+        divObj3.appendChild(aObj)
+        divObj2.appendChild(divObj3)
+        var divObj4 = document.createElement('div')
+        divObj4.className = "conInfo"
+        divObj4.innerText = val;
+        divObj2.appendChild(divObj4)
+        var divObj5 = document.createElement('div')
+        divObj5.innerText = dateStr
+        divObj2.appendChild(divObj5)
+        content.innerText = ""
+        count++;
+        messageCount.innerText = `留言(${count})`
+      }
+    }
+    let date = new Date();
+    function fill(num) {
+      return num > 10 ? num : "0" + num;
+    }
+    let dateStr = date.getFullYear() + "-" + fill(date.getMonth() + 1) + "-" + fill(date.getDate()) + " " + fill(date
+      .getHours()) + ":" + fill(date.getMinutes()) + ":" + fill(date.getSeconds());
+  </script>
+
+
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- QQ留言板 第3遍 -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        This is the head nav
+      </div>
+      <div class="topInfo">
+        <span class="edit">编辑</span>
+        <div class="zoneName">
+          <h2>漠丶叹尘 的空间</h2>
+          <p>知我者，谓我心忧。不知我者，谓我何求。</p>
+        </div>
+        <div class="support">
+          <img src="image/support_1.png" alt="赞">
+          <span class="num">7</span>
+        </div>
+        <div class="tips">7人赞过</div>
+        <!-- bottom nav -->
+<!--<div class="top_bottom">
+          <div class="photo">
+            <img src="http://qlogo3.store.qq.com/qzone/1262283870/1262283870/100?1481718124">
+          </div>
+          <div class="uploadphoto">修改头像</div>
+          <div class="container">
+            <ul class="section">
+              <li>主页</li>
+              <li>日志</li>
+              <li>相册</li>
+              <li>留言板</li>
+              <li>说说</li>
+              <li>个人档</li>
+              <li>音乐</li>
+              <li>更多</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- 下面实现留言板功能 -->
+<!--<div class="mainframe">
+        <div class="title">留言板</div>
+        <div class="message">主人寄语</div>
+        <div class="info">
+          这是主人留下的寄语~
+        </div>
+        <div class="content" contenteditable="true"></div>
+        <input type="button" name="submit" value="发表" class="subbtn">
+        <div class="numofmessage">留言(0)</div>
+        <!-- 下面是留言区 -->
+<!-- <div class="msgFrame">
+          <!-- <div class="content_1">
+                     <img class="name" src="http://qlogo3.store.qq.com/qzone/1262283870/1262283870/100?1481718124" alt="photo">
+                     <div class="mainInfo">
+                         <div class="userId"><a href="#">zipple</a></div>
+                         <div class="conInfo">
+                               这是一条留言。
+                            </div>
+                         <div class="time">2016-12-19  23:46:11</div>
+                    </div> -->
+<!--  </div>
+      </div>
+
+<script>
+
+var content = document.querySelector('.content')
+    var release = document.querySelector('.subbtn')
+    var messageCount = document.querySelector('.numofmessage')
+    var messageArea = document.querySelector('.msgFrame')
+var count=0;
+release.onclick=function(){
+var val=content.innerText;
+if(va.trim().length==0){
+    alert('您还没有输入任何内容')
+return false;
+}else{
+    var divObj1=document.createElement('div');
+    divObj1.className='content_1'if(messageArea.children.length==0){
+        messageArea.appendChild(divObj1)
+    }else{
+        messagearea.insertbefore(divObj1,messagearea.children[0])
+    }
+    var imgObj = document.createElement('img')
+        imgObj.src = "http://qlogo3.store.qq.com/qzone/1262283870/1262283870/100?1481718124"
+        imgObj.className = "name"
+        imgObj.alt = "photo"
+        divObj1.appendChild(imgObj)
+        var divObj2 = document.createElement('div')
+        divObj2.className = "mainInfo"
+        divObj1.appendChild(divObj2)
+        var divObj3 = document.createElement('div')
+        divObj3.className = "userId"
+        var aObj = document.createElement('a')
+        aObj.herf = "#"
+        aObj.innerText = "Zipple"
+        divObj3.appendChild(aObj)
+        divObj2.appendChild(divObj3)
+        var divObj4 = document.createElement('div')
+        divObj4.className = "conInfo"
+        divObj4.innerText = val;
+        divObj2.appendChild(divObj4)
+        var divObj5 = document.createElement('div')
+        divObj5.innerText = dateStr
+        divObj2.appendChild(divObj5)
+        content.innerText = ""
+        count++;
+        messageCount.innerText = `留言(${count})`
+      }
+    }
+    let date = new Date();
+    function fill(num) {
+      return num > 10 ? num : "0" + num;
+    }
+    let dateStr = date.getFullYear() + "-" + fill(date.getMonth() + 1) + "-" + fill(date.getDate()) + " " + fill(date
+      .getHours()) + ":" + fill(date.getMinutes()) + ":" + fill(date.getSeconds());
+  </script>
+
+
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: rgb(2, 78, 15);
+        }
+
+        button {
+            width: 150px;
+            height: 30px;
+            display: block;
+            margin: 10px auto;
+            background: goldenrod;
+            color: #fff;
+            border-radius: 15px;
+            line-height: 30px;
+            outline: none;
+            border: none;
+            font-size: 18px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #aaa;
+        }
+
+        caption {
+            text-align: center;
+            color: #fff;
+            margin: 20px 0;
+            font-size: 25px;
+
+        }
+
+        table {
+            margin: 0 auto;
+            width: 800px;
+            border-collapse: collapse;
+        }
+
+        th {
+            padding: 10px;
+            background: purple;
+            color: gold;
+            font-size: 20px;
+        }
+
+        td,
+        th {
+            border: 1px solid #ccc;
+        }
+
+        td {
+            padding: 10px;
+            color: #666;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        tbody tr {
+            background: #fff;
+        }
+
+        tbody tr:hover {
+            background: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <button>动态创建表格</button>
+    <div id="box1">
+        <!-- <table> -->
+<!-- <caption>就业榜</caption>
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>性别</th>
+          <th>学号</th>
+          <th>薪资</th>
+          <th>城市</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>欧阳霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>上海</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>令狐霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>北京</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>诸葛霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>南京</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>西门霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>深圳</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>上官霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>北京</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>欧阳霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>上海</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>令狐霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>北京</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>诸葛霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>南京</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>西门霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>深圳</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>上官霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>北京</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+      </tbody>
+    </table> -->
+<!-- </div>
+    <script>
+        // - 根据给定的数据，动态创建表格
+        //  - 点击“动态创建表格”按钮，根据页面中的数据创建表格，(第一个数组是用来创建表头的，第二个数组是用来创建表体的)
+        //  - 如果页面中有一个表格，再点击"动态创建表格"按钮，不会再次创建表格，保证页面中有且只有一个表格
+        //  - 点击每行中的"删除"，会弹出"你真的要删除嘛?",如果点击弹出框中的“确定”,那么就把对应的这一行删除，如果点击“取消”那么不删除
+        //  - 当tbody中的行都被删除之后，这个表格也会被从页面中移除，再次点击“动态创建表格”继续可以创建表格
+        // 后端的数据
+        var heads = ['姓名', '年龄', '性别', '学号', '薪资', '城市', '操作'];
+        var datas = [{
+                name: '欧阳霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '上海'
+            },
+            {
+                name: '令狐霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '北京'
+            },
+            {
+                name: '诸葛霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '南京'
+            },
+            {
+                name: '西门霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '深圳'
+            },
+            {
+                name: '上官霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '北京'
+            },
+            {
+                name: '欧阳霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '上海'
+            },
+            {
+                name: '令狐霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '北京'
+            },
+            {
+                name: '诸葛霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '南京'
+            },
+            {
+                name: '西门霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '深圳'
+            },
+            {
+                name: '上官霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '北京'
+            },
+        ];
+
+
+
+        // 点击“动态创建表格”按钮，根据页面中的数据创建表格，(第一个数组是用来创建表头的，第二个数组是用来创建表体的)
+        // 如果页面中有一个表格，再点击"动态创建表格"按钮，不会再次创建表格，保证页面中有且只有一个表格
+
+        let oBtn = document.querySelector('button');
+        let oBox = document.querySelector('#box1');
+        let flag = true;
+        oBtn.onclick = function () {
+            if (flag) {
+                let table = document.createElement('table');
+                let caption = document.createElement('caption');
+                caption.innerText = '就业榜';
+                table.appendChild(caption);
+                let thead = document.createElement('thead');
+                let theadTr = document.createElement('tr');
+                let thStr = '';
+                for (let i = 0; i < heads.length; i++) {
+                    thStr += `<th>${heads[i]}</th>`;
+                }
+                theadTr.innerHTML = thStr;
+                thead.appendChild(theadTr);
+                table.appendChild(thead);
+                let tbody = document.createElement('tbody');
+                let str = '';
+                for (let i = 0; i < datas.length; i++) {
+                    str += '<tr>'
+                    for (let key in datas[i]) {
+                        str += `<td>${datas[i][key]}</td>`
+                    }
+                    str += '<td><a herf="#">删除</a></td></tr>'
+                }
+                tbody.innerHTML = str;
+                table.appendChild(tbody);
+                oBox.appendChild(table);
+                flag = false;
+            }
+        }
+        oBox.onclick = function (e) {
+            if (e.target.nodeName == 'A') {
+                let result = confirm("您确定真的要删除吗");
+                if (result) {
+                    e.target.parentNode.parentNode.parentNode.removeChild(e.target.parentNode.parentNode);
+                    if (document.querySelectorAll('tbody tr').length == 0) {
+                        oBox.removeChild(document.querySelector('table'));
+                        flag = true;
+                    }
+                }
+            }
+
+
+        }
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 第二遍  -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: rgb(2, 78, 15);
+        }
+
+        button {
+            width: 150px;
+            height: 30px;
+            display: block;
+            margin: 10px auto;
+            background: goldenrod;
+            color: #fff;
+            border-radius: 15px;
+            line-height: 30px;
+            outline: none;
+            border: none;
+            font-size: 18px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #aaa;
+        }
+
+        caption {
+            text-align: center;
+            color: #fff;
+            margin: 20px 0;
+            font-size: 25px;
+
+        }
+
+        table {
+            margin: 0 auto;
+            width: 800px;
+            border-collapse: collapse;
+        }
+
+        th {
+            padding: 10px;
+            background: purple;
+            color: gold;
+            font-size: 20px;
+        }
+
+        td,
+        th {
+            border: 1px solid #ccc;
+        }
+
+        td {
+            padding: 10px;
+            color: #666;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        tbody tr {
+            background: #fff;
+        }
+
+        tbody tr:hover {
+            background: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <button>动态创建表格</button>
+    <div id="box1">
+        <!-- <table> -->
+<!-- <caption>就业榜</caption>
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>性别</th>
+          <th>学号</th>
+          <th>薪资</th>
+          <th>城市</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>欧阳霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>上海</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>令狐霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>北京</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>诸葛霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>南京</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>西门霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>深圳</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>上官霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>北京</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>欧阳霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>上海</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>令狐霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>北京</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>诸葛霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>南京</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>西门霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>深圳</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>上官霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>北京</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+      </tbody>
+    </table> -->
+<!--  </div>
+    <script>
+        // - 根据给定的数据，动态创建表格
+        //  - 点击“动态创建表格”按钮，根据页面中的数据创建表格，(第一个数组是用来创建表头的，第二个数组是用来创建表体的)
+        //  - 如果页面中有一个表格，再点击"动态创建表格"按钮，不会再次创建表格，保证页面中有且只有一个表格
+        //  - 点击每行中的"删除"，会弹出"你真的要删除嘛?",如果点击弹出框中的“确定”,那么就把对应的这一行删除，如果点击“取消”那么不删除
+        //  - 当tbody中的行都被删除之后，这个表格也会被从页面中移除，再次点击“动态创建表格”继续可以创建表格
+        // 后端的数据
+        var heads = ['姓名', '年龄', '性别', '学号', '薪资', '城市', '操作'];
+        var datas = [{
+                name: '欧阳霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '上海'
+            },
+            {
+                name: '令狐霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '北京'
+            },
+            {
+                name: '诸葛霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '南京'
+            },
+            {
+                name: '西门霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '深圳'
+            },
+            {
+                name: '上官霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '北京'
+            },
+            {
+                name: '欧阳霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '上海'
+            },
+            {
+                name: '令狐霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '北京'
+            },
+            {
+                name: '诸葛霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '南京'
+            },
+            {
+                name: '西门霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '深圳'
+            },
+            {
+                name: '上官霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '北京'
+            },
+        ];
+
+
+
+        // 点击“动态创建表格”按钮，根据页面中的数据创建表格，(第一个数组是用来创建表头的，第二个数组是用来创建表体的)
+        // 如果页面中有一个表格，再点击"动态创建表格"按钮，不会再次创建表格，保证页面中有且只有一个表格
+
+        let oBtn = document.querySelector('button');
+        let oBox = document.querySelector('#box1');
+        let flag = true;
+        oBtn.onclick = function () {
+            if (flag) {
+                let table = document.createElement('table');
+                let caption = document.createElement('caption');
+                caption.innerText = '就业榜';
+                table.appendChild(caption);
+                let thead = document.createElement('thead');
+                let theadTr = document.createElement('tr');
+                let thStr = '';
+                for (let i = 0; i < heads.length; i++) {
+                    thStr += `<th>${heads[i]}</th>`;
+                }
+                theadTr.innerHTML = thStr;
+                thead.appendChild(theadTr);
+                table.appendChild(thead);
+                let tbody = document.createElement('tbody');
+                let str = '';
+                for (let i = 0; i < datas.length; i++) {
+                    str += '<tr>'
+                    for (let key in datas[i]) {
+                        str += `<td>${datas[i][key]}</td>`
+                    }
+                    str += '<td><a herf="#">删除</a></td></tr>'
+                }
+                tbody.innerHTML = str;
+                table.appendChild(tbody);
+                oBox.appendChild(table);
+                flag = false;
+            }
+        }
+        oBox.onclick = function (e) {
+            if (e.target.nodeName == 'A') {
+                let result = confirm("您确定真的要删除吗");
+                if (result) {
+                    e.target.parentNode.parentNode.parentNode.removeChild(e.target.parentNode.parentNode);
+                    if (document.querySelectorAll('tbody tr').length == 0) {
+                        oBox.removeChild(document.querySelector('table'));
+                        flag = true;
+                    }
+                }
+            }
+
+
+        }
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 第三遍 -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: rgb(2, 78, 15);
+        }
+
+        button {
+            width: 150px;
+            height: 30px;
+            display: block;
+            margin: 10px auto;
+            background: goldenrod;
+            color: #fff;
+            border-radius: 15px;
+            line-height: 30px;
+            outline: none;
+            border: none;
+            font-size: 18px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #aaa;
+        }
+
+        caption {
+            text-align: center;
+            color: #fff;
+            margin: 20px 0;
+            font-size: 25px;
+
+        }
+
+        table {
+            margin: 0 auto;
+            width: 800px;
+            border-collapse: collapse;
+        }
+
+        th {
+            padding: 10px;
+            background: purple;
+            color: gold;
+            font-size: 20px;
+        }
+
+        td,
+        th {
+            border: 1px solid #ccc;
+        }
+
+        td {
+            padding: 10px;
+            color: #666;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        tbody tr {
+            background: #fff;
+        }
+
+        tbody tr:hover {
+            background: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <button>动态创建表格</button>
+    <div id="box1">
+        <!-- <table> -->
+<!-- <caption>就业榜</caption>
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>性别</th>
+          <th>学号</th>
+          <th>薪资</th>
+          <th>城市</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>欧阳霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>上海</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>令狐霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>北京</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>诸葛霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>南京</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>西门霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>深圳</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>上官霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>北京</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>欧阳霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>上海</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>令狐霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>北京</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>诸葛霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>南京</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>西门霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>深圳</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>上官霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>1001</td>
+          <td>20000</td>
+          <td>北京</td>
+          <td><a herf="#">删除</a></td>
+        </tr>
+      </tbody>
+    </table> -->
+<!--   </div>
+    <script>
+        // - 根据给定的数据，动态创建表格
+        //  - 点击“动态创建表格”按钮，根据页面中的数据创建表格，(第一个数组是用来创建表头的，第二个数组是用来创建表体的)
+        //  - 如果页面中有一个表格，再点击"动态创建表格"按钮，不会再次创建表格，保证页面中有且只有一个表格
+        //  - 点击每行中的"删除"，会弹出"你真的要删除嘛?",如果点击弹出框中的“确定”,那么就把对应的这一行删除，如果点击“取消”那么不删除
+        //  - 当tbody中的行都被删除之后，这个表格也会被从页面中移除，再次点击“动态创建表格”继续可以创建表格
+        // 后端的数据
+        var heads = ['姓名', '年龄', '性别', '学号', '薪资', '城市', '操作'];
+        var datas = [{
+                name: '欧阳霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '上海'
+            },
+            {
+                name: '令狐霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '北京'
+            },
+            {
+                name: '诸葛霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '南京'
+            },
+            {
+                name: '西门霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '深圳'
+            },
+            {
+                name: '上官霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '北京'
+            },
+            {
+                name: '欧阳霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '上海'
+            },
+            {
+                name: '令狐霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '北京'
+            },
+            {
+                name: '诸葛霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '南京'
+            },
+            {
+                name: '西门霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '深圳'
+            },
+            {
+                name: '上官霸天',
+                age: 19,
+                gender: '男',
+                stuId: '1001',
+                salary: '20000',
+                city: '北京'
+            },
+        ];
+
+
+
+        // 点击“动态创建表格”按钮，根据页面中的数据创建表格，(第一个数组是用来创建表头的，第二个数组是用来创建表体的)
+        // 如果页面中有一个表格，再点击"动态创建表格"按钮，不会再次创建表格，保证页面中有且只有一个表格
+
+        let oBtn = document.querySelector('button');
+        let oBox = document.querySelector('#box1');
+        let flag = true;
+        oBtn.onclick = function () {
+            if (flag) {
+                let table = document.createElement('table');
+                let caption = document.createElement('caption');
+                caption.innerText = '就业榜';
+                table.appendChild(caption);
+                let thead = document.createElement('thead');
+                let theadTr = document.createElement('tr');
+                let thStr = '';
+                for (let i = 0; i < heads.length; i++) {
+                    thStr += `<th>${heads[i]}</th>`;
+                }
+                theadTr.innerHTML = thStr;
+                thead.appendChild(theadTr);
+                table.appendChild(thead);
+                let tbody = document.createElement('tbody');
+                let str = '';
+                for (let i = 0; i < datas.length; i++) {
+                    str += '<tr>'
+                    for (let key in datas[i]) {
+                        str += `<td>${datas[i][key]}</td>`
+                    }
+                    str += '<td><a herf="#">删除</a></td></tr>'
+                }
+                tbody.innerHTML = str;
+                table.appendChild(tbody);
+                oBox.appendChild(table);
+                flag = false;
+            }
+        }
+        oBox.onclick = function (e) {
+            if (e.target.nodeName == 'A') {
+                let result = confirm("您确定真的要删除吗");
+                if (result) {
+                    e.target.parentNode.parentNode.parentNode.removeChild(e.target.parentNode.parentNode);
+                    if (document.querySelectorAll('tbody tr').length == 0) {
+                        oBox.removeChild(document.querySelector('table'));
+                        flag = true;
+                    }
+                }
+            }
+
+
+        }
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 第一遍 -->
+<!-- 
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>留言板</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        input {
+            font-size: 14px;
+            line-height: 24px;
+            color: #333;
+            font-family: Microsoft yahei, Song, Arial, Helvetica, Tahoma, Geneva;
+        }
+
+        h1 {
+            margin-bottom: 15px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 24px;
+            color: #fff;
+            background: black;
+        }
+
+        #content #post,
+        #comment p {
+            zoom: 1;
+        }
+
+        #content #post:after,
+        #comment p:after {
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+            overflow: hidden;
+            content: '.';
+        }
+
+        .transition {
+            -webkit-transition: all 0.5s linear;
+            -moz-transition: all 0.5s linear;
+            -o-transition: all 0.5s linear;
+            -ms-transition: all 0.5s linear;
+            transition: all 0.5s linear;
+        }
+
+        #content {
+            margin: 0 auto;
+            width: 960px;
+            overflow: hidden;
+        }
+
+        #content #post {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px #d4d4d4 dashed;
+            height: 556px;
+        }
+
+        #content #post textarea {
+            display: block;
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 948px;
+            height: 390px;
+            border: 1px #d1d1d1 solid;
+            border-radius: 5px;
+            resize: none;
+            outline: none;
+        }
+
+        #content #post textarea:hover {
+            border: 1px #9bdf70 solid;
+            background: #f0fbeb;
+        }
+
+        #content #post #postBt,
+        #content #post #clearBt {
+            margin-left: 5px;
+            padding: 3px;
+            float: right;
+        }
+
+        #comment {
+            overflow: hidden;
+        }
+
+        #comment p {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        #comment p:nth-child(odd) {
+            border: 1px solid #e3e197;
+            background: #ffd;
+        }
+
+        #comment p:nth-child(even) {
+            border: 1px solid #adcd3c;
+            background: #f2fddb;
+        }
+
+        #comment p .msg {
+            width: 738px;
+        }
+
+        #comment p #clear {
+            float: right;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .fr {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>留言板</h1>
+    <div id="content">
+        <div id="post">
+            <div style="background:#3EADC5 ;height:30px;">
+                昵称：<input type="submit" id="shangtian" name="Submit3"
+                    style="border:none; background-color:#3EADC5; color:white;" value="默认用户点击改变" />
+            </div>
+            <div>
+                <textarea class="transition"></textarea>
+            </div>
+            <input id="postBt" type="button"
+                style="border:none; background-color:#3EADC5; color:white;border-radius:5px; width:80px; height:30px;"
+                value="发表留言" />
+            <input id="clearBt" type="button"
+                style="border:none; background-color:#3EADC5; color:white;border-radius:5px; width:80px; height:30px;"
+                value="清空" />
+        </div>
+        <!-- 留言区 -->
+<!-- <div id="comment">
+            <!-- 这是创建元素的模板 -->
+<!-- <span>
+        匿名发言者
+        <span class="fr">2020-03-13 21:08:55</span>
+        <p>
+          <span class="msg">111<input  id="clear" type="button" value="删除"></span>
+        </p>
+      </span> -->
+<!--   </div>
+    </div>
+    <script>
+        //  - 页面已经给定，只写功能即可，不要在给定的页面上面添加样式之类的，只写js效果
+
+        // - 点击左上角的“默认用户点击改变”，弹出一个输入框,标题是"请输入您的名字",
+        //   如果用户没有输入，点击了确定，之前的“默认用户点击改变”的文字被 “匿名发言者”替代
+        //   如果用户没有输入，点击了取消，之前的“默认用户点击改变”的文字也会被 “匿名发言者”替代
+        //   如果用户输入了内容，点击了取消，之前的“默认用户点击改变”的文字也会被 “匿名发言者”替代
+        //   如果用户输入了内容，点击了确定，页面中弹出"欢迎您：XXX",之前的“默认用户点击改变”的文字被“用户输入的名字”替代
+
+        // - 点击“发表留言”,如果文本域的内容为空，则提示“请填写您的留言!”,否则根据页面中给定的模板，创建一条留言，之后将留言添加到留言区域内,
+        //   注意1:最新发布的留言在留言区域内的最上面
+        //   注意2：时间是当前格式化之后的时间
+
+        // - 当点击“清空”按钮的时候，
+        //   如果留言区域内没有留言，则弹出“没有需要清空的数据”
+        //   如果留言区域内有留言，则弹出“清空后不可恢复，是否确认清空?”，当点击弹出框的“取消”的时候，就不清空下面的留言；如果点击弹出框的“确认”的时候，下面留言区域内就会被清空
+
+        // - 当点击每条留言上面的"删除"按钮，对应的这条数据就会被删除掉从留言区域中
+
+
+
+        var changname = document.querySelector('#shangtian')
+        var content = document.querySelector('.transition')
+        var release = document.querySelector('#postBt')
+        var clear = document.querySelector('#clearBt')
+        var messageArea = document.querySelector('#comment')
+        var name = "匿名发言者";
+        changname.onclick = function () {
+            name = prompt("请输入您的名字");
+            if (name.trim().length == 0 || name === "null") {
+                this.value = "匿名发言者"
+                name = "匿名发言者"
+            } else if (name.trim().length !== 0) {
+                alert(`欢迎您：${name}`)
+                this.value = name
+            }
+        }
+        release.onclick = function () {
+            var val = content.value;
+            if (val.trim().length == 0) {
+                alert("请填写您的留言!")
+            } else {
+                var spanObj = document.createElement('span')
+                var str = ` 
+         ${name}
+        <span class="fr">${time()}</span>
+        <p>
+          <span class="msg">${val}<input  id="clear" type="button" value="删除"></span>
+        </p>
+      `
+                spanObj.innerHTML = str
+                messageArea.insertBefore(spanObj, messageArea.children[0])
+                content.value = ""
+                var del = spanObj.querySelector('#clear')
+                del.onclick = function () {
+                    messageArea.removeChild(this.parentNode.parentNode.parentNode)
+                }
+            }
+        }
+        clear.onclick = function () {
+            // 
+            if (messageArea.children.length == 0) {
+                alert("没有需要清空的数据")
+            } else {
+                var isOk = confirm("清空后不可恢复，是否确认清空？")
+                if (isOk) {
+                    messageArea.innerHTML = ""
+                }
+            }
+        }
+        function time() {
+            let date = new Date();
+            let y = date.getFullYear();
+            let m = date.getMonth() + 1;
+            let d = date.getDate();
+            let h = date.getHours();
+            let min = date.getMinutes();
+            let s = date.getSeconds();
+            s = s > 10 ? s : '0' + s;
+            return `${y}-${m}-${d} ${h}:${min}:${s}`
+        }
+    </script>
+
+</body>
+
+</html> -->
+
+
+
+
+<!-- 第二遍  -->
+
+<!-- 
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>留言板</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        input {
+            font-size: 14px;
+            line-height: 24px;
+            color: #333;
+            font-family: Microsoft yahei, Song, Arial, Helvetica, Tahoma, Geneva;
+        }
+
+        h1 {
+            margin-bottom: 15px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 24px;
+            color: #fff;
+            background: black;
+        }
+
+        #content #post,
+        #comment p {
+            zoom: 1;
+        }
+
+        #content #post:after,
+        #comment p:after {
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+            overflow: hidden;
+            content: '.';
+        }
+
+        .transition {
+            -webkit-transition: all 0.5s linear;
+            -moz-transition: all 0.5s linear;
+            -o-transition: all 0.5s linear;
+            -ms-transition: all 0.5s linear;
+            transition: all 0.5s linear;
+        }
+
+        #content {
+            margin: 0 auto;
+            width: 960px;
+            overflow: hidden;
+        }
+
+        #content #post {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px #d4d4d4 dashed;
+            height: 556px;
+        }
+
+        #content #post textarea {
+            display: block;
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 948px;
+            height: 390px;
+            border: 1px #d1d1d1 solid;
+            border-radius: 5px;
+            resize: none;
+            outline: none;
+        }
+
+        #content #post textarea:hover {
+            border: 1px #9bdf70 solid;
+            background: #f0fbeb;
+        }
+
+        #content #post #postBt,
+        #content #post #clearBt {
+            margin-left: 5px;
+            padding: 3px;
+            float: right;
+        }
+
+        #comment {
+            overflow: hidden;
+        }
+
+        #comment p {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        #comment p:nth-child(odd) {
+            border: 1px solid #e3e197;
+            background: #ffd;
+        }
+
+        #comment p:nth-child(even) {
+            border: 1px solid #adcd3c;
+            background: #f2fddb;
+        }
+
+        #comment p .msg {
+            width: 738px;
+        }
+
+        #comment p #clear {
+            float: right;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .fr {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>留言板</h1>
+    <div id="content">
+        <div id="post">
+            <div style="background:#3EADC5 ;height:30px;">
+                昵称：<input type="submit" id="shangtian" name="Submit3"
+                    style="border:none; background-color:#3EADC5; color:white;" value="默认用户点击改变" />
+            </div>
+            <div>
+                <textarea class="transition"></textarea>
+            </div>
+            <input id="postBt" type="button"
+                style="border:none; background-color:#3EADC5; color:white;border-radius:5px; width:80px; height:30px;"
+                value="发表留言" />
+            <input id="clearBt" type="button"
+                style="border:none; background-color:#3EADC5; color:white;border-radius:5px; width:80px; height:30px;"
+                value="清空" />
+        </div>
+        <!-- 留言区 -->
+<!--  <div id="comment">
+            <!-- 这是创建元素的模板 -->
+<!-- <span>
+        匿名发言者
+        <span class="fr">2020-03-13 21:08:55</span>
+        <p>
+          <span class="msg">111<input  id="clear" type="button" value="删除"></span>
+        </p>
+      </span> -->
+<!-- </div>
+    </div>
+    <script>
+        //  - 页面已经给定，只写功能即可，不要在给定的页面上面添加样式之类的，只写js效果
+
+        // - 点击左上角的“默认用户点击改变”，弹出一个输入框,标题是"请输入您的名字",
+        //   如果用户没有输入，点击了确定，之前的“默认用户点击改变”的文字被 “匿名发言者”替代
+        //   如果用户没有输入，点击了取消，之前的“默认用户点击改变”的文字也会被 “匿名发言者”替代
+        //   如果用户输入了内容，点击了取消，之前的“默认用户点击改变”的文字也会被 “匿名发言者”替代
+        //   如果用户输入了内容，点击了确定，页面中弹出"欢迎您：XXX",之前的“默认用户点击改变”的文字被“用户输入的名字”替代
+
+        // - 点击“发表留言”,如果文本域的内容为空，则提示“请填写您的留言!”,否则根据页面中给定的模板，创建一条留言，之后将留言添加到留言区域内,
+        //   注意1:最新发布的留言在留言区域内的最上面
+        //   注意2：时间是当前格式化之后的时间
+
+        // - 当点击“清空”按钮的时候，
+        //   如果留言区域内没有留言，则弹出“没有需要清空的数据”
+        //   如果留言区域内有留言，则弹出“清空后不可恢复，是否确认清空?”，当点击弹出框的“取消”的时候，就不清空下面的留言；如果点击弹出框的“确认”的时候，下面留言区域内就会被清空
+
+        // - 当点击每条留言上面的"删除"按钮，对应的这条数据就会被删除掉从留言区域中
+
+
+
+        var changname = document.querySelector('#shangtian')
+        var content = document.querySelector('.transition')
+        var release = document.querySelector('#postBt')
+        var clear = document.querySelector('#clearBt')
+        var messageArea = document.querySelector('#comment')
+        var name = "匿名发言者";
+        changname.onclick = function () {
+            name = prompt("请输入您的名字");
+            if (name.trim().length == 0 || name === "null") {
+                this.value = "匿名发言者"
+                name = "匿名发言者"
+            } else if (name.trim().length !== 0) {
+                alert(`欢迎您：${name}`)
+                this.value = name
+            }
+        }
+        release.onclick = function () {
+            var val = content.value;
+            if (val.trim().length == 0) {
+                alert("请填写您的留言!")
+            } else {
+                var spanObj = document.createElement('span')
+                var str = ` 
+         ${name}
+        <span class="fr">${time()}</span>
+        <p>
+          <span class="msg">${val}<input  id="clear" type="button" value="删除"></span>
+        </p>
+      `
+                spanObj.innerHTML = str
+                messageArea.insertBefore(spanObj, messageArea.children[0])
+                content.value = ""
+                var del = spanObj.querySelector('#clear')
+                del.onclick = function () {
+                    messageArea.removeChild(this.parentNode.parentNode.parentNode)
+                }
+            }
+        }
+        clear.onclick = function () {
+            // 
+            if (messageArea.children.length == 0) {
+                alert("没有需要清空的数据")
+            } else {
+                var isOk = confirm("清空后不可恢复，是否确认清空？")
+                if (isOk) {
+                    messageArea.innerHTML = ""
+                }
+            }
+        }
+        function time() {
+            let date = new Date();
+            let y = date.getFullYear();
+            let m = date.getMonth() + 1;
+            let d = date.getDate();
+            let h = date.getHours();
+            let min = date.getMinutes();
+            let s = date.getSeconds();
+            s = s > 10 ? s : '0' + s;
+            return `${y}-${m}-${d} ${h}:${min}:${s}`
+        }
+    </script>
+
+</body>
+
+</html> -->
+
+
+
+
+
+
+<!-- 第三遍 -->
+
+<!-- 
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>留言板</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        input {
+            font-size: 14px;
+            line-height: 24px;
+            color: #333;
+            font-family: Microsoft yahei, Song, Arial, Helvetica, Tahoma, Geneva;
+        }
+
+        h1 {
+            margin-bottom: 15px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 24px;
+            color: #fff;
+            background: black;
+        }
+
+        #content #post,
+        #comment p {
+            zoom: 1;
+        }
+
+        #content #post:after,
+        #comment p:after {
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+            overflow: hidden;
+            content: '.';
+        }
+
+        .transition {
+            -webkit-transition: all 0.5s linear;
+            -moz-transition: all 0.5s linear;
+            -o-transition: all 0.5s linear;
+            -ms-transition: all 0.5s linear;
+            transition: all 0.5s linear;
+        }
+
+        #content {
+            margin: 0 auto;
+            width: 960px;
+            overflow: hidden;
+        }
+
+        #content #post {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px #d4d4d4 dashed;
+            height: 556px;
+        }
+
+        #content #post textarea {
+            display: block;
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 948px;
+            height: 390px;
+            border: 1px #d1d1d1 solid;
+            border-radius: 5px;
+            resize: none;
+            outline: none;
+        }
+
+        #content #post textarea:hover {
+            border: 1px #9bdf70 solid;
+            background: #f0fbeb;
+        }
+
+        #content #post #postBt,
+        #content #post #clearBt {
+            margin-left: 5px;
+            padding: 3px;
+            float: right;
+        }
+
+        #comment {
+            overflow: hidden;
+        }
+
+        #comment p {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        #comment p:nth-child(odd) {
+            border: 1px solid #e3e197;
+            background: #ffd;
+        }
+
+        #comment p:nth-child(even) {
+            border: 1px solid #adcd3c;
+            background: #f2fddb;
+        }
+
+        #comment p .msg {
+            width: 738px;
+        }
+
+        #comment p #clear {
+            float: right;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .fr {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>留言板</h1>
+    <div id="content">
+        <div id="post">
+            <div style="background:#3EADC5 ;height:30px;">
+                昵称：<input type="submit" id="shangtian" name="Submit3"
+                    style="border:none; background-color:#3EADC5; color:white;" value="默认用户点击改变" />
+            </div>
+            <div>
+                <textarea class="transition"></textarea>
+            </div>
+            <input id="postBt" type="button"
+                style="border:none; background-color:#3EADC5; color:white;border-radius:5px; width:80px; height:30px;"
+                value="发表留言" />
+            <input id="clearBt" type="button"
+                style="border:none; background-color:#3EADC5; color:white;border-radius:5px; width:80px; height:30px;"
+                value="清空" />
+        </div>
+        <!-- 留言区 -->
+<!--<div id="comment">
+            <!-- 这是创建元素的模板 -->
+<!-- <span>
+        匿名发言者
+        <span class="fr">2020-03-13 21:08:55</span>
+        <p>
+          <span class="msg">111<input  id="clear" type="button" value="删除"></span>
+        </p>
+      </span> -->
+<!-- </div>
+    </div>
+    <script>
+        //  - 页面已经给定，只写功能即可，不要在给定的页面上面添加样式之类的，只写js效果
+
+        // - 点击左上角的“默认用户点击改变”，弹出一个输入框,标题是"请输入您的名字",
+        //   如果用户没有输入，点击了确定，之前的“默认用户点击改变”的文字被 “匿名发言者”替代
+        //   如果用户没有输入，点击了取消，之前的“默认用户点击改变”的文字也会被 “匿名发言者”替代
+        //   如果用户输入了内容，点击了取消，之前的“默认用户点击改变”的文字也会被 “匿名发言者”替代
+        //   如果用户输入了内容，点击了确定，页面中弹出"欢迎您：XXX",之前的“默认用户点击改变”的文字被“用户输入的名字”替代
+
+        // - 点击“发表留言”,如果文本域的内容为空，则提示“请填写您的留言!”,否则根据页面中给定的模板，创建一条留言，之后将留言添加到留言区域内,
+        //   注意1:最新发布的留言在留言区域内的最上面
+        //   注意2：时间是当前格式化之后的时间
+
+        // - 当点击“清空”按钮的时候，
+        //   如果留言区域内没有留言，则弹出“没有需要清空的数据”
+        //   如果留言区域内有留言，则弹出“清空后不可恢复，是否确认清空?”，当点击弹出框的“取消”的时候，就不清空下面的留言；如果点击弹出框的“确认”的时候，下面留言区域内就会被清空
+
+        // - 当点击每条留言上面的"删除"按钮，对应的这条数据就会被删除掉从留言区域中
+
+
+
+        var changname = document.querySelector('#shangtian')
+        var content = document.querySelector('.transition')
+        var release = document.querySelector('#postBt')
+        var clear = document.querySelector('#clearBt')
+        var messageArea = document.querySelector('#comment')
+        var name = "匿名发言者";
+        changname.onclick = function () {
+            name = prompt("请输入您的名字");
+            if (name.trim().length == 0 || name === "null") {
+                this.value = "匿名发言者"
+                name = "匿名发言者"
+            } else if (name.trim().length !== 0) {
+                alert(`欢迎您：${name}`)
+                this.value = name
+            }
+        }
+        release.onclick = function () {
+            var val = content.value;
+            if (val.trim().length == 0) {
+                alert("请填写您的留言!")
+            } else {
+                var spanObj = document.createElement('span')
+                var str = ` 
+         ${name}
+        <span class="fr">${time()}</span>
+        <p>
+          <span class="msg">${val}<input  id="clear" type="button" value="删除"></span>
+        </p>
+      `
+                spanObj.innerHTML = str
+                messageArea.insertBefore(spanObj, messageArea.children[0])
+                content.value = ""
+                var del = spanObj.querySelector('#clear')
+                del.onclick = function () {
+                    messageArea.removeChild(this.parentNode.parentNode.parentNode)
+                }
+            }
+        }
+        clear.onclick = function () {
+            // 
+            if (messageArea.children.length == 0) {
+                alert("没有需要清空的数据")
+            } else {
+                var isOk = confirm("清空后不可恢复，是否确认清空？")
+                if (isOk) {
+                    messageArea.innerHTML = ""
+                }
+            }
+        }
+        function time() {
+            let date = new Date();
+            let y = date.getFullYear();
+            let m = date.getMonth() + 1;
+            let d = date.getDate();
+            let h = date.getHours();
+            let min = date.getMinutes();
+            let s = date.getSeconds();
+            s = s > 10 ? s : '0' + s;
+            return `${y}-${m}-${d} ${h}:${min}:${s}`
+        }
+    </script>
+
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+<!-- 
+
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrap {
+            width: 410px;
+            margin: 100px auto 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #c0c0c0;
+        }
+
+        th,
+        td {
+            border: 1px solid #d0d0d0;
+            color: #404060;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #09c;
+            font: bold 16px "΢���ź�";
+            color: #fff;
+        }
+
+        td {
+            font: 14px "΢���ź�";
+        }
+
+        td a.get {
+            text-decoration: none;
+        }
+
+        a.del:hover {
+            text-decoration: underline;
+        }
+
+        tbody tr {
+            background-color: #f0f0f0;
+        }
+
+        tbody tr:hover {
+            cursor: pointer;
+            background-color: #fafafa;
+        }
+
+        .btnAdd {
+            width: 110px;
+            height: 30px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .form-item {
+            height: 100%;
+            position: relative;
+            padding-left: 100px;
+            padding-right: 20px;
+            margin-bottom: 34px;
+            line-height: 36px;
+        }
+
+        .form-item>.lb {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
+            width: 100px;
+            text-align: right;
+        }
+
+        .form-item>.txt {
+            width: 300px;
+            height: 32px;
+        }
+
+        .mask {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: 0.15;
+            display: none;
+        }
+
+        .form-add {
+            position: fixed;
+            top: 30%;
+            left: 50%;
+            margin-left: -197px;
+            padding-bottom: 20px;
+            background: #fff;
+            display: none;
+        }
+
+        .form-add-title {
+            background-color: #f7f7f7;
+            border-width: 1px 1px 0 1px;
+            border-bottom: 0;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .form-add-title span {
+            width: auto;
+            height: 18px;
+            font-size: 16px;
+            font-family: ����;
+            font-weight: bold;
+            color: rgb(102, 102, 102);
+            text-indent: 12px;
+            padding: 8px 0px 10px;
+            margin-right: 10px;
+            display: block;
+            overflow: hidden;
+            text-align: left;
+        }
+
+        .form-add-title div {
+            width: 16px;
+            height: 20px;
+            position: absolute;
+            right: 10px;
+            top: 6px;
+            font-size: 30px;
+            line-height: 16px;
+            cursor: pointer;
+        }
+
+        .form-submit {
+            text-align: center;
+        }
+
+        .form-submit input {
+            width: 170px;
+            height: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div>
+            <input type="button" value="添加数据" id="j_btnAddData" class="btnAdd" />
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>课程名称</th>
+                    <th>所属学院</th>
+                    <th>已学会</th>
+                </tr>
+            </thead>
+            <tbody id="j_tb">
+                <tr>
+                    <td>JavaScript</td>
+                    <td>传智播客-前端与移动开发学院</td>
+                    <td><a href="javascrip:;" class="get">GET</a></td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>传智播客-前端与移动开发学院</td>
+                    <td><a href="javascrip:;" class="get">GET</a></td>
+                </tr>
+                <tr>
+                    <td>HTML</td>
+                    <td>传智播客-前端与移动开发学院</td>
+                    <td><a href="javascrip:;" class="get">GET</a></td>
+                </tr>
+                <tr>
+                    <td>jQuery</td>
+                    <td>传智播客-前端与移动开发学院</td>
+                    <td><a href="javascrip:;" class="get">GET</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--遮挡的div-->
+<!--<div id="j_mask" class="mask"></div>
+    <div id="j_formAdd" class="form-add">
+        <div class="form-add-title">
+            <span>添加数据</span>
+
+            <div id="j_hideFormAdd">x</div>
+        </div>
+        <div class="form-item">
+            <label class="lb" for="j_txtLesson">课程名称：</label>
+            <input class="txt" type="text" id="j_txtLesson" placeholder="请输入课程名称">
+        </div>
+        <div class="form-item">
+            <label class="lb" for="j_txtBelSch">所属学院：</label>
+            <input class="txt" type="text" id="j_txtBelSch" value="传智播客-前端与移动开发学院">
+        </div>
+        <div class="form-submit">
+            <input type="button" value="添加" id="j_btnAdd">
+        </div>
+    </div>
+    <script>
+        //  - 当点击表格中的"GET"可以删除当前行
+        //  - 当点击"添加数据"遮罩层和添加数据的文本框都会显示
+        //  - 当点击文本框对应盒子右上角"X"遮罩层和这个盒子都会隐藏
+        //  - 当在课程文本框和所属学院文本框中都输入内容的时候，点击“添加”按钮，根据数据在表格中创建一行，并且遮罩层和这个盒子都会隐藏
+        //  - 当课程文本框或者是所属学院文本框的内容都为空，或者是有一个为空，那么点击"添加"按钮，都不会在表格中创建一行，并且遮罩层和这个盒子都会隐藏
+        //  - 注意：当根据数据表格中的添加一行之后，再次点击"GET"这一行还能删除当前行
+
+
+
+        // 获取元素
+
+        // 获取tbody
+        var tbody = document.querySelector('#j_tb')
+        // 获取a
+        var dels = document.querySelectorAll('.get')
+        // 添加数据按钮
+        var addBtn = document.querySelector("#j_btnAddData");
+        // 获取遮罩层
+        var mask = document.querySelector("#j_mask")
+        // 输入框的div
+        var formAdd = document.querySelector('#j_formAdd')
+        // 隐藏的小叉
+        var hide = document.querySelector('#j_hideFormAdd')
+        // 课程
+        var lesson = document.querySelector('#j_txtLesson')
+        // 所属的学院
+        var school = document.querySelector('#j_txtBelSch')
+        // 表单输入框下面的添加按钮
+        var formBtn = document.querySelector('#j_btnAdd')
+        tbody.onclick = function (e) {
+            this.removeChild(e.target.parentNode.parentNode)
+        }
+        addBtn.onclick = function () {
+            mask.style.display = 'block';
+            formAdd.style.display = 'block';
+        }
+        hide.onclick = function () {
+            mask.style.display = 'none';
+            formAdd.style.display = 'none';
+        }
+        formBtn.onclick = function () {
+            let lessonValue = lesson.value;
+            let schoolValue = school.value;
+            if (lessonValue.trim().length !== 0 && schoolValue.trim().length !== 0) {
+                let tbodyStr = tbody.innerHTML;
+                tbodyStr += `
+        <tr>
+          <td>${lessonValue}</td>
+          <td>${schoolValue}</td>
+          <td><a href="javascrip:;" class="get">GET</a></td>
+        </tr>
+
+        `;
+                tbody.innerHTML = tbodyStr;
+                mask.style.display = 'none';
+                formAdd.style.display = 'none';
+                lesson.value = '';
+                school.value = "";
+            } else {
+                mask.style.display = 'none';
+                formAdd.style.display = 'none';
+                lesson.value = '';
+                school.value = "";
+            }
+
+        }
+    </script>
+
+</body>
+
+</html> -->
+
+
+
+
+
+
+<!-- 
+
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrap {
+            width: 410px;
+            margin: 100px auto 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #c0c0c0;
+        }
+
+        th,
+        td {
+            border: 1px solid #d0d0d0;
+            color: #404060;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #09c;
+            font: bold 16px "΢���ź�";
+            color: #fff;
+        }
+
+        td {
+            font: 14px "΢���ź�";
+        }
+
+        td a.get {
+            text-decoration: none;
+        }
+
+        a.del:hover {
+            text-decoration: underline;
+        }
+
+        tbody tr {
+            background-color: #f0f0f0;
+        }
+
+        tbody tr:hover {
+            cursor: pointer;
+            background-color: #fafafa;
+        }
+
+        .btnAdd {
+            width: 110px;
+            height: 30px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .form-item {
+            height: 100%;
+            position: relative;
+            padding-left: 100px;
+            padding-right: 20px;
+            margin-bottom: 34px;
+            line-height: 36px;
+        }
+
+        .form-item>.lb {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
+            width: 100px;
+            text-align: right;
+        }
+
+        .form-item>.txt {
+            width: 300px;
+            height: 32px;
+        }
+
+        .mask {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: 0.15;
+            display: none;
+        }
+
+        .form-add {
+            position: fixed;
+            top: 30%;
+            left: 50%;
+            margin-left: -197px;
+            padding-bottom: 20px;
+            background: #fff;
+            display: none;
+        }
+
+        .form-add-title {
+            background-color: #f7f7f7;
+            border-width: 1px 1px 0 1px;
+            border-bottom: 0;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .form-add-title span {
+            width: auto;
+            height: 18px;
+            font-size: 16px;
+            font-family: ����;
+            font-weight: bold;
+            color: rgb(102, 102, 102);
+            text-indent: 12px;
+            padding: 8px 0px 10px;
+            margin-right: 10px;
+            display: block;
+            overflow: hidden;
+            text-align: left;
+        }
+
+        .form-add-title div {
+            width: 16px;
+            height: 20px;
+            position: absolute;
+            right: 10px;
+            top: 6px;
+            font-size: 30px;
+            line-height: 16px;
+            cursor: pointer;
+        }
+
+        .form-submit {
+            text-align: center;
+        }
+
+        .form-submit input {
+            width: 170px;
+            height: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div>
+            <input type="button" value="添加数据" id="j_btnAddData" class="btnAdd" />
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>课程名称</th>
+                    <th>所属学院</th>
+                    <th>已学会</th>
+                </tr>
+            </thead>
+            <tbody id="j_tb">
+                <tr>
+                    <td>JavaScript</td>
+                    <td>传智播客-前端与移动开发学院</td>
+                    <td><a href="javascrip:;" class="get">GET</a></td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>传智播客-前端与移动开发学院</td>
+                    <td><a href="javascrip:;" class="get">GET</a></td>
+                </tr>
+                <tr>
+                    <td>HTML</td>
+                    <td>传智播客-前端与移动开发学院</td>
+                    <td><a href="javascrip:;" class="get">GET</a></td>
+                </tr>
+                <tr>
+                    <td>jQuery</td>
+                    <td>传智播客-前端与移动开发学院</td>
+                    <td><a href="javascrip:;" class="get">GET</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--遮挡的div-->
+<!--<div id="j_mask" class="mask"></div>
+    <div id="j_formAdd" class="form-add">
+        <div class="form-add-title">
+            <span>添加数据</span>
+
+            <div id="j_hideFormAdd">x</div>
+        </div>
+        <div class="form-item">
+            <label class="lb" for="j_txtLesson">课程名称：</label>
+            <input class="txt" type="text" id="j_txtLesson" placeholder="请输入课程名称">
+        </div>
+        <div class="form-item">
+            <label class="lb" for="j_txtBelSch">所属学院：</label>
+            <input class="txt" type="text" id="j_txtBelSch" value="传智播客-前端与移动开发学院">
+        </div>
+        <div class="form-submit">
+            <input type="button" value="添加" id="j_btnAdd">
+        </div>
+    </div>
+    <script>
+        //  - 当点击表格中的"GET"可以删除当前行
+        //  - 当点击"添加数据"遮罩层和添加数据的文本框都会显示
+        //  - 当点击文本框对应盒子右上角"X"遮罩层和这个盒子都会隐藏
+        //  - 当在课程文本框和所属学院文本框中都输入内容的时候，点击“添加”按钮，根据数据在表格中创建一行，并且遮罩层和这个盒子都会隐藏
+        //  - 当课程文本框或者是所属学院文本框的内容都为空，或者是有一个为空，那么点击"添加"按钮，都不会在表格中创建一行，并且遮罩层和这个盒子都会隐藏
+        //  - 注意：当根据数据表格中的添加一行之后，再次点击"GET"这一行还能删除当前行
+
+
+
+        // 获取元素
+
+        // 获取tbody
+        var tbody = document.querySelector('#j_tb')
+        // 获取a
+        var dels = document.querySelectorAll('.get')
+        // 添加数据按钮
+        var addBtn = document.querySelector("#j_btnAddData");
+        // 获取遮罩层
+        var mask = document.querySelector("#j_mask")
+        // 输入框的div
+        var formAdd = document.querySelector('#j_formAdd')
+        // 隐藏的小叉
+        var hide = document.querySelector('#j_hideFormAdd')
+        // 课程
+        var lesson = document.querySelector('#j_txtLesson')
+        // 所属的学院
+        var school = document.querySelector('#j_txtBelSch')
+        // 表单输入框下面的添加按钮
+        var formBtn = document.querySelector('#j_btnAdd')
+        tbody.onclick = function (e) {
+            this.removeChild(e.target.parentNode.parentNode)
+        }
+        addBtn.onclick = function () {
+            mask.style.display = 'block';
+            formAdd.style.display = 'block';
+        }
+        hide.onclick = function () {
+            mask.style.display = 'none';
+            formAdd.style.display = 'none';
+        }
+        formBtn.onclick = function () {
+            let lessonValue = lesson.value;
+            let schoolValue = school.value;
+            if (lessonValue.trim().length !== 0 && schoolValue.trim().length !== 0) {
+                let tbodyStr = tbody.innerHTML;
+                tbodyStr += `
+        <tr>
+          <td>${lessonValue}</td>
+          <td>${schoolValue}</td>
+          <td><a href="javascrip:;" class="get">GET</a></td>
+        </tr>
+
+        `;
+                tbody.innerHTML = tbodyStr;
+                mask.style.display = 'none';
+                formAdd.style.display = 'none';
+                lesson.value = '';
+                school.value = "";
+            } else {
+                mask.style.display = 'none';
+                formAdd.style.display = 'none';
+                lesson.value = '';
+                school.value = "";
+            }
+
+        }
+    </script>
+
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrap {
+            width: 410px;
+            margin: 100px auto 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #c0c0c0;
+        }
+
+        th,
+        td {
+            border: 1px solid #d0d0d0;
+            color: #404060;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #09c;
+            font: bold 16px "΢���ź�";
+            color: #fff;
+        }
+
+        td {
+            font: 14px "΢���ź�";
+        }
+
+        td a.get {
+            text-decoration: none;
+        }
+
+        a.del:hover {
+            text-decoration: underline;
+        }
+
+        tbody tr {
+            background-color: #f0f0f0;
+        }
+
+        tbody tr:hover {
+            cursor: pointer;
+            background-color: #fafafa;
+        }
+
+        .btnAdd {
+            width: 110px;
+            height: 30px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .form-item {
+            height: 100%;
+            position: relative;
+            padding-left: 100px;
+            padding-right: 20px;
+            margin-bottom: 34px;
+            line-height: 36px;
+        }
+
+        .form-item>.lb {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
+            width: 100px;
+            text-align: right;
+        }
+
+        .form-item>.txt {
+            width: 300px;
+            height: 32px;
+        }
+
+        .mask {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: 0.15;
+            display: none;
+        }
+
+        .form-add {
+            position: fixed;
+            top: 30%;
+            left: 50%;
+            margin-left: -197px;
+            padding-bottom: 20px;
+            background: #fff;
+            display: none;
+        }
+
+        .form-add-title {
+            background-color: #f7f7f7;
+            border-width: 1px 1px 0 1px;
+            border-bottom: 0;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .form-add-title span {
+            width: auto;
+            height: 18px;
+            font-size: 16px;
+            font-family: ����;
+            font-weight: bold;
+            color: rgb(102, 102, 102);
+            text-indent: 12px;
+            padding: 8px 0px 10px;
+            margin-right: 10px;
+            display: block;
+            overflow: hidden;
+            text-align: left;
+        }
+
+        .form-add-title div {
+            width: 16px;
+            height: 20px;
+            position: absolute;
+            right: 10px;
+            top: 6px;
+            font-size: 30px;
+            line-height: 16px;
+            cursor: pointer;
+        }
+
+        .form-submit {
+            text-align: center;
+        }
+
+        .form-submit input {
+            width: 170px;
+            height: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div>
+            <input type="button" value="添加数据" id="j_btnAddData" class="btnAdd" />
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>课程名称</th>
+                    <th>所属学院</th>
+                    <th>已学会</th>
+                </tr>
+            </thead>
+            <tbody id="j_tb">
+                <tr>
+                    <td>JavaScript</td>
+                    <td>传智播客-前端与移动开发学院</td>
+                    <td><a href="javascrip:;" class="get">GET</a></td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>传智播客-前端与移动开发学院</td>
+                    <td><a href="javascrip:;" class="get">GET</a></td>
+                </tr>
+                <tr>
+                    <td>HTML</td>
+                    <td>传智播客-前端与移动开发学院</td>
+                    <td><a href="javascrip:;" class="get">GET</a></td>
+                </tr>
+                <tr>
+                    <td>jQuery</td>
+                    <td>传智播客-前端与移动开发学院</td>
+                    <td><a href="javascrip:;" class="get">GET</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--遮挡的div-->
+<!--<div id="j_mask" class="mask"></div>
+    <div id="j_formAdd" class="form-add">
+        <div class="form-add-title">
+            <span>添加数据</span>
+
+            <div id="j_hideFormAdd">x</div>
+        </div>
+        <div class="form-item">
+            <label class="lb" for="j_txtLesson">课程名称：</label>
+            <input class="txt" type="text" id="j_txtLesson" placeholder="请输入课程名称">
+        </div>
+        <div class="form-item">
+            <label class="lb" for="j_txtBelSch">所属学院：</label>
+            <input class="txt" type="text" id="j_txtBelSch" value="传智播客-前端与移动开发学院">
+        </div>
+        <div class="form-submit">
+            <input type="button" value="添加" id="j_btnAdd">
+        </div>
+    </div>
+    <script>
+        //  - 当点击表格中的"GET"可以删除当前行
+        //  - 当点击"添加数据"遮罩层和添加数据的文本框都会显示
+        //  - 当点击文本框对应盒子右上角"X"遮罩层和这个盒子都会隐藏
+        //  - 当在课程文本框和所属学院文本框中都输入内容的时候，点击“添加”按钮，根据数据在表格中创建一行，并且遮罩层和这个盒子都会隐藏
+        //  - 当课程文本框或者是所属学院文本框的内容都为空，或者是有一个为空，那么点击"添加"按钮，都不会在表格中创建一行，并且遮罩层和这个盒子都会隐藏
+        //  - 注意：当根据数据表格中的添加一行之后，再次点击"GET"这一行还能删除当前行
+
+
+
+        // 获取元素
+
+        // 获取tbody
+        var tbody = document.querySelector('#j_tb')
+        // 获取a
+        var dels = document.querySelectorAll('.get')
+        // 添加数据按钮
+        var addBtn = document.querySelector("#j_btnAddData");
+        // 获取遮罩层
+        var mask = document.querySelector("#j_mask")
+        // 输入框的div
+        var formAdd = document.querySelector('#j_formAdd')
+        // 隐藏的小叉
+        var hide = document.querySelector('#j_hideFormAdd')
+        // 课程
+        var lesson = document.querySelector('#j_txtLesson')
+        // 所属的学院
+        var school = document.querySelector('#j_txtBelSch')
+        // 表单输入框下面的添加按钮
+        var formBtn = document.querySelector('#j_btnAdd')
+        tbody.onclick = function (e) {
+            this.removeChild(e.target.parentNode.parentNode)
+        }
+        addBtn.onclick = function () {
+            mask.style.display = 'block';
+            formAdd.style.display = 'block';
+        }
+        hide.onclick = function () {
+            mask.style.display = 'none';
+            formAdd.style.display = 'none';
+        }
+        formBtn.onclick = function () {
+            let lessonValue = lesson.value;
+            let schoolValue = school.value;
+            if (lessonValue.trim().length !== 0 && schoolValue.trim().length !== 0) {
+                let tbodyStr = tbody.innerHTML;
+                tbodyStr += `
+        <tr>
+          <td>${lessonValue}</td>
+          <td>${schoolValue}</td>
+          <td><a href="javascrip:;" class="get">GET</a></td>
+        </tr>
+
+        `;
+                tbody.innerHTML = tbodyStr;
+                mask.style.display = 'none';
+                formAdd.style.display = 'none';
+                lesson.value = '';
+                school.value = "";
+            } else {
+                mask.style.display = 'none';
+                formAdd.style.display = 'none';
+                lesson.value = '';
+                school.value = "";
+            }
+
+        }
+    </script>
+
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- 键盘变色？ -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    ul {
+      width: 800px;
+      margin: 100px auto;
+    }
+
+    li {
+      border: 1px solid #f00;
+      width: 80px;
+      float: left;
+      text-align: center;
+      height: 30px;
+      line-height: 30px;
+    }
+
+    .active {
+      background-color: #0F0
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="box">
+
+  </ul>
+  <script>
+
+    var allKey = ["1", '2', '3', '4', '5', '6', '7', '8', '9', '0', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U',
+      'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M'
+    ];
+    let box = document.querySelector('.box');
+    for (let i = 0; i < allKey.length; i++) {
+      let li = document.createElement('li');
+      li.innerText = allKey[i];
+      li.id = `a${allKey[i].charCodeAt()}`;
+      box.appendChild(li);
+    }
+    document.addEventListener('keydown', function (e) {
+      let activeLi = document.querySelector(`#a${e.keyCode}`);
+      activeLi.classList.add('active');
+    })
+    document.addEventListener('keyup', function (e) {
+      let activeLi = document.querySelector(`#a${e.keyCode}`);
+      activeLi.classList.remove('active');
+    })
+  </script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    ul {
+      width: 800px;
+      margin: 100px auto;
+    }
+
+    li {
+      border: 1px solid #f00;
+      width: 80px;
+      float: left;
+      text-align: center;
+      height: 30px;
+      line-height: 30px;
+    }
+
+    .active {
+      background-color: #0F0
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="box">
+
+  </ul>
+  <script>
+
+    var allKey = ["1", '2', '3', '4', '5', '6', '7', '8', '9', '0', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U',
+      'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M'
+    ];
+    let box = document.querySelector('.box');
+    for (let i = 0; i < allKey.length; i++) {
+      let li = document.createElement('li');
+      li.innerText = allKey[i];
+      li.id = `a${allKey[i].charCodeAt()}`;
+      box.appendChild(li);
+    }
+    document.addEventListener('keydown', function (e) {
+      let activeLi = document.querySelector(`#a${e.keyCode}`);
+      activeLi.classList.add('active');
+    })
+    document.addEventListener('keyup', function (e) {
+      let activeLi = document.querySelector(`#a${e.keyCode}`);
+      activeLi.classList.remove('active');
+    })
+  </script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    ul {
+      width: 800px;
+      margin: 100px auto;
+    }
+
+    li {
+      border: 1px solid #f00;
+      width: 80px;
+      float: left;
+      text-align: center;
+      height: 30px;
+      line-height: 30px;
+    }
+
+    .active {
+      background-color: #0F0
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="box">
+
+  </ul>
+  <script>
+
+    var allKey = ["1", '2', '3', '4', '5', '6', '7', '8', '9', '0', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U',
+      'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M'
+    ];
+    let box = document.querySelector('.box');
+    for (let i = 0; i < allKey.length; i++) {
+      let li = document.createElement('li');
+      li.innerText = allKey[i];
+      li.id = `a${allKey[i].charCodeAt()}`;
+      box.appendChild(li);
+    }
+    document.addEventListener('keydown', function (e) {
+      let activeLi = document.querySelector(`#a${e.keyCode}`);
+      activeLi.classList.add('active');
+    })
+    document.addEventListener('keyup', function (e) {
+      let activeLi = document.querySelector(`#a${e.keyCode}`);
+      activeLi.classList.remove('active');
+    })
+  </script>
+</body>
+
+</html> -->
