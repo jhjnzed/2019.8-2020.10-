@@ -1,0 +1,92 @@
+html,
+body {
+    width: 100%;
+    height: 500%;
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    position: fixed;
+    width: 50px;
+    height: 200px;
+    // background-color: green;
+    left: 100px;
+    bottom: 200px;
+}
+
+.box-1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    li {
+        width: 100%;
+        height: 25%;
+        margin: 0;
+        padding: 0;
+        // border: 1px solid black;
+        display: block;
+    }
+
+    // 鼠标移入变手
+    li:hover {
+        cursor: pointer;
+    }
+
+    // 第一个li——微信
+    .box-1-1 {
+        background-image: url(../images/sbtn.png);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+    }
+
+    // 鼠标移入变化
+    .box-1-1:hover {
+        background-image: url(../images/sbtn.png);
+        background-repeat: no-repeat;
+        background-position: -50px 0;
+    }
+
+    // 第二个li——移动
+    .box-1-2 {
+        background-image: url(../images/sbtn.png);
+        background-repeat: no-repeat;
+        background-position: 0 -50px;
+    }
+
+    .box-1-2:hover {
+        background-image: url(../images/sbtn.png);
+        background-repeat: no-repeat;
+        background-position: -50px -50px;
+    }
+
+    // 第三个li——返回顶部
+    .box-1-3 {
+        background-image: url(../images/sbtn.png);
+        background-repeat: no-repeat;
+        background-position: 0 -100px;
+        display: none;
+    }
+
+    .box-1-3:hover {
+        background-image: url(../images/sbtn.png);
+        background-repeat: no-repeat;
+        background-position: -50px -100px;
+    }
+
+    // 第四个li——指南
+    .box-1-4 {
+        background-image: url(../images/sbtn.png);
+        background-repeat: no-repeat;
+        background-position: 0 -150px;
+    }
+
+    .box-1-4:hover {
+        background-image: url(../images/sbtn.png);
+        background-repeat: no-repeat;
+        background-position: -50px -150px;
+    }
+}

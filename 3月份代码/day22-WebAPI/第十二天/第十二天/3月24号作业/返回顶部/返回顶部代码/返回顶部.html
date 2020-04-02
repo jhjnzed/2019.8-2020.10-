@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./scss/daohang.css">
+</head>
+<body>
+    <div class="box">
+        <ul class="box-1">
+            <!-- 微信 -->
+            <li class="box-1-1"></li>
+            <!-- 移动 -->
+            <li class="box-1-2"></li>
+            <!-- 返回顶部 -->
+            <li class="box-1-3"></li>
+            <!-- 指南 -->
+            <li class="box-1-4"></li>
+        </ul>
+    </div>
+
+    <script>
+        // 获取元素
+        let onbox = document.querySelector('.box-1-3')
+        // 添加事件
+        window.addEventListener('scroll',function () {
+            // 计算向上卷曲高度  兼容性
+            let num = document.documentElement.scrollTop || document.body.scrollTop || window.pageYOffset;
+            // 判断
+            if(num <= 500) {
+                onbox.style.display = "none"
+            }else {
+                onbox.style.display = "block"
+            }
+        })
+
+        // 添加点击事件——返回顶部
+        onbox.onclick = function () {
+            document.documentElement.scrollTop = 0
+        }
+    </script>
+</body>
+</html>
