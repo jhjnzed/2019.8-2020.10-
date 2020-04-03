@@ -1,0 +1,490 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            padding: 30px;
+            margin: 30px;
+            border: 5px solid #cccccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        let a = document.querySelector('div')
+        console.log(a.offsetWidth)
+        console.log(a.offsetHeight)
+    </script>
+</body>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .one {
+            /* position: relative; */
+            width: 500px;
+            height: 500px;
+            margin-left: 100px;
+            margin-top: 100px;
+            background-color: blueviolet;
+        }
+
+        .two {
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">
+        <div class="two"></div>
+    </div>
+    <script>
+        let a = document.querySelector('.two')
+        console.log(a.offsetLeft)
+        console.log(a.offsetTop)
+    </script>
+</body>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .one {
+            /* position: relative; */
+            width: 500px;
+            height: 500px;
+            margin-left: 100px;
+            margin-top: 100px;
+            background-color: blueviolet;
+        }
+
+        .two {
+            /* position: fixed; */
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">
+        <div class="two"></div>
+    </div>
+    <script>
+        let a = document.querySelector('.two')
+        // 获取two的定位父级
+        console.log(a.offsetParent)
+    </script>
+</body>
+
+</html> -->
+
+
+<!-- 获取盒子内鼠标位置 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .one {
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+            margin-left: 100px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one"></div>
+    <script>
+        // 获取元素
+        let a = document.querySelector('.one')
+        // 元素距左边的距离
+        let onleft = a.offsetLeft
+        // 元素距上方的距离
+        let ontop = a.offsetTop
+        // 鼠标再盒子中的X标
+        a.addEventListener('mousemove', function (e) {
+            let X = e.pageX - onleft
+            let Y = e.pageY - ontop
+            console.log(X, Y)
+        }) 
+    </script>
+</body>
+
+</html> -->
+
+<!-- 拖动模态框案例 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .login-header {
+            width: 100%;
+            text-align: center;
+            height: 30px;
+            font-size: 24px;
+            line-height: 30px;
+        }
+
+        ul,
+        li,
+        ol,
+        dl,
+        dt,
+        dd,
+        div,
+        p,
+        span,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        a {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .login {
+            display: none;
+            width: 512px;
+            height: 280px;
+            position: fixed;
+            border: #ebebeb solid 1px;
+            left: 50%;
+            top: 50%;
+            background: #ffffff;
+            box-shadow: 0px 0px 20px #ddd;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+        }
+
+        .login-title {
+            width: 100%;
+            margin: 10px 0px 0px 0px;
+            text-align: center;
+            line-height: 40px;
+            height: 40px;
+            font-size: 18px;
+            position: relative;
+            cursor: move;
+        }
+
+        .login-input-content {
+            margin-top: 20px;
+        }
+
+        .login-button {
+            width: 50%;
+            margin: 30px auto 0px auto;
+            line-height: 40px;
+            font-size: 14px;
+            border: #ebebeb 1px solid;
+            text-align: center;
+        }
+
+        .login-bg {
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            background: rgba(0, 0, 0, .3);
+        }
+
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .login-button a {
+            display: block;
+        }
+
+        .login-input input.list-input {
+            float: left;
+            line-height: 35px;
+            height: 35px;
+            width: 350px;
+            border: #ebebeb 1px solid;
+            text-indent: 5px;
+        }
+
+        .login-input {
+            overflow: hidden;
+            margin: 0px 0px 20px 0px;
+        }
+
+        .login-input label {
+            float: left;
+            width: 90px;
+            padding-right: 10px;
+            text-align: right;
+            line-height: 35px;
+            height: 35px;
+            font-size: 14px;
+        }
+
+        .login-title span {
+            position: absolute;
+            font-size: 12px;
+            right: -20px;
+            top: -30px;
+            background: #ffffff;
+            border: #ebebeb solid 1px;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-header"><a id="link" href="javascript:;">点击，弹出登录框</a></div>
+    <div id="login" class="login">
+        <div id="title" class="login-title">登录会员
+            <span><a id="closeBtn" href="javascript:void(0);" class="close-login">关闭</a></span>
+        </div>
+        <div class="login-input-content">
+            <div class="login-input">
+                <label>用户名：</label>
+                <input type="text" placeholder="请输入用户名" name="username" id="username" class="list-input">
+            </div>
+            <div class="login-input">
+                <label>登录密码：</label>
+                <input type="password" placeholder="请输入登录密码" name="password" id="password" class="list-input">
+            </div>
+        </div>
+        <div id="loginBtn" class="login-button"><a href="javascript:void(0);" id="login-button-submit">登录会员</a></div>
+    </div>
+
+    <div id="bg" class="login-bg"></div>
+
+    <script>
+        // 获取元素
+        // 链接
+        let a = document.querySelector('#link')
+        // 登录框
+        let b = document.querySelector('#login')
+        // 背景
+        let c = document.querySelector('#bg')
+        // ×按钮
+        let d = document.querySelector('#closeBtn')
+        // 头部
+        let e = document.querySelector('#title')
+        // 功能一：点击出现
+        a.onclick = function () {
+            b.style.display = "block"
+            c.style.display = "block"
+        }
+        // 或
+        // a.addEventListener('click', function () {
+        //     b.style.display = "block"
+        //     c.style.display = "block"
+        // })
+        // 功能二：点击关闭
+        d.onclick = function () {
+            b.style.display = "none"
+            c.style.display = "none"
+        }
+        // 或
+        // d.addEventListener('click', function () {
+        //     b.style.display = "none"
+        //     c.style.display = "none"
+        // })
+        // 功能三：点击拖动窗口
+        e.addEventListener('mousedown',function (e) {
+            // 鼠标在元素内坐标
+            let X = e.pageX - b.offsetLeft
+            let Y = e.pageY - b.offsetTop
+
+            document.addEventListener('mousemove',function (e) {
+                let onleft = e.pageX - X
+                let ontop = e.pageY - Y
+                b.style.left = onleft + "px"
+                b.style.top = ontop + "px"
+            })
+        })
+    </script>
+</body>
+
+</html> -->
+
+<!-- 京东放大镜案例 -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .preview_img {
+            position: relative;
+            height: 398px;
+            width: 398px;
+            margin-left: 10px;
+            margin-top: 200px;
+            border: 1px solid #ccc;
+        }
+
+        .mask {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background: #FEDE4F;
+            opacity: .5;
+            border: 1px solid #ccc;
+            cursor: move;
+        }
+
+        .big {
+            display: none;
+            position: absolute;
+            left: 410px;
+            top: 0;
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            z-index: 999;
+            border: 1px solid #ccc;
+            overflow: hidden;
+        }
+
+        .big img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="preview_wrap fl">
+        <div class="preview_img">
+            <img src="image/s3.png" alt="">
+            <div class="mask"></div>
+            <div class="big">
+                <img src="image/big.jpg" alt="" class="bigImg">
+            </div>
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+            let a = document.querySelector('.preview_img')
+            let b = document.querySelector('.mask')
+            let c = document.querySelector('.big')
+            // 移入显示
+            a.addEventListener('mouseover', function () {
+                b.style.display = "block"
+                c.style.display = "block"
+            })
+            // 移出隐藏
+            a.addEventListener('mouseout', function () {
+                b.style.display = "none"
+                c.style.display = "none"
+            })
+
+            a.addEventListener('mousemove', function (e) {
+                let X = e.pageX - this.offsetLeft
+                let Y = e.pageY - this.offsetTop
+                let maxX = X - (b.offsetWidth / 2)
+                let maxY = Y - (b.offsetHeight / 2)
+
+
+                let maxbX = a.offsetWidth - b.offsetWidth
+                let maxbY = a.offsetHeight - b.offsetHeight
+                if (maxX <= 0) {
+                    maxX = 0
+                } else if (maxX >= maxbX) {
+                    maxX = maxbX
+                }
+                if (maxY <= 0) {
+                    maxY = 0
+                } else if (maxY >= maxbY) {
+                    maxY = maxbY
+                }
+
+                b.style.left = maxX + "px"
+                c.style.top = maxY + "px"
+            })
+        }
+    </script>
+
+</body>
+
+</html> -->

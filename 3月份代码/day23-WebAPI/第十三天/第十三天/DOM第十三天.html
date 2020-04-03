@@ -1,0 +1,357 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点击移动</button>
+    <div></div>
+    <script>
+        // 动画原理：获取原位置》在盒子当前位置上加上步长（每次移动的距离）》重复步长（计时器）》加一个停止计时器执行的条件
+        // 获取元素
+        let ondiv = document.querySelector('div')
+        let onbut = document.querySelector('button')
+        // 添加点击事件
+        onbut.onclick = function () {
+            // 设定定时器
+            let time = setInterval(function () {
+                // 让div开始移动
+                ondiv.style.left = ondiv.offsetLeft + 1 + "px"
+                // 判断移动距离是否大于500像素，如果大于就清除定时器
+                if (ondiv.offsetLeft >= 500) {
+                    clearInterval(time)
+                }
+            }, 10)
+        }
+    </script>
+</body>
+
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点击移动</button>
+    <div></div>
+    <script>
+        // 获取元素
+        let ondiv = document.querySelector('div')
+        let onbut = document.querySelector('button')
+        onbut.onclick = function () {
+            animate(ondiv,500)
+        }
+
+        function animate(element,target) {
+            let time = setInterval(function () {
+                if(element.offsetLeft >= target) {
+                    clearInterval(time)
+                }
+                element.style.left = element.offsetLeft + 1 + "px"
+            },20)
+        }
+    </script>
+</body>
+
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点击移动</button>
+    <div></div>
+    <script>
+        // 获取元素
+        let ondiv = document.querySelector('div')
+        let onbut = document.querySelector('button')
+        onbut.onclick = function () {
+            animate(ondiv,500)
+        }
+
+        function animate(element,target) {
+            clearInterval(element.time)
+            element.time = setInterval(function () {
+                if(element.offsetLeft >= target) {
+                    clearInterval(element.time)
+                }
+                element.style.left = element.offsetLeft + 1 + "px"
+            },50)
+        }
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点击移动</button>
+    <div></div>
+    <script>
+        // 获取元素
+        let ondiv = document.querySelector('div')
+        let onbut = document.querySelector('button')
+        onbut.onclick = function () {
+            aniament(ondiv,800)
+        }
+        function aniament(element,target) {
+            clearInterval(element.timer)
+            element.timer = setInterval(function () {
+                let sen = (target - element.offsetLeft) / 10
+                sen = sen > 0?Math.ceil(sen):Math.ceil(sen)
+                if(element.offsetLeft == target) {
+                    clearInterval(element.timer)
+                }
+                element.style.left = element.offsetLeft + sen + "px"
+            },50)
+
+        }
+    </script>
+</body> 
+
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点击移动</button>
+    <div></div>
+    <script>
+        // 点击就移动，可以从左往右、从上往下
+        // 获取元素
+        let ondiv = document.querySelector('div')
+        let onbut = document.querySelector('button')
+
+        onbut.onclick = function () {
+            aniament(ondiv, "left", 500)
+        }
+
+        function get(element, attr) {
+            if (window.getComputedStyle) {
+                return window.getComputedStyle(element, null)[attr]
+            } else {
+                return element.currentStyle[attr]
+            }
+        }
+
+        function aniament(element, attr, target) {
+            clearInterval(element.time)
+            element.time = setInterval(function () {
+                let set = parseInt(get(element, attr))
+                let abs = (target - set) / 10
+                abs = abs > 0 ? Math.ceil(abs) : Math.floor(abs)
+                set += abs
+                element.style[attr] = set + "px"
+                if (set == target) {
+                    clearInterval(element.time)
+                }
+            }, 20)
+        }
+    </script>
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点击移动</button>
+    <div></div>
+    <script>
+        // 点击就移动，可以从左往右、从上往下
+        // 获取元素
+        let ondiv = document.querySelector('div')
+        let onbut = document.querySelector('button')
+
+        onbut.onclick = function () {
+            // aniament(ondiv, "left", 500)
+            aniament(ondiv,{
+                width:400,
+                height:400,
+                left:800
+            })
+        }
+
+        function get(element, attr) {
+            if (window.getComputedStyle) {
+                return window.getComputedStyle(element, null)[attr]
+            } else {
+                return element.currentStyle[attr]
+            }
+        }
+
+        function aniament(element, attrObj) {
+            clearInterval(element.time)
+            element.time = setInterval(function () {
+                let flag = true
+                for(let attr in attrObj) {
+                    let set = parseInt(get(element, attr))
+                    // console.log(set)
+                    let target = attrObj[attr]
+                    // console.log(target)
+                    let step = parseInt((target - set)) / 10
+                    // console.log(step)
+                    step = step > 0 ? Math.ceil(step):Math.floor(step)
+                    element.style[attr] = set + "px"
+                    if(set !== target) {
+                        flag = false
+                    }
+                }
+                if(flag) {
+                    clearInterval(element.time)
+                }
+            }, 20) 
+        }
+    </script>
+</body>
+
+</html>
