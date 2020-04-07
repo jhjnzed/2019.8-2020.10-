@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<ul>
+    <li>我是ul第1个数字</li>
+    <li>我是ul第2个数字</li>
+    <li class="x1">我是ul第3个数字</li>
+    <li>我是ul第4个数字</li>
+    <li>我是ul第5个数字</li>
+</ul>
+<ol>
+    <li>我是ul第1个数字</li>
+    <li>我是ul第2个数字</li>
+    <li>我是ul第3个数字</li>
+    <li>我是ul第4个数字</li>
+    <li>我是ul第5个数字</li>
+</ol>
+<button>123</button>
+<div>
+    <button>567</button>
+</div>
+
+<form action="">
+    <input type="text">
+    <input type="password">
+    <input type="radio">
+    <input type="email">
+    <input type="checkbox">
+    <input type="button" disabled value="按钮">
+</form>
+
+<select name="" id="">
+    <option value="1">12</option>
+    <option value="2" selected="selected">34</option>
+</select>
+
+<body>
+
+
+    <script src="./lib/jquery-3.4.1.min.js"></script>
+
+    <script>
+        // console.log($.trim("  hello, how are you?  "))
+
+        // console.log($('*'))
+        // console.log($('ol'))
+
+        // console.log($('body button'))
+        // console.log($('div button'))
+
+        console.log($("input:enabled"));
+        console.log($("input:disabled"));
+        console.log($("input:checked"));
+        console.log($("select option:selected"));
+    </script>
+</body>
+
+</html>
