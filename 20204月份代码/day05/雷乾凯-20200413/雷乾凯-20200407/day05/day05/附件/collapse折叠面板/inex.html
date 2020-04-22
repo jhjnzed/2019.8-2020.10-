@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul {
+            margin: 100px auto;
+            width: 1000px;
+            list-style: none;
+            border: 1px solid #ccc;
+            padding: 25px;
+        }
+
+        li {
+            position: relative;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        img {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -7px;
+            transform: rotate(90deg);
+        }
+
+        div {
+            display: inline-block;
+            margin-top: 5px;
+            width: 700px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li>
+            <p>一致性 Consistency<img src="./img/select.png" alt=""></p> <br>
+            <div>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；
+                在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。
+            </div>
+        </li>
+        <li>
+            <p>反馈 Feedback<img src="./img/select.png" alt=""></p> <br>
+            <div>控制反馈：通过界面样式和交互动效让用户可以清晰的感知自己的操作；
+                页面反馈：操作后，通过页面元素的变化清晰地展现当前状态。
+            </div>
+        </li>
+        <li>
+            <p>效率 Efficiency<img src="./img/select.png" alt=""></p> <br>
+            <div>简化流程：设计简洁直观的操作流程；
+                清晰明确：语言表达清晰且表意明确，让用户快速理解进而作出决策；
+                帮助用户识别：界面简单直白，让用户快速识别而非回忆，减少用户记忆负担。
+            </div>
+        </li>
+        <li>
+            <p>可控 Controllability <img src="./img/select.png" alt=""></p> <br>
+            <div>用户决策：根据场景可给予用户操作建议或安全提示，但不能代替用户进行决策；
+                结果可控：用户可以自由的进行操作，包括撤销、回退和终止当前操作等。
+            </div>
+        </li>
+    </ul>
+
+    <script src="../lib/jquery-3.4.1.js"></script>
+    <script>
+        let num = 1
+        $('li').on('click', function () {
+            if (num == 1) {
+                num--
+                $(this).find('div').slideDown(400)
+                $(this).find('p').find('img').css({
+                    "transform": "rotate(00deg)"
+                })
+            } else if (num == 0) {
+                num++
+                $(this).find('div').slideUp(400)
+                $(this).find('p').find('img').css({
+                    "transform": "rotate(90deg)"
+                })
+            }
+
+        })
+    </script>
+
+</body>
+
+</html>
