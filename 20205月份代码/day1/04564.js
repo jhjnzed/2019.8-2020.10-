@@ -41,31 +41,31 @@
 
 
 
-// const http = require('http');
-// const querystring = require('querystring')
-// // 使用http模块创建服务
-// let app = http.createServer();
+const http = require('http');
+const querystring = require('querystring')
+// 使用http模块创建服务
+let app = http.createServer();
 
-// // 监听事件
-// app.on('request', function (req, res) {
-//     res.writeHead(200, {
-//         // text/html代表服务器向浏览器发送了什么类型的文件
-//         'Content-Type': "text/html;charset=utf-8"
-//     })
-//     let postDate = ''
-//     req.on('data', (chunk) => {
-//         // console.log(chunk)
-//         postDate += chunk
-//     })
-//     req.on('end', () => {
-//         let finalData = querystring.parse(postDate)
-//         console.log(postDate)
-//     })
-// })
-// // 监听指定端口并启动服务
-// app.listen(80, function () {
-//     console.log('请访问http://localhost')
-// })
+// 监听事件
+app.on('request', function (req, res) {
+    res.writeHead(200, {
+        // text/html代表服务器向浏览器发送了什么类型的文件
+        'Content-Type': "text/html;charset=utf-8"
+    })
+    let postDate = ''
+    req.on('data', (chunk) => {
+        // console.log(chunk)
+        postDate += chunk
+    })
+    req.on('end', () => {
+        let finalData = querystring.parse(postDate)
+        console.log(postDate)
+    })
+})
+// 监听指定端口并启动服务
+app.listen(80, function () {
+    console.log('请访问http://localhost')
+})
 
 
 

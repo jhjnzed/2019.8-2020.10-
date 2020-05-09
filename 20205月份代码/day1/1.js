@@ -26,18 +26,18 @@
 //     }
 //     console.log(path)
 // })
-
+ 
 
 // const path=require('path');
 // let fina=path.join('public','gdx.jpg')
 // console.log(fina)
 
-const fs=require('fs');
-const path=require('path');
+const fs = require('fs');
+const path = require('path');
 // console.log(__dirname);
 // console.log(path.join(__dirname,'gaodx.txt'))
 
-fs.readFile(path.join(__dirname,'gaodx.txt'),'utf8',function(err,data){
+fs.readFile(path.join(__dirname, 'gaodx.txt'), 'utf8', function (err, data) {
     console.log(err);
     console.log(data)
 })
