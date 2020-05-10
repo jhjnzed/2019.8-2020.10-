@@ -27,6 +27,7 @@
 //     console.log(path)
 // })
  
+ 
 
 // const path=require('path');
 // let fina=path.join('public','gdx.jpg')
