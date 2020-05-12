@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" name="username">
+        <input type="password" name="password">
+
+    </form>
+    <button>提交</button>
+
+    <script>
+        let bu = document.querySelector('button');
+        let useript = document.querySelector('input[name="username"]');
+        let passipt = document.querySelector('input[name="password"]');
+        bu.onclick = function () {
+            let username = useript.value;
+            let password = passipt.value;
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', `/getParam?username=${username}&password=${password}`)
+            xhr.send(null);
+            xhr.onreadystatechange = function () {
+                // console.log(xhr.responseText)
+                let data = JSON.parse(xhr.responseText);
+                // console.log(data)
+                document.body.innerHTML = xhr.responseText
+            }
+        }
+    </script>
+</body>
+
+</html>

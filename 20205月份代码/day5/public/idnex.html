@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>高些东西进去</h1>
+    <button>按我</button>
+
+    <script>
+        let obtn = document.querySelector('button');
+        obtn.onclick = function () {
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', '/simple');
+            xhr.send();
+            xhr.onreadystatechange = function () {
+                // console.log(xhr.responseText)
+                document.body.innerHTML = xhr.responseText
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

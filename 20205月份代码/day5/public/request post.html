@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" name="username">
+        <input type="password" name="password">
+
+    </form>
+    <button>提交</button>
+
+    <script>
+        let bu = document.querySelector('button');
+        bu.onclick = function () {
+            let xhr = new XMLHttpRequest();
+            xhr.open('POST', '/postParam');
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+            xhr.send("username=guer & password=666666")
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    console.log(xhr.responseText)
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+
+
