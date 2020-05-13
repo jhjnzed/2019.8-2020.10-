@@ -1,0 +1,43 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1>高些东西进去</h1>
+
+        <button>提交</button>
+        <script src="./js/ajaxTools.js"></script>
+        <script>
+            // let obtn = document.querySelector('button');
+            // let userinfo = {
+            //     username: 'tom',
+            //     password: '123456'
+            // }
+            // obtn.onclick = function () {
+            //     let xhr = new XMLHttpRequest();
+            //     xhr.open('POST', 'http://localhost/json');
+            //     xhr.setRequestHeader('Content-Type', 'application/json')
+            //     xhr.send(JSON.stringify(userinfo));
+            //     xhr.onreadystatechange = function () {
+            //         if (xhr.readyState == 4 && xhr.status == 200) {
+            //             console.log(xhr.responseText)
+            //         }
+            //     }
+
+            // }
+            let obtn = document.querySelector('button');
+            obtn.onclick = function () {
+                ajax('GET', '/reqGet', 'name=guer&age=666', function (data) {
+                    console.log(data)
+                })
+            }
+        </script>
+
+    </body>
+
+    </html>
