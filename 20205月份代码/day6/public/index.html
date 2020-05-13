@@ -10,8 +10,12 @@
     <body>
         <h1>高些东西进去</h1>
 
+
         <button>提交</button>
-        <script src="./js/ajaxTools.js"></script>
+
+        <!-- <script src="./js/ajaxTools3.js"></script> -->
+        <!-- <script src="./lib/jquery.min.js"></script> -->
+        <script src="./lib/jquery.min.js"></script>
         <script>
             // let obtn = document.querySelector('button');
             // let userinfo = {
@@ -32,8 +36,49 @@
             // }
             let obtn = document.querySelector('button');
             obtn.onclick = function () {
-                ajax('GET', '/reqGet', 'name=guer&age=666', function (data) {
-                    console.log(data)
+                // ajax('GET', '/reqGet', 'name=孤儿&age=666', function (data) {
+                //     console.log(data)
+                // })
+
+                // ajax({
+                //     type: 'GET',
+                //     url: '/reqGet',
+                //     data: 'name=孤儿&age=666',
+                //     suceess: function (data) {
+                //         console.log(data)
+                //     }
+
+                // })
+
+
+
+                // $.ajax({
+                //     type: 'GET',
+                //     url: '/reqGet',
+                //     data: {
+                //         name: 'lol永存不灭',
+                //         age: 666
+                //     },
+                //     success: function (data) {
+                //         console.log(data)
+                //     }
+                // })
+
+
+                // $.param({
+                //     name: 'lol永存不灭',
+                //     age: 666
+                // })
+                $.ajax({
+                    type: 'GET',
+                    url: '/reqGet',
+                    data: {
+                        name: 'nodesb',
+                        age: 666
+                    },
+                    success: function (data) {
+                        console.log(data)
+                    }
                 })
             }
         </script>
