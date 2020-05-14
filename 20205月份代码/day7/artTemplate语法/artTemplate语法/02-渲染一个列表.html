@@ -1,0 +1,91 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button>按钮</button>
+  <div>
+    <!-- <h1>我是标题</h1> -->
+
+<!-- <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li> -->
+<!-- </div>
+
+  <script src="./art-template-4.13.2/template-web.js"></script>
+  <script type="text/template" id="list_templ">
+    <!-- target代表数字的名字 -->
+<!-- {{each target}}
+  <li> {{$index}}-{{$value}}</li>
+  {{/each}}
+  </script>
+  <script>
+    let data = ["宋轶", "张国立", "于文文", "王菲", "江疏影", "王源", "宋祖儿", "易烊千玺", "王一博"];
+
+    let oBtn = document.querySelector('button');
+    oBtn.onclick = function () {
+      let htmlStr = template('list_templ', {
+        target: data
+      })
+      // console.log(htmlStr);
+      document.querySelector('div').innerHTML = htmlStr;
+    }
+
+  </script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <button>按我</button>
+  <div></div>
+  <script src="art-template-4.13.2/template-web.js"></script>
+  <script type="text/template" id='laiba'>
+    {{each target}}
+<li>{{$index}}-{{$value}}</li>
+{{/each}}  
+</script>
+  <script>
+    let data = ['亚索 ', '劫', '盲僧', '剑圣', '螳螂', '剑魔', '鳄鱼', '狗头', '沙皇', '卡密尔', '你是我未曾永远无法捕捉的亲昵', '我的房间变得真的很大很大',
+      '屈服吧凡人我是世界的终结者', '死亡如风常伴吾身', '弟弟救我',
+    ]
+    let oBtn = document.querySelector('button');
+    oBtn.onclick = function () {
+      let htmlStr = template('laiba', {
+        target: data
+      })
+      document.querySelector('div').innerHTML = htmlStr;
+    }
+  </script>
+</body>
+
+</html>

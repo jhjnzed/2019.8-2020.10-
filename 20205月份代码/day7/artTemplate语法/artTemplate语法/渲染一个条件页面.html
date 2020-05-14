@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button>按我</button>
+    <div></div>
+    <script src="art-template-4.13.2/template-web.js"></script>
+    <script type="text/template" id='guoranchenggongle'>
+        {{if data.length>0}}
+<ul>
+{{each data}}
+<li>{{$value}}</li>
+{{/each}}
+</ul>
+{{else}}
+<p>没有的东西啊</p>
+{{/if}}
+</script>
+    <script>
+        let data = ['亚索 ', '劫', '盲僧', '剑圣', '螳螂', '剑魔', '鳄鱼', '狗头', '沙皇', '卡密尔', '你是我未曾永远无法捕捉的亲昵', '我的房间变得真的很大很大',
+            '屈服吧凡人我是世界的终结者', '死亡如风常伴吾身', '弟弟救我',
+        ]
+        let oBtn = document.querySelector('button');
+        oBtn.onclick = function () {
+            let htmlStr = template('guoranchenggongle', {
+                data: data
+            })
+            document.querySelector('div').innerHTML = htmlStr;
+        }
+    </script>
+</body>
+
+</html>
