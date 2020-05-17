@@ -92,7 +92,7 @@
     $.ajax({
         // 请求数据的方式
         type:'GET'
-        // 记载数据的url地址
+        // 记载数据的url地址 
         type:'/xxx',
         // 请求服务器的数据
         data:xxx,
