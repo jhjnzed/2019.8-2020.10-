@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">发送ajax请求</button>
+
+    <script>
+        var btn = document.getElementById('btn')
+        btn.onclick = function () {
+            // 创建ajax对象
+            var xhr = new XMLHttpRequest();
+            // 告诉ajax对象要向哪发送请求，以什么方式
+            xhr.open('get', 'http://localhost:3000/error');
+            // 发送请求
+            xhr.send();
+            // 获取服务器响应到客户端的数据
+            xhr.onload = function () {
+                // xhr.status 获取http状态码
+                // console.log(xhr.status);
+                console.log(xhr.responseText);
+                if (xhr.status == 400) {
+                    alert('请求出错')
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

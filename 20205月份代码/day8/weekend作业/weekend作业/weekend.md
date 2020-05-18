@@ -142,19 +142,15 @@
 
 8. express怎么读文件和写文件?
 ```js
-app.get('/', (req, res) => res.send('Hello World!'))
-
-
-xhr.onreadystatechange = function () {
-                let data = JSON.parse(xhr.responseText);
-                document.querySelector('.box').innerHTML = `写入的内容${data.xxx}`
-            }
+const fs = require('fs') // 引包
+fs.readFile('路径', '编码方式', 回调函数) // 读文件
+fs.writeFile('路径', 写入数据, 回调函数) // 写文件
 ```
 
 9. JSON对象和JSON字符串是怎么进行相互转换的?
 ```js
-// 可以使用
-JSON.parse(data)
+JSON.parse('JSON字符串') -> JSON对象
+JSON.stringify('JSON对象') -> JSON字符串
 ```
 
 10. form表单怎么的属性有哪些？分别是什么意思？
@@ -171,8 +167,8 @@ let formDate = $('#form').serialize();
 
 12. form表单怎么阻止默认的提交行为?
 ```js
-onsubmit="return true" //为默认的表单提交事件
-onsubmit="return false"//为阻止表单提交事件
+// 阻止事件默认行为
+event.preventDefault() // 调用该方法
 ```
 
 13. 在客户端怎么由login.html页面跳转到首页index.html?

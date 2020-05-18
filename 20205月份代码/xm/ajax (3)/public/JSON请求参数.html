@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 创建ajax对象
+        var xhr = new XMLHttpRequest();
+        // 配置ajax对象
+        xhr.open('post', 'http://localhost:3000/json')
+        // 通过请求头告诉服务器端客户端向服务器端传递的请求参数的格式是什么
+        xhr.setRequestHeader('Content-Type', 'applicatnion/json')
+        // 发送请求
+        // JSON.stringify(); json对象转换为json字符串
+        xhr.send(JSON.stringify({ name: 'zs', age: 50 }));
+        // 获取服务器端相应的数据
+        xhr.onload = function () {
+            console.log(xhr.responseText);
+        }
+    </script>
+</body>
+
+</html>
