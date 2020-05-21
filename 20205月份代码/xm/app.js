@@ -13,7 +13,7 @@ const mime = require('mime');
 // 2.使用http模块提供的方法创建服务
 const app = http.createServer();
 
-
+ 
 // 3.监听客户端的request事件 处理请求并响应内容
 app.on('request', (req, res) => {
     // 需求: 浏览器地址栏 http://localhost/public/default.html?a=1&b=tom
