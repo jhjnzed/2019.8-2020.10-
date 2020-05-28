@@ -66,7 +66,32 @@ let student = mew mongoose.model('student',studentSchema);
 >姓名:姚姚,年龄:24,性别:女,业务爱好：["football","computer","running"]
 >姓名:王凯,年龄:25,性别:男,业务爱好：["sing","computer"]
 ```js
-
+let student = students.create(
+    {
+        name: '杨文林',
+        age: 19,
+        sex:'男',
+        hobby: ["draw","computer"]
+    },
+    {
+        name: '贾拉拉',
+        age: 18,
+        sex:'女',
+        hobby: ["sing","draw","football"]
+    },
+    {
+        name: '姚姚',
+        age: 24,
+        sex:'女',
+        hobby: ["football","computer","running"]
+    },
+    {
+        name: '王凯',
+        age: 25,
+        sex:'男',
+        hobby: ["sing","computer"]
+    }
+)
 ```
 
 =============================Score集合==============================
@@ -77,7 +102,40 @@ let student = mew mongoose.model('student',studentSchema);
 > 英语成绩: 数字类型,不能低于0，不能多于100，必传,添加提示信息
 > 语文成绩: 数字类型,不能低于0，不能多于100，必传,添加提示信息
 ```js
+let Student = new mongoose.Schema(
+    {Math: {
+        type:Number,
+        required: [true,'message'],
+        validate: {
+        	validator: v => {
+                return v && v >= 0 && v <= 100
+            },
+            message: 'message'
+    	}
+	}},
+        {English: {
+        type:Number,
+        required: [true,'message'],
+        validate: {
+        	validator: v => {
+                return v && v >= 0 && v <= 100
+            },
+            message: 'message'
+    	}
+	}},
+        {Chiness: {
+        type:Number,
+        required: [true,'message'],
+        validate: {
+        	validator: v => {
+                return v && v >= 0 && v <= 100
+            },
+            message: 'message'
+    	}
+	}}
+);
 
+let score = mew mongoose.model('score',Student);
 ```
 =============================增加操作===============================
 5. 在Score的集合中插入文档
@@ -85,75 +143,135 @@ let student = mew mongoose.model('student',studentSchema);
 >姓名:贾拉拉,英语成绩：79，数学成绩：88，语文成绩：90，
 >姓名:姚姚,英语成绩：90，数学成绩：90，语文成绩：90，
 >姓名:王凯,英语成绩：98，数学成绩：90，语文成绩：99
+>
+>```js
+>let Student = score.create({
+> name:'杨文林',English:88,Math:99,Chinese:80,
+> name:'贾拉拉',English:79,Math:88,Chinese:90,
+> name:'姚姚',English:90,Math:90,Chinese:90,
+> name:'王凯',English:98,Math:90,Chinese:99
+>})
+>```
+>
+>
 
 6. 查询所有学生的信息
 ```js
-
+students.find()
+    .then((data) => { console.log(data) })
+    .catch((err) => { console.log(err) })
 ```
 
 7. 查询年龄大于18岁小于24岁的学生的信息
 ```js
-
+students.find(
+    {
+        age:{$gt:18,$lt:24}
+    }
+).then((data)=>{console.log(data)})
 ```
 
 8. 查询年龄19岁并且喜欢计算机的男生的信息
 ```js
-
+students.find(
+    {
+        age:19,
+        hobby:{$in:'计算机'}
+    }
+).then((data)=>{console.log(data)})
 ```
 
 9. 查询班级中年龄最大的学生的信息
 ```js
-
+students.find()
+    .sort('-age')
+	.limit(1)
+    .then(data =>console.log(data))
 ```
 
 10. 查询年龄是18岁的学生的姓名
 ```js
-
+student.find({
+    age: {$gt:18&&$lt:18},
+	})
+	.select('name')
+	.then(data => console.log(data))
 ```
 11. 查询总人数(提示count)
 ```js
- 
+  student.find()
+	.count()
+	.then(data => console.log(data))
 ```
 
 12. 查询显示第二页的数据，每页显示2条
 ```js
-
+student.find()
+	.skip(2)
+	.limit(2)
+	.then(data => console.log(data))
 ```
 13. 查询业余爱好里面包含sing的学生的信息
 ```js
-
+students.find(
+    {
+        hobby: {
+            $in: 'sing'
+        }
+    }
+).then((data) => { console.log(data) })
 ```
 14. 对数学成绩降序输出
 ```js
-
+students.find().sort('-Math').then(result=>console.log(result))
 ```
 
 15. 查询姓名是王凯的各科成绩
 ```js
-
+score.find({
+    name: '王凯'
+	})
+	.then(data => console.log(data))
 ```
 
 ===============================更新操作===============================
 
 16. 将姓名是姚姚的学生的年龄更改为23
 ```js
- 
+students.updateOne(
+    { name:'姚姚' },
+    {age: 23})
+    .then((data) => { console.log(data + '数据修改成功') 
+})
 ```
 17. 将所有学生的年龄更改为18
 ```js
-
+students.updateMany(
+    {},
+    {age:18})
+    .then((data)=>{console.log(data+'数据修改成功')
+})
 ```
 18. 将王凯的数学成绩更新为100分
 ```js
-
-```  
+ student.updateOne(
+     {name:'王凯'},
+     {math:100}
+ 	)
+	.then(data => console.log(data))
+```
 ==================================删除操作=============================
 19. 删除年龄小于20的学生的信息
 ```js
-
+student.deleteMany({
+    age:{$lt:20}
+	})
+	.then(data => console.log(data))
 ```
 20. 删除姓名是贾拉拉的这条数据
 ```js
-
+students.findOneAndDelete(
+    { name:'贾拉拉' })
+    .then((data) => { console.log(data) })
 ```
 
