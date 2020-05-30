@@ -18,7 +18,7 @@ app.on('request', (req, res) => {
     }
     res.end()
     // res.writeHead(200,{
-    //     'Content-Type':"text/html;charset=utf8"
+    //      'Content-Type':"text/html;charset=utf8"
     // })
     // res.end('成功')
 })
