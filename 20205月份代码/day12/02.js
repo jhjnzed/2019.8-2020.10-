@@ -7,7 +7,7 @@ mongoose.connect('mongodb://localhost/db_system', {
 }).then(result => {
     console.log("数据库连接成功")
 });
-
+ 
 const User = new mongoose.model('User', new mongoose.Schema({
     username: {
         type: String,
