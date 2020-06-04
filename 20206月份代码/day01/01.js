@@ -6,7 +6,7 @@ getn(1, 2, function (result) {
     console.log(result);
 
 })
-
+ 
 function pg(callback) {
     callback()
 }
