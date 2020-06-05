@@ -9,3 +9,4 @@ mongoose.connect('mongodb://66.112.215.31:27017/LOL_blog', {
     }).catch((err) => {
         console.log(err)
     })
+ 
