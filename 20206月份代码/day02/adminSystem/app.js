@@ -9,7 +9,7 @@ const indexRouter = require('./routes/indexRouter');
 const userRouter = require('./routes/userRouter');
 // 1.5 引入关于文章的路由
 const articleRouter = require('./routes/articleRouter');
-// 2.设置包     
+// 2.设置包      
 // 2.1 使用express方法创建Web服务
 const app = express();
 // 2.2 设置静态资源目录
