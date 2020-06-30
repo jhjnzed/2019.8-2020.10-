@@ -18,7 +18,7 @@
 
 //     app.get('/artlicle', (req, res) => {
 //         res.send('<h1>文章</h1>')
-//     })
+//     }) 
 //     app.get('/login', (req, res) => {
 //         res.send('<h1>登录</h1>')
 //     })
