@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            sayHI() {
+                console.log(`我叫${this.name},我今年${this.age}`);
+            }
+        }
+        let p2 = new person('憨憨', 18);
+
+        console.log(p2.name);
+        p2.sayHI();
+
+
+
+        class oos {
+            constructor(name, age, hoby) {
+                this.name = name;
+                this.age = age;
+                this.hoby = hoby;
+            }
+            kaj() {
+                console.log(`我叫${this.name},我今年${this.age},我喜欢${this.hoby}`)
+            }
+        }
+        let x1 = new oos('亚索', 18, '送人头');
+
+
+        x1.kaj()
+
+
+
+
+
+        class Father {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+
+            }
+            sum() {
+                return this.x + this.y
+            }
+        }
+        class Son extends Father {}
+        let s212 = new Son(55, 45);
+        console.log(s212.sum())
+    </script>
+</body>
+
+</html>
