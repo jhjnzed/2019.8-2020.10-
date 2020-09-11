@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Peson(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        Peson.prototype.sayH = function () {
+            console.log('您好')
+        }
+        var ls = new Peson('ls', 15);
+        console.log(ls.__proto__ == Peson.prototype);
+    </script>
+</body>
+
+</html>
