@@ -23,11 +23,20 @@
         // }
         // console.log(arr);
 
-
-        var maximum = function (a, b) {
-            return ((a + b) + Math.abs(a - b)) / 2;
-        };
-        console.log(maximum(5,2))
+        let XXX = "yuan yuan yuan jiang jiang yong aaaaaaaaaaaaa aaaaaaaaaaaaa odpsospoaioaoaoaoaoao";
+        let arr = XXX.split(' ');
+        let arr2 = [];
+        for (let i = 0; i < arr.length; i++) {
+            arr2.push(arr[i].length);
+        }
+        arr2 = arr2.sort();
+        let maxLength = arr2[arr2.length - 1];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i].length == maxLength) {
+                console.log(arr[i]);
+                console.log(arr[i].length);
+            }
+        }
     </script>
 
 </body>
