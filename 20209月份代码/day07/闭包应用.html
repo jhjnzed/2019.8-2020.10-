@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <li>2512121</li>
+        <li>5465</li>
+        <li>456456</li>
+        <li>456456</li>
+        <li>456456</li>
+
+    </div>
+    <script>
+        let ali = document.querySelectorAll('li');
+        for (let i = 0; i < ali.length; i++) {
+            ali[i].index = i;
+            ali[i].onclick = function () {
+                console.log(ali[i].index)
+                // console.log(i);
+                // console.log(this.index)
+            }
+        }
+    </script>
+</body>
+
+</html>

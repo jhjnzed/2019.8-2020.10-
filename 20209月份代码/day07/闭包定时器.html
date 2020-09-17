@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <li>2512121</li>
+        <li>5465</li>
+        <li>545645654</li>
+        <li>456457</li>
+        <li>44544577575</li>
+
+    </div>
+    <script>
+        // 1获取所有li
+        let ali = document.querySelectorAll('li');
+
+        // 2for循环
+        for (let i = 0; i < ali.length; i++) {
+            setTimeout(function () {
+                console.log(ali[i].innerHTML);
+            }, 3000)
+        }
+        // 3延迟定时器
+        // 4获取每个li的内容
+    </script>
+
+</body>
+
+</html>

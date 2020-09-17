@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // // 1声明函数
+        // function fn(){
+        //     console.log('我是你爹')
+        // }
+        // // 2函数表达式
+        // let xxx=function(){
+        //     console.log('啊 哈哈哈好')
+        // }
+        // // 3构造函数
+        // let f=new Function('a','b','console.log(a+b)');
+        // f(2,5)
+        // 5定时器函数
+        // setInterval(function () {
+        //     console.log(new Date());
+        //     console.log(this)
+        // }, 2000);
+        // setTimeout(function () {
+        //     console.log(new Date());
+        //     console.log(this)
+        // }, 4000);
+        // // 6自调用函数
+        // (function () {
+        //     console.log('铁憨憨');
+        //     console.log(this)
+        // }())
+
+        // function fn(x, y) {
+        //     console.log('我执行了');
+        //     console.log(this);
+        //     console.log(x + y);
+        // }
+        // let x = {
+        //     name: 'zs',
+        //     age: 18
+        // }
+        // fn.apply(x, [1, 2]);
+        // fn.call(x, 1, 2);
+        // let fn1 = fn.bind(o, 1, 2); //bind拷贝
+        // fn1();
+
+        // function fn() {
+        //     console.log(this)
+
+        // }
+        // fn()
+        function star(){
+            this.sex='男';
+        }
+        var lasd=new star();
+        console.log(lasd)
+
+        setTimeout(function(){
+            console.log(this)
+        },2000);
+    </script>
+
+
+</body>
+
+</html>
