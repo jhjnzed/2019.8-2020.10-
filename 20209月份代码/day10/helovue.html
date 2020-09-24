@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .red {
+        color: rgba(35, 178, 197, 0.678);
+    }
+</style>
+
+<body>
+    <div id='app'>
+        <h1 v-html=' msg'></h1>
+        <a v-bind:title='title' :class='redx' :href='Link'>1156a15gas5g4s54ga65g4as5g4a5s4as54a56s</a>
+    </div>
+
+    <script src="./vue-3.0.js"></script>
+    <!-- <script>
+        console.log(window)
+    </script> -->
+    <script>
+        let x = Vue.createApp({
+            data() {
+                return {
+                    // msg:   “它们眼中的我，只有面具。我眼中的它们，只有惶恐。”—— 永恩 '<span>疾风亦有归途，弟弟愿艾欧里亚指引你</span>'
+                    title: '疾风亦有归途，弟弟愿艾欧里亚指引你',
+                    redx: 'red',
+                    Link: 'https://baike.baidu.com/item/%E5%B0%81%E9%AD%94%E5%89%91%E9%AD%82/52705927?fromtitle=%E6%B0%B8%E6%81%A9&fromid=52714560&fr=aladdin'
+                }
+            }
+        })
+        x.mount('#app')
+    </script>
+</body>
+
+</html>
