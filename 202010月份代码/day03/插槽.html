@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            width: 33.333%;
+            box-sizing: border-box;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <toubu>
+            <template v-slot:left>
+                <input type="text" name="" id="">
+            </template>
+            <template #default>
+
+                <button>不用写名字的匿名插槽</button> </template>
+        </toubu>
+
+    </div>
+    <script src="../vue-3.0.0.js"></script>
+    <script>
+        let vm = Vue.createApp({});
+        vm.component('toubu', {
+            template: `<header>
+    <slot name="left"></slot>
+    <slot name="center">
+        </slot>
+    <slot name="right">
+        </slot>
+
+
+        <slot></slot>
+</header>`
+        })
+
+        vm.mount('#app')
+    </script>
+</body>
+
+</html>
